@@ -1,0 +1,16 @@
+﻿body {
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+}
+main {
+    min-height: 500px;
+}
+.title {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+.quote {
+    font-style: italic;
+}
