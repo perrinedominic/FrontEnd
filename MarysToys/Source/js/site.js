@@ -23,5 +23,4 @@ function showQuote() {
     // Put the quote into the quote container element on the page.
     document.getElementById('quoteContainer').innerHTML = randomQuote;
 
-    alert('test');
 }
