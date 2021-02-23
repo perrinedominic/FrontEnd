@@ -8,7 +8,12 @@ var possibleQuotes = [
     'We sell toys - it\'s what we do!',
     'If you came here to by cookies, you came to the wrong place...',
     'Oh happy day!',
-    'Mary says Legos are the best!'
+    'Mary says Legos are the best!',
+    'Toy stores make everyone happy.',
+    'There are toys for all ages.',
+    'So many toys - So little time.',
+    'Here its playtime all the time!',
+    'You can never have enough toys!'
 ];
 
 function showQuote() {

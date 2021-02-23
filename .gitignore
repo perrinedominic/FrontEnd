@@ -48,3 +48,20 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Filtered folders
+Foo/
+foo/
+Bar/
+bar/
+Goo/
+goop/
+
+# Filtered files
+.food
+.soda
+.try
+.hello
+.coins
+One/.letter
+
+
