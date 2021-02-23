@@ -8,12 +8,7 @@ var possibleQuotes = [
     'We sell toys - it\'s what we do!',
     'If you came here to by cookies, you came to the wrong place...',
     'Oh happy day!',
-    'Mary says Legos are the best!',
-    'foo',
-    'foo',
-    'foo',
-    'foo',
-    'foo'
+    'Mary says Legos are the best!'
 ];
 
 function showQuote() {
