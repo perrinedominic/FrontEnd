@@ -60,3 +60,8 @@ main {
     width: 60px;
     height: 60px;
   }
+
+  button{
+    background-color:rgb(14, 4, 41);
+    color: whitesmoke;
+  }

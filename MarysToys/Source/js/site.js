@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿// Get a random quote from the array list to display.
+$(document).ready(function () {
     showQuote();
 });
 
@@ -23,3 +24,10 @@ function showQuote() {
     // Put the quote into the quote container element on the page.
     document.getElementById('quoteContainer').innerHTML = randomQuote;
 }
+
+// Hide and show navbar
+$(function() {
+    $("#hideShow").click(function() {
+        $("#quoteContainer").toggle();
+    });
+});
