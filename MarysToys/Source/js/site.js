@@ -32,7 +32,7 @@ $(function() {
     });
 });
 
-
+// Slides a paragraph up and down.
 $(document).ready(function(){
     $(".btn1").click(function(){
       $("#log").slideUp();
@@ -41,3 +41,16 @@ $(document).ready(function(){
       $("#log").slideDown();
     });
   });
+  
+  // Privious and After
+  $(document).ready(function() {
+    $(".next").click(function() {
+        $( "li.third-item" ).next().css( "background-color", "blue" );
+    });
+});
+
+$(document).ready(function() {
+    $(".prev").click(function() {
+        $( "li.third-item" ).prev().css( "background-color", "blue" );
+    });
+});
