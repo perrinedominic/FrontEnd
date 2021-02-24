@@ -1,4 +1,3 @@
-﻿// Get a random quote from the array list to display.
 $(document).ready(function () {
     showQuote();
 });
@@ -16,14 +15,6 @@ var possibleQuotes = [
     'Here its playtime all the time!',
     'You can never have enough toys!'
 ];
-
-function showQuote() {
-    // Get a random quote from the quote array.
-    var randomQuote = possibleQuotes[Math.floor(Math.random() * 10)];
-
-    // Put the quote into the quote container element on the page.
-    document.getElementById('quoteContainer').innerHTML = randomQuote;
-}
 
 // Hide and show navbar
 $(function() {
@@ -44,6 +35,20 @@ $(document).ready(function(){
   
   // Privious and After
   $(document).ready(function() {
+    $(".next").click(function() {
+        $( "li.third-item" ).next().css( "background-color", "blue" );
+    });
+});
+
+function showQuote() {
+    // Get a random quote from the quote array.
+    var randomQuote = possibleQuotes[Math.floor(Math.random() * 10)];
+
+    // Put the quote into the quote container element on the page.
+    document.getElementById('quoteContainer').innerHTML = randomQuote;
+}
+
+$(document).ready(function() {
     $(".next").click(function() {
         $( "li.third-item" ).next().css( "background-color", "blue" );
     });
