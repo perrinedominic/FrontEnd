@@ -31,3 +31,13 @@ $(function() {
         $("#quoteContainer").toggle();
     });
 });
+
+
+$(document).ready(function(){
+    $(".btn1").click(function(){
+      $("#log").slideUp();
+    });
+    $(".btn2").click(function(){
+      $("#log").slideDown();
+    });
+  });
