@@ -1,8 +1,10 @@
-﻿body {
+﻿body{
     width: 950px;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgb(202, 202, 202);
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 main {
     min-height: 500px;
@@ -11,50 +13,22 @@ main {
     font-weight: bold;
     font-size: 48px;
     text-align: center;
+    color: rgb(170, 122, 0);
 }
 .quote {
     font-style: italic;
+    color: rgb(170, 122, 0);
 }
 
 .footer{
    position: fixed;
-   left: 0;
    bottom: 0;
-   color: whitesmoke;
-   background-color:red;
+   left: 20%;
+   color: rgb(170, 122, 0);
    text-align: center;
+   font-size: 30px;
+   width: 60%;
 }
-
-.sidenav {
-    height: 100%;
-    width: 140px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(14, 4, 41);
-    overflow-x: hidden;
-    padding-top: 20px;
-    color: whitesmoke;
-    text-align: center;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: whitesmoke;
-    display: block;
-  }
-  
-  .sidenav a:hover {
-    color: #046e01;
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
 
   .homeImg{
     width: 60px;
@@ -63,5 +37,53 @@ main {
 
   button{
     background-color:rgb(14, 4, 41);
-    color: whitesmoke;
+    color: rgb(170, 122, 0);
+    border-color: rgb(170, 122, 0);
   }
+
+  .toys{
+    border-top-color: rgb(170, 122, 0);
+    border-top-style: solid;
+    color: whitesmoke;
+    padding-top: 5px;
+  }
+
+  /* The side NAVBAR menu */
+.sidenav {
+  height: 100%; 
+  width: 160px;
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: whitesmoke;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: rgb(170, 122, 0);
+}
+
+.navTxt{
+  color: whitesmoke;
+}
+
+.shopCart{
+  position: fixed; 
+  z-index: 1; 
+  top: 5px;
+  right: 5px;
+}
+
+.pageHeading{
+  position: fixed; 
+  margin-left: 40%;
+}

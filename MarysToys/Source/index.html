@@ -5,34 +5,26 @@
     <link type = "text/css" rel="stylesheet" href="css/site.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Mary's Toys</title>
 </head>
 <body>
-    <div  class="sidenav">
-        <div class="shoppingcart">
-            <img src="images/cart.jpg" width="50"/>
-        </div>
+    <!-- Side navigation -->
+    <div class="sidenav">
         <div>
             <a href="index.html"><img src="images/home.png" alt="Home" class="homeImg"></a>
-            <a href="html/toys.html">Toys</a>
+            <a class="navTxt" href="html/toys.html">Toys</a>
         </div>
         <p class="footer">© 2021 Mary's Toys</p>
     </div>
-    <header>
-        <div>
-            <span class="title">Mary's Toys</span>
-        </div>
-        <div>
-            <button id="hideShow">Hide/Show Quotes</button><br />
+
+    <div class="shopCart">
+        <img src="images/cart.jpg" width="50"/>
+    </div>
+        
+        <div class="pageHeading">
+            <span class="title">Mary's Toys</span><br />
             <span id="quoteContainer" class="quote"></span>
         </div>
-        <div>
-            <button class="btn1">Slide up</button>
-            <button class="btn2">Slide down</button>
-            <p id="log">Mary's Toys is the best!</p>
-        </div>
-        
-    </header>
-    <main></main>
 </body>
 </html>
