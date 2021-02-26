@@ -13,11 +13,11 @@ main {
     font-weight: bold;
     font-size: 48px;
     text-align: center;
-    color: rgb(170, 122, 0);
+    color: whitesmoke;
 }
 .quote {
     font-style: italic;
-    color: rgb(170, 122, 0);
+    color: whitesmoke;
 }
 
 .footer{
@@ -86,4 +86,17 @@ main {
 .pageHeading{
   position: fixed; 
   margin-left: 40%;
+}
+
+.toyImage{
+ width: 300px;
+ height: 300px;
+border-color: rgb(170, 122, 0);
+border-style: solid;
+}
+
+.toyDescription{
+  width: 80%;
+  align-content: center;
+  background: rgba(0, 0, 0, 0.603);
 }
