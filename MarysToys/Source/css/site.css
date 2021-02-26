@@ -5,10 +5,12 @@
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 main {
     min-height: 500px;
 }
+
 .title {
     font-weight: bold;
     font-size: 48px;
@@ -24,7 +26,7 @@ main {
    position: fixed;
    bottom: 0;
    left: 20%;
-   color: rgb(170, 122, 0);
+   color: whitesmoke;
    text-align: center;
    font-size: 30px;
    width: 60%;
@@ -42,35 +44,34 @@ main {
   }
 
   .toys{
-    border-top-color: rgb(170, 122, 0);
-    border-top-style: solid;
     color: whitesmoke;
     padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.603);
   }
 
   /* The side NAVBAR menu */
-.sidenav {
-  height: 100%; 
-  width: 160px;
-  position: fixed; 
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  color: whitesmoke;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: rgb(170, 122, 0);
-}
+  .sidenav {
+    height: 100%; 
+    width: 160px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: whitesmoke;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: rgb(170, 122, 0);
+  }
 
 .navTxt{
   color: whitesmoke;
@@ -91,12 +92,12 @@ main {
 .toyImage{
  width: 300px;
  height: 300px;
-border-color: rgb(170, 122, 0);
+border-color: whitesmoke;
 border-style: solid;
+margin-left: 5px;
 }
 
 .toyDescription{
   width: 80%;
   align-content: center;
-  background: rgba(0, 0, 0, 0.603);
 }
