@@ -82,6 +82,7 @@ main {
   z-index: 1; 
   top: 5px;
   right: 5px;
+  color: orangered;
 }
 
 .pageHeading{

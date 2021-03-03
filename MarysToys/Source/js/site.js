@@ -1,4 +1,4 @@
-$(document).ready(function () {
+﻿$(document).ready(function () {
     showQuote();
 });
 
@@ -16,10 +16,64 @@ var possibleQuotes = [
     'You can never have enough toys!'
 ];
 
-// Hide and show navbar
+// Hide and show descriptions. (P.S after I put these in I realized I couldve just used two arguements. -boden)
 $(function() {
     $("#hideShow").click(function() {
-        $("#quoteContainer").toggle();
+        $("#laptopDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowMouse").click(function() {
+        $("#mouseDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowCar").click(function() {
+        $("#carDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowKeyboard").click(function() {
+        $("#keyboardDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowDrone").click(function() {
+        $("#droneDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowRemote").click(function() {
+        $("#remoteDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowRobo").click(function() {
+        $("#roboDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowTablet").click(function() {
+        $("#tabletDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowWalkie").click(function() {
+        $("#walkieDescription").toggle();
+    });
+});
+
+$(function() {
+    $("#hideShowWatch").click(function() {
+        $("#watchDescription").toggle();
     });
 });
 

@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="shopCart">
-        <a href="../html/cart.html"><img src="../images/cart.jpg" width="50"/></a>
+        <div>
+            <span id="items-in-cart">0</span>
+        </div>
+        <a href="../html/cart.html"><img src="../images/cart.png" width="70"/></a>
     </div>
 
     <div class="sidenav">
@@ -19,82 +22,128 @@
         </div>
         <p class="footer">© 2021 Mary's Toys</p>
     </div>
-
         <span class="title">Mary's Toys</span><br />
         <span id="quoteContainer" class="quote"></span>
 
-        <div class='toys'>                  
-            <img class="toyImage" id='laptop' src="../images/laptop.jpg" />                  
-            <p class="toyDescription">Build your own computer. 
+        <div class='toys'>          
+            <img class="toyImage" id='laptop' src="../images/laptop.jpg" /> 
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>     
+                <button id="hideShow">Description</button>  
+            </div>                     
+            <p id="laptopDescription" class="toyDescription">Build your own computer. 
                 Comes with step-by-step book, Raspberry Pi 3, programmable LED lights, DIY case, power button, wireless keyboard with track pad, memory, HDMI and power cables, stickers, Kano unique OS.
-            </p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            </p>                           
         </div>
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='mouse' src="../images/mouse.jpg" />                  
-            <p class="toyDescription" >The Little Tikes® Tiny Mouse is approximately half the size of a standard computer mouse which makes it the perfect size for smaller hands.</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='mouse' src="../images/mouse.jpg" /> 
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowMouse">Description</button>  
+            </div>                  
+            <p id="mouseDescription" class="toyDescription" >The Little Tikes® Tiny Mouse is approximately half the size of a standard computer mouse which makes it the perfect size for smaller hands.</p>                         
         </div> 
         <br />
         
         <div class='toys'>                  
-            <img class="toyImage" id='car' src="../images/car.jpg" />                  
-            <p class="toyDescription">Robot smart car is an electronic construction kit for individual assembly of a smart multi-functional robotic vehicle.
-                It can be constructed and programmed easily with plenty of free codes uploaded from the internet, or made on your own.</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='car' src="../images/car.jpg" />    
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowCar">Description</button>  
+            </div>     
+            
+            <p id="carDescription" class="toyDescription">Robot smart car is an electronic construction kit for individual assembly of a smart multi-functional robotic vehicle.
+                It can be constructed and programmed easily with plenty of free codes uploaded from the internet, or made on your own.</p>                            
         </div>  
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='keyboard' src="../images/keyboard.jpg" />                  
-            <p class="toyDescription">This portable keyboard has simple plug-in operation with a built-in recharchable battery.
+            <img class="toyImage" id='keyboard' src="../images/keyboard.jpg" />   
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowKeyboard">Description</button>  
+            </div> 
+
+            <p id="keyboardDescription" class="toyDescription">This portable keyboard has simple plug-in operation with a built-in recharchable battery.
                 It includes multiple selectable sounds, tones, and rhythm styles.
-            </p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            </p>                            
         </div>  
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='drone' src="../images/drone.jpg" />                  
-             <p class="toyDescription">The SKY drone simplifies flying and outperforms other drones in it's class. It includes a tiny camera sensor on the underside of the drone that tracks and analyzes surface patterns at nearly 200 times per second.</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='drone' src="../images/drone.jpg" />      
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowDrone">Description</button>  
+            </div> 
+
+             <p id="droneDescription" class="toyDescription">The SKY drone simplifies flying and outperforms other drones in it's class. It includes a tiny camera sensor on the underside of the drone that tracks and analyzes surface patterns at nearly 200 times per second.</p>                           
         </div>   
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='remote' src="../images/remote.jpg" />                  
-             <p class="toyDescription">The three most popular and iconic grown-up devices in one realistic looking set!</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='remote' src="../images/remote.jpg" />                
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowRemote">Description</button>  
+            </div>
+
+             <p id="remoteDescription" class="toyDescription">The three most popular and iconic grown-up devices in one realistic looking set!</p>                            
         </div>   
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='robot' src="../images/robot.jpg" />                  
-            <p class="toyDescription">RYOBI is a friendly kid robot that introduces children to Math, Science, Tech & Languages. It helps children with increased vocabulary knowledge with 500 FREE lessons, songs, and stories.</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='robot' src="../images/robot.jpg" />    
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowRobo">Description</button>  
+            </div>
+
+            <p id="roboDescription" class="toyDescription">RYOBI is a friendly kid robot that introduces children to Math, Science, Tech & Languages. It helps children with increased vocabulary knowledge with 500 FREE lessons, songs, and stories.</p>                          
         </div>   
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='tablet' src="../images/tablet.jpg" />                  
-                <p class="toyDescription">Learning tablet helps your children improve their eyesight, hearing, problem-solving ability as well as overall knowledge.</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='tablet' src="../images/tablet.jpg" />     
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowTablet">Description</button>  
+            </div>
+
+                <p id="tabletDescription" class="toyDescription">Learning tablet helps your children improve their eyesight, hearing, problem-solving ability as well as overall knowledge.</p>                         
+
         </div> 
         <br />
     
         <div class='toys'>                  
-            <img class="toyImage" id='walkie' src="../images/walkie.jpg" />                  
-            <p class="toyDescription">With so many features packed in these walkie-talkies will definitely be the perfect gift or toy for your kid. Share with friends or family and have fun in the yard, home or on your next adventure.</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+            <img class="toyImage" id='walkie' src="../images/walkie.jpg" />  
+            
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowWalkie">Description</button>  
+            </div>
+
+            <p id="walkieDescription" class="toyDescription">With so many features packed in these walkie-talkies will definitely be the perfect gift or toy for your kid. Share with friends or family and have fun in the yard, home or on your next adventure.</p>                          
         </div> 
         <br />
          
         <div class='toys'>                  
             <img class="toyImage" id='watch' src="../images/watch.jpg" />                  
-            <p class="toyDescription">We design this kind watch for children to recognize time, play it by interacting with electronic pet, selfie and voice record and so on, esp for parents to control and remind thier children</p>                         
-            <button onclick="document.location='cart.html'">Add To Cart</button>    
+
+            <div class="buttonBox">
+                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button id="hideShowWatch">Description</button>  
+            </div>
+
+            <p id="watchDescription" class="toyDescription">We design this kind watch for children to recognize time, play it by interacting with electronic pet, selfie and voice record and so on, esp for parents to control and remind thier children</p>                          
         </div>  
 </body>
 </html>
