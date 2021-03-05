@@ -1,1 +1,0 @@
-This is a toy store website project created to help Mary sell toys online.
