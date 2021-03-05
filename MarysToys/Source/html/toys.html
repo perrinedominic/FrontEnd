@@ -5,6 +5,7 @@
     <link type = "text/css" rel="stylesheet" href="../css/site.css">
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/site.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Mary's Quotes</title>
 </head>
 <body>
@@ -20,8 +21,14 @@
         </div>
         <p class="footer">© 2021 Mary's Toys</p>
     </div>
+
+    <div class="container d-flex justify-content-center">
         <span class="title">Mary's Toys</span><br />
+    </div>
+
+    <div class="container d-flex justify-content-center">
         <span id="quoteContainer" class="quote"></span>
+    </div>
 
         <div id="laptopDisplay" class='toys'>          
             <img class="toyImage" id='laptop' src="../images/laptop.jpg" /> 
@@ -35,21 +42,21 @@
         </div>
         <br />
     
-        <div class='toys'>                  
+        <div id="mouseDisplay" class='toys'>                  
             <img class="toyImage" id='mouse' src="../images/mouse.jpg" /> 
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('mouseDisplay')">Add To Cart</button>  
                 <button id="hideShowMouse">Description</button>  
             </div>                  
             <p id="mouseDescription" class="toyDescription" >The Little Tikes® Tiny Mouse is approximately half the size of a standard computer mouse which makes it the perfect size for smaller hands.</p>                         
         </div> 
         <br />
         
-        <div class='toys'>                  
+        <div id="carDisplay" class='toys'>                  
             <img class="toyImage" id='car' src="../images/car.jpg" />    
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('carDisplay')">Add To Cart</button>  
                 <button id="hideShowCar">Description</button>  
             </div>     
             
@@ -58,11 +65,11 @@
         </div>  
         <br />
     
-        <div class='toys'>                  
+        <div id="keyboardDisplay" class='toys'>                  
             <img class="toyImage" id='keyboard' src="../images/keyboard.jpg" />   
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('keyboardDisplay')">Add To Cart</button>  
                 <button id="hideShowKeyboard">Description</button>  
             </div> 
 
@@ -72,11 +79,11 @@
         </div>  
         <br />
     
-        <div class='toys'>                  
+        <div id="droneDisplay" class='toys'>                  
             <img class="toyImage" id='drone' src="../images/drone.jpg" />      
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('droneDisplay')">Add To Cart</button> 
                 <button id="hideShowDrone">Description</button>  
             </div> 
 
@@ -84,11 +91,11 @@
         </div>   
         <br />
     
-        <div class='toys'>                  
+        <div id="remoteDisplay" class='toys'>                  
             <img class="toyImage" id='remote' src="../images/remote.jpg" />                
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('remoteDisplay')">Add To Cart</button> 
                 <button id="hideShowRemote">Description</button>  
             </div>
 
@@ -96,11 +103,11 @@
         </div>   
         <br />
     
-        <div class='toys'>                  
+        <div id="roboDisplay" class='toys'>                  
             <img class="toyImage" id='robot' src="../images/robot.jpg" />    
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('roboDisplay')">Add To Cart</button> 
                 <button id="hideShowRobo">Description</button>  
             </div>
 
@@ -108,11 +115,11 @@
         </div>   
         <br />
     
-        <div class='toys'>                  
+        <div id="tabletDisplay" class='toys'>                  
             <img class="toyImage" id='tablet' src="../images/tablet.jpg" />     
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('tabletDisplay')">Add To Cart</button> 
                 <button id="hideShowTablet">Description</button>  
             </div>
 
@@ -121,11 +128,11 @@
         </div> 
         <br />
     
-        <div class='toys'>                  
+        <div id="walkieDisplay" class='toys'>                  
             <img class="toyImage" id='walkie' src="../images/walkie.jpg" />  
             
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('walkieDisplay')">Add To Cart</button> 
                 <button id="hideShowWalkie">Description</button>  
             </div>
 
@@ -133,11 +140,11 @@
         </div> 
         <br />
          
-        <div class='toys'>                  
+        <div id="watchDisplay" class='toys'>                  
             <img class="toyImage" id='watch' src="../images/watch.jpg" />                  
 
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>
+                <button onclick="addToCart('watchDisplay')">Add To Cart</button> 
                 <button id="hideShowWatch">Description</button>  
             </div>
 

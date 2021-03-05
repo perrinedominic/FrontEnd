@@ -95,13 +95,6 @@ $(document).ready(function(){
       $("#log").slideDown();
     });
   });
-  
-  // Privious and After
-  $(document).ready(function() {
-    $(".next").click(function() {
-        $( "li.third-item" ).next().css( "background-color", "blue" );
-    });
-});
 
 function showQuote() {
     // Get a random quote from the quote array.
@@ -128,6 +121,8 @@ $(document).ready(function() {
 function addToCart(itemID){
     document.getElementById(itemID).remove();
 
-    // Redirect the customer to the cart page.
-     location.replace("../html/cart.html");
+    // Increment value in span element.
+    var value = parseInt($(".items-in-cart").text(), 10) + 1;
+    $(".items-in-cart").text(value);
+
 }
