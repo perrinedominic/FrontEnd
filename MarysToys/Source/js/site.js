@@ -104,6 +104,14 @@ function showQuote() {
     document.getElementById('quoteContainer').innerHTML = randomQuote;
 }
 
+function showThankYouQuote() {
+    // Get a random quote from the quote array.
+    var thankYouQuote = thankYouQuotes[Math.floor(Math.random() * 5)];
+
+    // Put the quote into the quote container element on the page.
+    document.getElementById('quoteContainer').innerHTML = thankYouQuote;
+}
+
 $(document).ready(function() {
     $(".next").click(function() {
         $( "li.third-item" ).next().css( "background-color", "blue" );
@@ -124,5 +132,5 @@ function addToCart(itemID){
     // Increment value in span element.
     var value = parseInt($(".items-in-cart").text(), 10) + 1;
     $(".items-in-cart").text(value);
-
+    showThankYouQuote();
 }
