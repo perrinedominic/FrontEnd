@@ -101,4 +101,5 @@ margin-left: 5px;
 .toyDescription{
   width: 80%;
   align-content: center;
+  display: none;
 }

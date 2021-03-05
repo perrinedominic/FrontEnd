@@ -20,7 +20,7 @@ var possibleQuotes = [
 var thankYouQuotes = [
     'Thank you for shopping with us!',
     'We appreciate your business!',
-    'Please recommend us to your friends and family!',
+    'Recommend us to your friends and family!',
     'Check back often for offers and special deals!',
     'Thank you for your purchase!'
 ];
@@ -122,3 +122,12 @@ $(document).ready(function() {
         $( "li.third-item" ).prev().css( "background-color", "blue" );
     });
 });
+
+
+// Adds items to cart and removes from the toys page
+function addToCart(itemID){
+    document.getElementById(itemID).remove();
+
+    // Redirect the customer to the cart page.
+     location.replace("../html/cart.html");
+}

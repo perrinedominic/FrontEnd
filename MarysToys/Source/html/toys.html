@@ -9,10 +9,8 @@
 </head>
 <body>
     <div class="shopCart">
-        <div>
-            <span id="items-in-cart">0</span>
-        </div>
-        <a href="../html/cart.html"><img src="../images/cart.png" width="70"/></a>
+        <a href="cart.html"><img src="../images/cart.png" width="70px"/></a>
+        <span class="items-in-cart" id="items-in-cart">0</span>
     </div>
 
     <div class="sidenav">
@@ -25,10 +23,10 @@
         <span class="title">Mary's Toys</span><br />
         <span id="quoteContainer" class="quote"></span>
 
-        <div class='toys'>          
+        <div id="laptopDisplay" class='toys'>          
             <img class="toyImage" id='laptop' src="../images/laptop.jpg" /> 
             <div class="buttonBox">
-                <button onclick="document.location='cart.html'">Add To Cart</button>     
+                <button onclick="addToCart('laptopDisplay')">Add To Cart</button>     
                 <button id="hideShow">Description</button>  
             </div>                     
             <p id="laptopDescription" class="toyDescription">Build your own computer. 
