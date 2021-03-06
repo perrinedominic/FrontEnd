@@ -1,0 +1,105 @@
+﻿body{
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    min-height: 500px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    color: whitesmoke;
+}
+.quote {
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.footer{
+   position: fixed;
+   bottom: 0;
+   left: 20%;
+   color: whitesmoke;
+   text-align: center;
+   font-size: 30px;
+   width: 60%;
+}
+
+  .homeImg{
+    width: 60px;
+    height: 60px;
+  }
+
+  button{
+    background-color:rgb(14, 4, 41);
+    color: rgb(170, 122, 0);
+    border-color: rgb(170, 122, 0);
+  }
+
+  .toys{
+    color: whitesmoke;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.603);
+  }
+
+  /* The side NAVBAR menu */
+  .sidenav {
+    height: 100%; 
+    width: 160px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: whitesmoke;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: rgb(170, 122, 0);
+  }
+
+.navTxt{
+  color: whitesmoke;
+}
+
+.shopCart{
+  position: fixed; 
+  z-index: 1; 
+  top: 5px;
+  right: 5px;
+  color: orangered;
+}
+
+.pageHeading{
+  position: fixed; 
+  margin-left: 40%;
+}
+
+.toyImage{
+ width: 300px;
+ height: 300px;
+border-color: whitesmoke;
+border-style: solid;
+margin-left: 5px;
+}
+
+.toyDescription{
+  width: 80%;
+  align-content: center;
+  display: none;
+}
