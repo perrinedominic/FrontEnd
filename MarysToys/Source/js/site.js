@@ -28,73 +28,63 @@ var thankYouQuotes = [
 // Hide and show descriptions. (P.S after I put these in I realized I couldve just used two arguements. -boden)
 $(function() {
     $("#hideShow").click(function() {
-        $("#laptopDescription").toggle();
+        $("#laptopDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowMouse").click(function() {
-        $("#mouseDescription").toggle();
+        $("#mouseDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowCar").click(function() {
-        $("#carDescription").toggle();
+        $("#carDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowKeyboard").click(function() {
-        $("#keyboardDescription").toggle();
+        $("#keyboardDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowDrone").click(function() {
-        $("#droneDescription").toggle();
+        $("#droneDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowRemote").click(function() {
-        $("#remoteDescription").toggle();
+        $("#remoteDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowRobo").click(function() {
-        $("#roboDescription").toggle();
+        $("#roboDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowTablet").click(function() {
-        $("#tabletDescription").toggle();
+        $("#tabletDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowWalkie").click(function() {
-        $("#walkieDescription").toggle();
+        $("#walkieDescription").slideToggle();
     });
 });
 
 $(function() {
     $("#hideShowWatch").click(function() {
-        $("#watchDescription").toggle();
+        $("#watchDescription").slideToggle();
     });
 });
-
-// Slides a paragraph up and down.
-$(document).ready(function(){
-    $(".btn1").click(function(){
-      $("#log").slideUp();
-    });
-    $(".btn2").click(function(){
-      $("#log").slideDown();
-    });
-  });
 
 function showQuote() {
     // Get a random quote from the quote array.
@@ -110,10 +100,6 @@ function showThankYouQuote() {
 
     // Put the quote into the quote container element on the page.
     document.getElementById('quoteContainer').innerHTML = thankYouQuote;
-<<<<<<< HEAD
-
-=======
->>>>>>> edaf762b18f9c9717b17df9bfcb925efc6e2dd2b
     document.getElementById('quoteContainer').style.fontWeight = "bold";
 }
 
@@ -137,5 +123,18 @@ function addToCart(itemID){
     // Increment value in span element.
     var value = parseInt($(".items-in-cart").text(), 10) + 1;
     $(".items-in-cart").text(value);
+
+    // Updates quote container to say thank you.
     showThankYouQuote();
+
+    // Sets the cookie to store which items are in the cart.
+    setCookie("itemID", itemID, 1);
+}
+
+// Sets a user cookie
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
 }
