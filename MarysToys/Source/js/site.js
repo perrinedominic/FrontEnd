@@ -110,6 +110,8 @@ function showThankYouQuote() {
 
     // Put the quote into the quote container element on the page.
     document.getElementById('quoteContainer').innerHTML = thankYouQuote;
+
+    document.getElementById('quoteContainer').style.fontWeight = "bold";
 }
 
 $(document).ready(function() {
