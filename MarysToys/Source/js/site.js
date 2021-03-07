@@ -165,8 +165,13 @@ function displayItems(){
 
     toys.forEach(element => { 
         document.getElementById(element.id).style.display = "block"
+
         var value = parseInt($(".items-in-cart").text(), 10) + 1;
         $(".items-in-cart").text(value);
+
+        var price = parseInt($(".priceOfCart").text(), 10) + element.price;
+        $(".priceOfCart").text(price);
+        
     });
 }
 
@@ -174,9 +179,13 @@ function checkIfcart(){
     var toys = getData();
 
     toys.forEach(element => { 
-        document.getElementById(element.id).style.display = "none"
+        document.getElementById(element.id).remove();
+        
         var value = parseInt($(".items-in-cart").text(), 10) + 1;
         $(".items-in-cart").text(value);
+
+        var price = parseInt($(".priceOfCart").text(), 10) + element.price;
+        $(".priceOfCart").text(price);
     });
 }
 
@@ -191,6 +200,11 @@ function removeToCart(itemId){
     // Loop through list find item to delete and delete it.
     for (var i = toys.length - 1; i >= 0; i--) {
         if (toys[i].id === itemId) { 
+
+            // Removes price on cart
+            var price = parseInt($(".priceOfCart").text(), 10) - toys[i].price;
+            $(".priceOfCart").text(price);
+
             toys.splice(i, 1);
         }
     }
@@ -202,4 +216,25 @@ function removeToCart(itemId){
     location.reload()
 
     return toys
+}
+
+function checkout(){
+    var storage = window.sessionStorage;                
+    var toys = [];                
+    
+    // Remove display of toys on cart.
+    checkIfcart();
+
+    // Reset storage to the balnk toys array.
+    storage.setItem(storageKey, JSON.stringify(toys));
+
+    // Display thankYouNote.
+    document.getElementById("thankYouBox").style.display = "block";
+    document.getElementById("thankYouNotice").textContent = "Thank you for shopping please come again!";
+
+    // reset price box
+    document.getElementById("priceOfCart").textContent = "0.00";
+
+    // reset cart count.
+    document.getElementById("items-in-cart").textContent = "0";
 }

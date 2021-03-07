@@ -1,5 +1,4 @@
 ﻿body{
-    width: 950px;
     margin-right: auto;
     margin-left: auto;
     background-image: url(../images/background.jpg);
@@ -98,7 +97,6 @@ main {
 }
 
 .pageHeading{
-  position: fixed; 
   margin-left: 40%;
 }
 
@@ -117,5 +115,29 @@ margin-left: 5px;
 }
 
 .priceOfCart{
-  
+  color: whitesmoke;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.currentPriceOfCart{
+  color: whitesmoke;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.checkOutMesage{
+    color: black;
+    background-color: rgba(30, 179, 0, 0.603);
+    display: none;
+    text-align: center;
+}
+
+.cardHolder{
+  margin-top: 10%;
+  margin-left: 80%; 
+}
+
+.cardRow{
+  margin-left: 50%;
 }
