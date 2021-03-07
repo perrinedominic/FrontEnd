@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 
 // Adds items to cart and removes from the toys page
-function addToCart(itemID){
+function addToCart(itemID, price){
     document.getElementById(itemID).remove();
 
     // Increment value in span element.
@@ -128,13 +128,78 @@ function addToCart(itemID){
     showThankYouQuote();
 
     // Sets the cookie to store which items are in the cart.
-    setCookie("itemID", itemID, 1);
+    addData(itemID, price);
 }
 
-// Sets a user cookie
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+// Sets a session variabel.
+var storageKey = 'cart';
+
+function addData(itemId, price) {
+    
+    var storage = window.sessionStorage;                
+    var toys = [];                
+
+    if(storage.getItem(storageKey) !== null)
+        toys = JSON.parse(storage.getItem(storageKey));
+
+    var toyToAdd = {id: itemId, price: price};
+    toys.push(toyToAdd);
+    
+                    
+    storage.setItem(storageKey, JSON.stringify(toys));
+    return toys
+}
+
+function getData(){
+    var toys = []; 
+
+    if(window.sessionStorage.getItem(storageKey) !== null){
+        toys = JSON.parse(window.sessionStorage.getItem(storageKey));
+    }
+
+    return toys;
+}
+
+function displayItems(){
+    var toys = getData();
+
+    toys.forEach(element => { 
+        document.getElementById(element.id).style.display = "block"
+        var value = parseInt($(".items-in-cart").text(), 10) + 1;
+        $(".items-in-cart").text(value);
+    });
+}
+
+function checkIfcart(){
+    var toys = getData();
+
+    toys.forEach(element => { 
+        document.getElementById(element.id).style.display = "none"
+        var value = parseInt($(".items-in-cart").text(), 10) + 1;
+        $(".items-in-cart").text(value);
+    });
+}
+
+function removeToCart(itemId){
+    // Gets window storage adn assigns to array toys
+    var storage = window.sessionStorage;                
+    var toys = [];                
+
+    // parse JSON objects into list
+    toys = JSON.parse(storage.getItem(storageKey));
+
+    // Loop through list find item to delete and delete it.
+    for (var i = toys.length - 1; i >= 0; i--) {
+        if (toys[i].id === itemId) { 
+            toys.splice(i, 1);
+        }
+    }
+  
+    // Reset storage to the new toys array.
+    storage.setItem(storageKey, JSON.stringify(toys));
+
+    // Refresh page
+    location.reload()
+
+    return toys
 }

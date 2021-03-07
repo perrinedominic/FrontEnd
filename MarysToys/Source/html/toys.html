@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/site.js"></script>
     <title>Mary's Quotes</title>
 </head>
-<body>
+<body onload="checkIfcart()">
     <div class="shopCart">
         <a href="cart.html"><img src="../images/cart.png" width="70px"/></a>
         <span class="items-in-cart" id="items-in-cart">0</span>
@@ -29,7 +29,7 @@
             <h3 class="priceContainer">Price: $24.97</h3>
 
             <div class="buttonBox">
-                <button onclick="addToCart('laptopDisplay')">Add To Cart</button>     
+                <button onclick="addToCart('laptopDisplay', 24.97)">Add To Cart</button>     
                 <button id="hideShow">Description</button>  
             </div>                     
             <p id="laptopDescription" class="toyDescription">Build your own computer. 
@@ -44,7 +44,7 @@
             <h3 class="priceContainer">Price: $12.56</h3>
 
             <div class="buttonBox">
-                <button onclick="addToCart('mouseDisplay')">Add To Cart</button>  
+                <button onclick="addToCart('mouseDisplay', 12.56)">Add To Cart</button>  
                 <button id="hideShowMouse">Description</button>  
             </div>                  
             <p id="mouseDescription" class="toyDescription" >The Little Tikes® Tiny Mouse is approximately half the size of a standard computer mouse which makes it the perfect size for smaller hands.</p>                         
@@ -57,7 +57,7 @@
             <h3 class="priceContainer">Price: $56.34</h3>
             
             <div class="buttonBox">
-                <button onclick="addToCart('carDisplay')">Add To Cart</button>  
+                <button onclick="addToCart('carDisplay', 56.34)">Add To Cart</button>  
                 <button id="hideShowCar">Description</button>  
             </div>     
             
@@ -72,7 +72,7 @@
             <h3 class="priceContainer">Price: $36.36</h3>
             
             <div class="buttonBox">
-                <button onclick="addToCart('keyboardDisplay')">Add To Cart</button>  
+                <button onclick="addToCart('keyboardDisplay', 36.36)">Add To Cart</button>  
                 <button id="hideShowKeyboard">Description</button>  
             </div> 
 
@@ -88,7 +88,7 @@
             <h3 class="priceContainer">Price: $168.99</h3>
 
             <div class="buttonBox">
-                <button onclick="addToCart('droneDisplay')">Add To Cart</button> 
+                <button onclick="addToCart('droneDisplay', 168.99)">Add To Cart</button> 
                 <button id="hideShowDrone">Description</button>  
             </div> 
 
@@ -102,7 +102,7 @@
             <h3 class="priceContainer">Price: $9.96</h3>
             
             <div class="buttonBox">
-                <button onclick="addToCart('remoteDisplay')">Add To Cart</button> 
+                <button onclick="addToCart('remoteDisplay', 9.96)">Add To Cart</button> 
                 <button id="hideShowRemote">Description</button>  
             </div>
 
@@ -116,7 +116,7 @@
             <h3 class="priceContainer">Price: $34.56</h3>
             
             <div class="buttonBox">
-                <button onclick="addToCart('roboDisplay')">Add To Cart</button> 
+                <button onclick="addToCart('roboDisplay', 34.56)">Add To Cart</button> 
                 <button id="hideShowRobo">Description</button>  
             </div>
 
@@ -130,7 +130,7 @@
             <h3 class="priceContainer">Price: $79.86</h3>
             
             <div class="buttonBox">
-                <button onclick="addToCart('tabletDisplay')">Add To Cart</button> 
+                <button onclick="addToCart('tabletDisplay', 79.86)">Add To Cart</button> 
                 <button id="hideShowTablet">Description</button>  
             </div>
 
@@ -145,7 +145,7 @@
             <h3 class="priceContainer">Price: $21.56</h3>
             
             <div class="buttonBox">
-                <button onclick="addToCart('walkieDisplay')">Add To Cart</button> 
+                <button onclick="addToCart('walkieDisplay', 21.56)">Add To Cart</button> 
                 <button id="hideShowWalkie">Description</button>  
             </div>
 
@@ -159,7 +159,7 @@
             <h3 class="priceContainer">Price: $119.56</h3>
 
             <div class="buttonBox">
-                <button onclick="addToCart('watchDisplay')">Add To Cart</button> 
+                <button onclick="addToCart('watchDisplay', 119.56)">Add To Cart</button> 
                 <button id="hideShowWatch">Description</button>  
             </div>
 
