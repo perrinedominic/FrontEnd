@@ -189,6 +189,15 @@ function checkIfcart(){
     });
 }
 
+function setCartCount(){
+    var toys = getData();
+
+    toys.forEach(element => { 
+        var value = parseInt($(".items-in-cart").text(), 10) + 1;
+        $(".items-in-cart").text(value);
+    });
+}
+
 function removeToCart(itemId){
     // Gets window storage adn assigns to array toys
     var storage = window.sessionStorage;                
