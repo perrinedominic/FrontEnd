@@ -12,7 +12,7 @@ var possibleQuotes = [
     'Toy stores make everyone happy.',
     'There are toys for all ages.',
     'So many toys - So little time.',
-    'Here its playtime all the time!',
+    'Here it\'s playtime all the time!',
     'You can never have enough toys!'
 ];
 
