@@ -28,12 +28,15 @@
         <span class="currentPriceOfCart" id="currentPriceOfCart">Current Price: $<span class="priceOfCart" id="priceOfCart">0.00</span></span><br /><br />
         <button onclick="checkout()">Checkout</button><br /><br />
 
-        <div id="thankYouBox" class='checkOutMessage'>
-            <h3 id="thankYouNotice"></h3>           
+        <div id="thankYouBox" class="card" style="width: 18rem; display: none;">
+            <div class="card-body">
+                <h5 id="thankYouHeader" class="card-title"></h5>
+                <p id="thankYouNotice" class="card-text"></p>
+            </div>
         </div>
 
         <div id="laptopDisplay" class='toys-cart'>     
-            <h3 class="priceContainer">Price: $24.97</h3>      
+            <h3 >Price: $24.97</h3>      
             <img class="toyImage" id='laptop' src="../images/laptop.jpg" />
             <br />
             <button onclick="removeToCart('laptopDisplay')">Remove</button>
@@ -41,7 +44,7 @@
         <br />
     
         <div id="mouseDisplay" class='toys-cart'>  
-            <h3 class="priceContainer">Price: $12.56</h3>                   
+            <h3 >Price: $12.56</h3>                   
             <img class="toyImage" id='mouse' src="../images/mouse.jpg" />         
             <br />
             <button onclick="removeToCart('mouseDisplay')">Remove</button>   
@@ -49,7 +52,7 @@
         <br />
         
         <div id="carDisplay" class='toys-cart'>     
-            <h3 class="priceContainer">Price: $56.34</h3>                
+            <h3 >Price: $56.34</h3>                
             <img class="toyImage" id='car' src="../images/car.jpg" />  
             <br />
             <button onclick="removeToCart('carDisplay')">Remove</button>                    
@@ -57,7 +60,7 @@
         <br />
     
         <div id="keyboardDisplay" class='toys-cart'>        
-            <h3 class="priceContainer">Price: $36.36</h3>          
+            <h3 >Price: $36.36</h3>          
             <img class="toyImage" id='keyboard' src="../images/keyboard.jpg" />   
             <br />
             <button onclick="removeToCart('keyboardDisplay')">Remove</button>   
@@ -65,7 +68,7 @@
         <br />
     
         <div id="droneDisplay" class='toys-cart'>    
-            <h3 class="priceContainer">Price: $168.99</h3>                   
+            <h3 >Price: $168.99</h3>                   
             <img class="toyImage" id='drone' src="../images/drone.jpg" /> 
             <br />
             <button onclick="removeToCart('droneDisplay')">Remove</button>   
@@ -74,7 +77,7 @@
         <br />
     
         <div id="remoteDisplay" class='toys-cart'>  
-            <h3 class="priceContainer">Price: $9.96</h3>                  
+            <h3 >Price: $9.96</h3>                  
             <img class="toyImage" id='remote' src="../images/remote.jpg" />    
             <br />
             <button onclick="removeToCart('remoteDisplay')">Remove</button>   
@@ -82,7 +85,7 @@
         <br />
     
         <div id="roboDisplay" class='toys-cart'>  
-            <h3 class="priceContainer">Price: $34.56</h3>                     
+            <h3 >Price: $34.56</h3>                     
             <img class="toyImage" id='robot' src="../images/robot.jpg" />   
             <br />
             <button onclick="removeToCart('roboDisplay')">Remove</button>   
@@ -91,7 +94,7 @@
         <br />
     
         <div id="tabletDisplay" class='toys-cart'>         
-            <h3 class="priceContainer">Price: $79.86</h3>           
+            <h3 >Price: $79.86</h3>           
             <img class="toyImage" id='tablet' src="../images/tablet.jpg" />   
             <br />
             <button onclick="removeToCart('tabletDisplay')">Remove</button>   
@@ -99,7 +102,7 @@
         <br />
     
         <div id="walkieDisplay" class='toys-cart'>  
-            <h3 class="priceContainer">Price: $21.56</h3>                
+            <h3 >Price: $21.56</h3>                
             <img class="toyImage" id='walkie' src="../images/walkie.jpg" />  
             <br />
             <button onclick="removeToCart('walkieDisplay')">Remove</button>   
@@ -108,7 +111,7 @@
         <br />
          
         <div id="watchDisplay" class='toys-cart'>   
-            <h3 class="priceContainer">Price: $119.56</h3>                 
+            <h3 >Price: $119.56</h3>                 
             <img class="toyImage" id='watch' src="../images/watch.jpg" />    
             <br />
             <button onclick="removeToCart('watchDisplay')">Remove</button>   

@@ -189,6 +189,16 @@ function checkIfcart(){
     });
 }
 
+function checkIfcheckout(){
+    var toys = getData();
+
+    toys.forEach(element => { 
+        document.getElementById(element.id).remove();
+
+        $(".priceOfCart").text('0.00');
+    });
+}
+
 function setCartCount(){
     var toys = getData();
 
@@ -229,21 +239,35 @@ function removeToCart(itemId){
 
 function checkout(){
     var storage = window.sessionStorage;                
-    var toys = [];                
+    var toys = [];       
+    var toysInCart = getData();         
     
+    if(toysInCart.length > 1){
     // Remove display of toys on cart.
-    checkIfcart();
+    checkIfcheckout();
+
+    // Thank the user
+    showThankYouQuote();
 
     // Reset storage to the balnk toys array.
     storage.setItem(storageKey, JSON.stringify(toys));
 
     // Display thankYouNote.
     document.getElementById("thankYouBox").style.display = "block";
-    document.getElementById("thankYouNotice").textContent = "Thank you for shopping please come again!";
+    document.getElementById('thankYouBox').style.backgroundColor = "green"
+    document.getElementById("thankYouNotice").textContent = "Thank you for shopping with us, check back often for more products!";
+    document.getElementById("thankYouHeader").textContent = "Thank you for your purchase.";
 
     // reset price box
     document.getElementById("priceOfCart").textContent = "0.00";
 
     // reset cart count.
     document.getElementById("items-in-cart").textContent = "0";
+    }
+    else{
+        document.getElementById("thankYouBox").style.display = "block";
+        document.getElementById('thankYouBox').style.backgroundColor = "red"
+        document.getElementById("thankYouNotice").textContent = "Add items to the cart to checkout";
+        document.getElementById("thankYouHeader").textContent = "Add items to the cart to checkout";
+    }
 }
