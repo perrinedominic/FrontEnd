@@ -1,62 +1,144 @@
-﻿body {
-    width: 950px;
+﻿body{
     margin-right: auto;
     margin-left: auto;
-    background-color: rgb(202, 202, 202);
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 main {
     min-height: 500px;
 }
+
+.priceContainer{
+  float: right;
+  margin-right: 50px;
+}
+
 .title {
     font-weight: bold;
     font-size: 48px;
     text-align: center;
+    color: whitesmoke;
 }
 .quote {
     font-style: italic;
+    color: whitesmoke;
 }
 
 .footer{
    position: fixed;
-   left: 0;
    bottom: 0;
+   left: 20%;
    color: whitesmoke;
-   background-color:rgb(14, 4, 41);
    text-align: center;
+   font-size: 30px;
+   width: 60%;
 }
-
-.sidenav {
-    height: 100%;
-    width: 140px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(14, 4, 41);
-    overflow-x: hidden;
-    padding-top: 20px;
-    color: whitesmoke;
-    text-align: center;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: whitesmoke;
-    display: block;
-  }
-  
-  .sidenav a:hover {
-    color: #046e01;
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
 
   .homeImg{
     width: 60px;
     height: 60px;
   }
+
+  button{
+    background-color:rgb(14, 4, 41);
+    color: rgb(170, 122, 0);
+    border-color: rgb(170, 122, 0);
+  }
+
+  .toys{
+    color: whitesmoke;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.603);
+  }
+  
+  .toys-cart{
+    color: whitesmoke;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.603);
+    display: none;
+    width: 40%;
+  }
+
+  /* The side NAVBAR menu */
+  .sidenav {
+    height: 100%; 
+    width: 160px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: whitesmoke;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: rgb(170, 122, 0);
+  }
+
+.navTxt{
+  color: whitesmoke;
+}
+
+.shopCart{
+  position: fixed; 
+  z-index: 1; 
+  top: 5px;
+  right: 5px;
+  color: orangered;
+}
+
+.pageHeading{
+  margin-left: 40%;
+}
+
+.toyImage{
+ width: 300px;
+ height: 300px;
+border-color: whitesmoke;
+border-style: solid;
+margin-left: 5px;
+}
+
+.toyDescription{
+  width: 80%;
+  align-content: center;
+  display: none;
+}
+
+.priceOfCart{
+  color: whitesmoke;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.currentPriceOfCart{
+  color: whitesmoke;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.checkOutMessage{
+    color: black;
+    background-color: rgba(30, 179, 0, 0.603);
+    display: none;
+    text-align: center;
+}
+
+.cardHolder{
+  margin-top: 10%;
+  margin-left: 80%; 
+}
+
+.cardRow{
+  margin-left: 50%;
+}

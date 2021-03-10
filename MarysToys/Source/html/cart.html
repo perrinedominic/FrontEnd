@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link type = "text/css" rel="stylesheet" href="../css/site.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/site.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Mary's Quotes</title>
+</head>
+<body  onLoad="displayItems()">
+    <div style="margin-left: 20%; width: 950px;">
+    <div class="shopCart">
+        <a href="cart.html"><img src="../images/cart.png" width="70px"/></a>
+        <span class="items-in-cart" id="items-in-cart">0</span>
+    </div>
+
+    <div class="sidenav">
+        <div>
+            <a href="../index.html"><img src="../images/home.png" alt="Home" class="homeImg"></a>
+            <a class="navTxt" href="toys.html">Toys</a>
+        </div>
+        <p class="footer">© 2021 Mary's Toys</p>
+    </div>
+
+        <span class="title">Mary's Toys</span><br />
+        <span id="quoteContainer" class="quote"></span><br /><br />
+        <span class="currentPriceOfCart" id="currentPriceOfCart">Current Price: $<span class="priceOfCart" id="priceOfCart">0.00</span></span><br /><br />
+        <button onclick="checkout()">Checkout</button><br /><br />
+
+        <div id="thankYouBox" class="card" style="width: 18rem; display: none;">
+            <div class="card-body">
+                <h5 id="thankYouHeader" class="card-title"></h5>
+                <p id="thankYouNotice" class="card-text"></p>
+            </div>
+        </div>
+
+        <div id="laptopDisplay" class='toys-cart'>     
+            <h3 >Price: $24.97</h3>      
+            <img class="toyImage" id='laptop' src="../images/laptop.jpg" />
+            <br />
+            <button onclick="removeToCart('laptopDisplay')">Remove</button>
+        </div>
+        <br />
+    
+        <div id="mouseDisplay" class='toys-cart'>  
+            <h3 >Price: $12.56</h3>                   
+            <img class="toyImage" id='mouse' src="../images/mouse.jpg" />         
+            <br />
+            <button onclick="removeToCart('mouseDisplay')">Remove</button>   
+        </div> 
+        <br />
+        
+        <div id="carDisplay" class='toys-cart'>     
+            <h3 >Price: $56.34</h3>                
+            <img class="toyImage" id='car' src="../images/car.jpg" />  
+            <br />
+            <button onclick="removeToCart('carDisplay')">Remove</button>                    
+        </div>  
+        <br />
+    
+        <div id="keyboardDisplay" class='toys-cart'>        
+            <h3 >Price: $36.36</h3>          
+            <img class="toyImage" id='keyboard' src="../images/keyboard.jpg" />   
+            <br />
+            <button onclick="removeToCart('keyboardDisplay')">Remove</button>   
+        </div>  
+        <br />
+    
+        <div id="droneDisplay" class='toys-cart'>    
+            <h3 >Price: $168.99</h3>                   
+            <img class="toyImage" id='drone' src="../images/drone.jpg" /> 
+            <br />
+            <button onclick="removeToCart('droneDisplay')">Remove</button>   
+           
+        </div>   
+        <br />
+    
+        <div id="remoteDisplay" class='toys-cart'>  
+            <h3 >Price: $9.96</h3>                  
+            <img class="toyImage" id='remote' src="../images/remote.jpg" />    
+            <br />
+            <button onclick="removeToCart('remoteDisplay')">Remove</button>   
+        </div>   
+        <br />
+    
+        <div id="roboDisplay" class='toys-cart'>  
+            <h3 >Price: $34.56</h3>                     
+            <img class="toyImage" id='robot' src="../images/robot.jpg" />   
+            <br />
+            <button onclick="removeToCart('roboDisplay')">Remove</button>   
+            
+        </div>   
+        <br />
+    
+        <div id="tabletDisplay" class='toys-cart'>         
+            <h3 >Price: $79.86</h3>           
+            <img class="toyImage" id='tablet' src="../images/tablet.jpg" />   
+            <br />
+            <button onclick="removeToCart('tabletDisplay')">Remove</button>   
+        </div> 
+        <br />
+    
+        <div id="walkieDisplay" class='toys-cart'>  
+            <h3 >Price: $21.56</h3>                
+            <img class="toyImage" id='walkie' src="../images/walkie.jpg" />  
+            <br />
+            <button onclick="removeToCart('walkieDisplay')">Remove</button>   
+            
+        </div> 
+        <br />
+         
+        <div id="watchDisplay" class='toys-cart'>   
+            <h3 >Price: $119.56</h3>                 
+            <img class="toyImage" id='watch' src="../images/watch.jpg" />    
+            <br />
+            <button onclick="removeToCart('watchDisplay')">Remove</button>   
+        </div>  
+</body>
+</html>
