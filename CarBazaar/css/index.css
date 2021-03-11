@@ -1,0 +1,50 @@
+body {
+    margin-right: auto;
+    margin-left: auto;
+}
+header { 
+    padding: 15px 200px; 
+}
+main {
+    min-height: 550px;
+    width: 950px;
+    padding: 20px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+.tagline {
+    font-size: 24px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: skyblue;
+}
+
+#index {
+    background-color: skyblue;
+}
