@@ -50,3 +50,13 @@ li a:hover {
 #index {
     background-color: skyblue;
 }
+
+.contactTable{
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 4px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}

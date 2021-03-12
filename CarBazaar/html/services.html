@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
     <link type="text/css" rel="stylesheet" href="../css/products.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
+
 <body>
     <ul>
         <span class="title">Car Bazaar</span>
@@ -17,20 +20,134 @@
         <br />
         <li><a class="navigation-item" href="../index.html">Home</a></li>
         <li><a class="navigation-item" href="about.html">About</a></li>
-        <li><a class="navigation-item" href="contact.html">Contact</a></li>
         <li><a class="navigation-item" href="products.html">Show Room</a></li>
         <li id="index"><a class="navigation-item" href="services.html">Services</a></li>
     </ul>
-        
-    
+
+
     <main>
         <h1>Services</h1>
-        <p>We are proud to offer our repair service for any car you purcahse from us. Upgrade your package when you purchase any vehicle 
+        <p>We are proud to offer our repair service for any car you purcahse from us. Upgrade your package when you
+            purchase any vehicle
             to get free reapir services, all you have to do is buy the parts and drive your car in!
         </p>
+
+        <div class="testbox">
+            <form action="/">
+                <div class="banner">
+                    <h2>Schedule an Appointment</h2>
+                </div>
+
+                <!--Contact Information-->
+                <div class="contactInfo">
+
+                    <h3>Name</h3>
+
+                    <div class="customerName">
+                        <input type="text" name="name" placeholder="First" />
+                        <input type="text" name="name" placeholder="Last" />
+                    </div>
+
+                    <div class="customerEmail">
+                        <h3>Email</h3>
+                        <input type="text" name="name" />
+                    </div>
+
+                    <div class="customerPhone">
+                        <h3>Phone</h3>
+                        <input type="text" name="name" />
+                    </div>
+
+                    <div class="customerAddress">
+                        <h3>Contact Address</h3>
+                        <input type="text" name="name" placeholder="Street address" /><br>
+                        <input type="text" name="name" placeholder="Street address line 2" /><br>
+                        <input type="text" name="name" placeholder="City" /><br>
+                        <input type="text" name="name" placeholder="Postal / Zip code" /><br>
+                        <input type="text" name="name" placeholder="Country" /><br>
+                    </div>
+                </div>
+
+                <!--Vehicle information-->
+                <div class="vehicle">
+
+                    <h3>Vehicle</h3>
+
+                    <div>
+                        <input type="text" name="year" placeholder="Year">
+                    </div>
+
+                    <div class="vehicleMake">
+                        <input type="text" name="make" placeholder="Make">
+                    </div>
+
+                    <div class="vehicleModel">
+                        <input type="text" name="model" placeholder="Model">
+                    </div>
+
+                    <div class="vehicleSubmodel">
+                        <input type="text" name="make" placeholder="Submodel">
+                    </div>
+
+                    <!--Date and Time selection-->
+                    <div class="requestedDate">
+
+                        <h3>Requested Date</h3>
+
+                        <input type="date" name="bdate" />
+                        <i class="fas fa-calendar-alt"></i>
+
+                    </div>
+
+                    <div class="item">
+
+                        <h3>Requested Time</h3>
+
+                        <input type="time" name="name" />
+                        <i class="fas fa-clock"></i>
+
+                    </div>
+
+                    <!--Service and repair selection-->
+                    <div>
+                        <h3>Services</h3>
+                        <input type="checkbox" id="oilChange" name="oilChange">
+                        <label for="oilChange">Oil Change</label><br>
+
+                        <input type="checkbox" id="tireRotation" name="tireRotation">
+                        <label for="tireRotation">Tire Rotation</label><br>
+
+                        <input type="checkbox" id="wheelAlignment" name="wheelAlignment">
+                        <label for="wheelAlignment">Wheel Alignment</label><br>
+
+                        <input type="checkbox" id="warningLights" name="warningLights">
+                        <label for="warningLights">Warning Lights</label><br>
+
+                        <input type="checkbox" id="brakes" name="brakes">
+                        <label for="brakes">Brakes</label><br>
+
+                        <input type="checkbox" id="wheelAlignment" name="wheelAlignment">
+                        <label for="wheelAlignment">Wheel Alignment</label><br>
+
+                        <input type="checkbox" id="other" name="other">
+                        <label for="other">Other (Please Describe Below)</label><br>
+                    </div>
+
+                    <!--Comments-->
+                    <div class="item">
+                        <h3>Additional Information</h3>
+                        <textarea rows="3"></textarea>
+                    </div>
+
+                    <div class="btn-block">
+                        <button type="submit" href="/">SEND</button>
+                    </div>
+            </form>
+        </div>
     </main>
     <footer>
         <!-- Footer content -->
     </footer>
 </body>
+
 </html>
