@@ -16,10 +16,12 @@ main {
     font-weight: bold;
     font-size: 48px;
     text-align: center;
+    color: skyblue;
 }
 .tagline {
     font-size: 24px;
     text-align: center;
+    color: skyblue;
 }
 
 ul {
@@ -47,4 +49,10 @@ li a:hover {
 
 #index {
     background-color: skyblue;
+}
+
+.contactTable{
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 4px;
 }
