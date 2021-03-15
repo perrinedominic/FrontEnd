@@ -15,16 +15,16 @@ function closeLightbox(id) {
   document.getElementById(id).style.display = 'none';
 };
 
-function changeSlide(n) {
-  showSlide(slideIndex += n);
+function changeSlide(n, id) {
+  showSlide(slideIndex += n, id);
 };
 
-function toSlide(n) {
-  showSlide(slideIndex = n);
+function toSlide(n, id) {
+  showSlide(slideIndex = n, id);
 };
 
-function showSlide(n) {
-  const slides = document.getElementsByClassName('slide');
+function showSlide(n, id) {
+  const slides = document.querySelectorAll('[id='+id+']');
   let modalPreviews = document.getElementsByClassName('modal-preview');
 
   if (n > slides.length) {
