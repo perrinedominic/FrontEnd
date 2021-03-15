@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title></title>
     <link type="text/css" rel="stylesheet" href="../css/products.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/site.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
@@ -30,17 +30,12 @@
 
         <div class="col">
             <div class="row">
-               <img src="../images/suburbanMain.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
+               <img src="../images/suburbanMain.jpg" onclick="openLightbox('Lightbox');toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
             </div>    
         </div>
-          
-          <!-- This is your lightbox, it is contained in a modal. Here you provide all the images,
-               controls, and another set of preview images as the dots. Dots show your user which
-               image is currently active. Note that you use entities (e.g. &times;), more info on
-               them at the bottom. -->
                
           <div id="Lightbox" class="modal">
-            <span class="close pointer" onclick="closeLightbox()">&times;</span>
+            <span class="close pointer" onclick="closeLightbox('Lightbox')">&times;</span>
             <div class="modal-content">
               <div class="slide">
                   <img src="../images/suburbanMain.jpg" class="image-slide" alt="Toy car on the road." />
@@ -68,51 +63,6 @@
               </div>
             </div>
           </div>
-
-          <script>
-            let slideIndex = 1;
-            showSlide(slideIndex);
-            
-            function openLightbox() {
-              document.getElementById('Lightbox').style.display = 'block';
-            };
-            
-            function closeLightbox() {
-              document.getElementById('Lightbox').style.display = 'none';
-            };
-            
-            function changeSlide(n) {
-              showSlide(slideIndex += n);
-            };
-            
-            function toSlide(n) {
-              showSlide(slideIndex = n);
-            };
-            
-            function showSlide(n) {
-              const slides = document.getElementsByClassName('slide');
-              let modalPreviews = document.getElementsByClassName('modal-preview');
-            
-              if (n > slides.length) {
-                slideIndex = 1;	
-              };
-              
-              if (n < 1) {
-                slideIndex = slides.length;
-              };
-            
-              for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-              };
-              
-              for (let i = 0; i < modalPreviews.length; i++) {
-                modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-              };
-              
-              slides[slideIndex - 1].style.display = 'block';
-              modalPreviews[slideIndex - 1].className += ' active';
-            };
-          </script>
     </main>
     <footer>
         <!-- Footer content -->
