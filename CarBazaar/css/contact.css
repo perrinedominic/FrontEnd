@@ -66,3 +66,9 @@ td, th {
 tr:nth-child(odd) {
     background-color: lightgray;
 }
+
+.floatCar{
+    float:right;
+    clear:right;
+    margin-left:20px;
+}

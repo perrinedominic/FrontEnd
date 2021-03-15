@@ -60,3 +60,9 @@ li a:hover {
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.floatCar{
+    float:right;
+    clear:right;
+    margin-left:20px;
+}

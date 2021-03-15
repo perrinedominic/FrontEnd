@@ -3,6 +3,7 @@ $(document).ready(function () {
 });
 
 
+// Show the cars lightbox by id.
 let slideIndex = 1;
 showSlide(slideIndex);
 

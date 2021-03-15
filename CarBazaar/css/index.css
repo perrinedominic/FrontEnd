@@ -56,5 +56,7 @@ p {
 }
 
 .floatCar{
-    float: right;
+    float:right;
+    clear:right;
+    margin-left:20px;
 }

@@ -94,11 +94,8 @@ html {
   .col {
     float: left;
     width: 25%;
+    padding-right: 10px;
   }
-  
-  /* Now you want to define what the lightbox will look like. Note that you have the display
-     as none. You don't want it to show until the user clicks on one of the previews. 
-     You will change this display property with JavaScript below. */
      
   .modal {
     display: none;
@@ -125,9 +122,6 @@ html {
     max-height: 80%;
   }
   
-  /* Same with your slides, you set the display to none, because you want to choose which 
-     one is shown at a time. */
-  
   .slide {
     display: none;
   }
@@ -145,11 +139,6 @@ html {
     flex-direction: row;
     justify-content: space-between;
   }
-  
-  /* You want the previews a little transparent to show that they are "inactive". 
-     You then add an .active or :hover class to animate the selections for your user when
-     they interact with your controls and clickable content.
-   */
   
   img.preview, img.modal-preview {
     opacity: 0.6;
@@ -211,3 +200,10 @@ html {
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+
+  .floatCar{
+    float:right;
+    clear:right;
+    margin-left:20px;
+}
