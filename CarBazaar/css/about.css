@@ -66,3 +66,7 @@ p {
     clear:right;
     margin-left:20px;
 }
+
+h1, h2, h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
