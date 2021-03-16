@@ -214,7 +214,9 @@ html {
     margin-left:20px;
 }
 
-td {
-  padding-left: 2px;
-  padding-right: 2px;
+table{
+  border: 3px solid black;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: rgba(250, 250, 250, 0.507);
 }

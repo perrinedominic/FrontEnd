@@ -92,11 +92,7 @@ hr.peopleDivider{
     border: 3px solid whitesmoke;
 }
 
-.personBox{
-    color: whitesmoke;
-}
-
 .aboutInfo{
     width: 40%;
-    color: whitesmoke;
+    color: black;
 }
