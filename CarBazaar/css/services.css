@@ -1,6 +1,12 @@
 body {
     margin-right: auto;
     margin-left: auto;
+
+    background-image: url(../images/background.jpg);
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 header { 
     padding: 15px 200px; 
