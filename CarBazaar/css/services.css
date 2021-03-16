@@ -73,9 +73,11 @@ tr:nth-child(odd) {
     background-color: lightgray;
 }
 
-.floatCar{
-    float:right;
-    clear:right;
-    margin-left:20px;
+.serviceForm{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
