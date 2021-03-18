@@ -96,3 +96,14 @@ hr.peopleDivider{
     width: 40%;
     color: black;
 }
+
+#map {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+#location {
+    margin: auto;
+    text-align: center;
+}
