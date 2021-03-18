@@ -37,11 +37,11 @@ ul {
     overflow: hidden;
     background-color: black;
 }
-li {
+.nav-list {
     float: left;
 }
 
-li a {
+.nav-list a {
     display: block;
     color: white;
     text-align: center;
@@ -49,7 +49,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.nav-list a:hover {
     background-color: skyblue;
 }
 
@@ -209,4 +209,26 @@ table{
   padding-left: 3px;
   padding-right: 3px;
   background-color: rgba(250, 250, 250, 0.507);
+}
+
+.float-container{
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  display: block;
+  float: left;
+  padding: 20px;
+}
+
+.details-title{
+  list-style: none;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.details-info {
+  list-style: none;
+  text-align: left;
 }
