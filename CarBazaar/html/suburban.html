@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link type="text/css" rel="stylesheet" href="../css/products.css">
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/site.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
-<body>
-<img src="../images/suburbanMain.jpg"
-                onclick="openLightbox('Lightbox');toSlide(1, 'suburbanSlide', 'suburbanImage')"
-                class="hover-shadow preview" alt="Toy car on the road." />
 
-                <div id="Lightbox" class="modal">
-                    <span class="close pointer" onclick="closeLightbox('Lightbox')">&times;</span>
-                    <div class="modal-content">
-                      <div id="suburbanSlide" class="slide">
-                        <img src="../images/suburbanMain.jpg" class="image-slide" alt="Toy car on the road." />
-                      </div>
-                      <div id="suburbanSlide" class="slide">
-                        <img src="../images/suburbanInterior.jpg" class="image-slide" alt="Toy car exploring offroad." />
-                      </div>
-                      <div id="suburbanSlide" class="slide">
-                        <img src="../images/suburbanBackseat.jpg" class="image-slide" alt="Toy car in the city." />
-                      </div>
-          
-                      <a class="previous" onclick="changeSlide(-1, 'suburbanSlide', 'suburbanImage')">&#10094;</a>
-                      <a class="next" onclick="changeSlide(1, 'suburbanSlide', 'suburbanImage')">&#10095;</a>
-          
-                      <div class="dots">
-                        <div class="col">
-                          <img id="suburbanImage" src="../images/suburbanMain.jpg" class="modal-preview hover-shadow"
-                            onclick="toSlide(1, 'suburbanSlide', 'suburbanImage')" alt="Toy car on the road" />
-                        </div>
-                        <div class="col">
-                          <img id="suburbanImage" src="../images/suburbanInterior.jpg" class="modal-preview hover-shadow"
-                            onclick="toSlide(2, 'suburbanSlide', 'suburbanImage')" alt="Toy car exploring offroad." />
-                        </div>
-                        <div class="col">
-                          <img id="suburbanImage" src="../images/suburbanBackseat.jpg" class="modal-preview hover-shadow"
-                            onclick="toSlide(3, 'suburbanSlide', 'suburbanImage')" alt="Toy car in the city." />
-                        </div>
-                      </div>
-                    </div>
-                </body>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link type="text/css" rel="stylesheet" href="../css/products.css">
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/site.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+  <ul class="nav-list-container">
+    <span class="title">Car Bazaar</span>
+    <br />
+    <span class="tagline">Better prices somewhere else? Now that's bizarre!</span>
+    <br />
+    <br />
+    <li class="nav-list"><a class="navigation-item" href="../index.html">Home</a></li>
+    <li class="nav-list"><a class="navigation-item" href="about.html">About</a></li>
+    <li class="nav-list" id="index"><a class="navigation-item" href="products.html">Show Room</a></li>
+    <li class="nav-list"><a class="navigation-item" href="services.html">Services</a></li>
+  </ul>
+  <main>
+    <img src="../images/suburbanMain.jpg"
+      onclick="openLightbox('Lightbox');toSlide(1, 'suburbanSlide', 'suburbanImage')" class="hover-shadow preview"
+      alt="Toy car on the road." />
+  </main>
+  <div id="Lightbox" class="modal">
+    <span class="close pointer" onclick="closeLightbox('Lightbox')">&times;</span>
+    <div class="modal-content">
+      <div id="suburbanSlide" class="slide">
+        <img src="../images/suburbanMain.jpg" class="image-slide" alt="Toy car on the road." />
+      </div>
+      <div id="suburbanSlide" class="slide">
+        <img src="../images/suburbanInterior.jpg" class="image-slide" alt="Toy car exploring offroad." />
+      </div>
+      <div id="suburbanSlide" class="slide">
+        <img src="../images/suburbanBackseat.jpg" class="image-slide" alt="Toy car in the city." />
+      </div>
+
+      <a class="previous" onclick="changeSlide(-1, 'suburbanSlide', 'suburbanImage')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'suburbanSlide', 'suburbanImage')">&#10095;</a>
+
+      <div class="dots">
+        <div class="col">
+          <img id="suburbanImage" src="../images/suburbanMain.jpg" class="modal-preview hover-shadow"
+            onclick="toSlide(1, 'suburbanSlide', 'suburbanImage')" alt="Toy car on the road" />
+        </div>
+        <div class="col">
+          <img id="suburbanImage" src="../images/suburbanInterior.jpg" class="modal-preview hover-shadow"
+            onclick="toSlide(2, 'suburbanSlide', 'suburbanImage')" alt="Toy car exploring offroad." />
+        </div>
+        <div class="col">
+          <img id="suburbanImage" src="../images/suburbanBackseat.jpg" class="modal-preview hover-shadow"
+            onclick="toSlide(3, 'suburbanSlide', 'suburbanImage')" alt="Toy car in the city." />
+        </div>
+      </div>
+    </div>
+</body>
+
 </html>

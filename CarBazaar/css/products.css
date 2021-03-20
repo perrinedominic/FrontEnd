@@ -220,15 +220,25 @@ table{
   display: block;
   float: left;
   padding: 20px;
+  border: solid;
+  height: 100%;
 }
 
 .details-title{
   list-style: none;
   text-align: left;
-  font-weight: bolder;
+  font-weight: 900;
+  font-size: 100%;
 }
+
 
 .details-info {
   list-style: none;
   text-align: left;
+}
+
+#logo {
+  float: left;
+  display: flex;
+  width: 10%;
 }
