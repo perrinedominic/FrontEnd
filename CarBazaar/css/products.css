@@ -300,7 +300,7 @@ button.accordion {
 }
  
 button.accordion:after {
-  content: '\f055';
+  content: '+';
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14px;
   float: right;
@@ -308,7 +308,7 @@ button.accordion:after {
 }
  
 button.accordion.is-open:after {
-  content: '\f056';
+  content: '-';
 }
  
 button.accordion:hover, button.accordion.is-open {
