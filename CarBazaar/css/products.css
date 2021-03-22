@@ -1,217 +1,230 @@
 body {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 
-    background-image: url(../images/background.jpg);
-    background-position: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url(../images/background.jpg);
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: Roboto, San Francisco, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #2d363e;
 }
-header { 
-    padding: 15px 200px; 
+
+header {
+  padding: 15px 200px;
 }
+
 main {
-    min-height: 550px;
-    width: 950px;
-    padding: 20px 0px;
-    margin-left: auto;
-    margin-right: auto;
+  min-height: 550px;
+  width: 950px;
+  padding: 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .title {
-    font-weight: bold;
-    font-size: 48px;
-    text-align: center;
-    color: skyblue;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  color: skyblue;
 }
+
 .tagline {
-    font-size: 24px;
-    text-align: center;
-    color: skyblue;
+  font-size: 24px;
+  text-align: center;
+  color: skyblue;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
 }
+
 .nav-list {
-    float: left;
+  float: left;
 }
 
 .nav-list a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .nav-list a:hover {
-    background-color: skyblue;
+  background-color: skyblue;
 }
 
 #index {
-    background-color: skyblue;
+  background-color: skyblue;
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
 html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  /* You define the style of our previews here, you are using flex to display the images 
-     "responsively". */
-  
-  .preview {
-    width: 100%;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .row > .col {
-    padding: 0 8px;
-  }
-  
-  .col {
-    float: left;
-    width: 25%;
-    padding-right: 10px;
-  }
-     
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding: 10px 62px 0px 62px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: black;
-  }
-  
-  .modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    padding: 0 0 0 0;
-    width: 80%;
-    max-width: 1200px;
-    max-height: 80%;
-  }
-  
-  .slide {
-    display: none;
-  }
-  
-  .image-slide {
-    width: 100%;
-  }
-  
-  .modal-preview {
-    width: 100%;
-  }
-  
-  .dots {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  img.preview, img.modal-preview {
-    opacity: 0.6;
-  }
-  
-  img.active,
-  .preview:hover,
-  .modal-preview:hover {
-    opacity: 1;
-  }
-  
-  img.hover-shadow {
-    transition: 0.3s;
-  }
-  
-  .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .previous,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  .previous:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-
-  .floatCar{
-    float:right;
-    clear:right;
-    margin-left:20px;
+  box-sizing: border-box;
 }
 
-table{
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* You define the style of our previews here, you are using flex to display the images 
+     "responsively". */
+
+.preview {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row>.col {
+  padding: 0 8px;
+}
+
+.col {
+  float: left;
+  width: 25%;
+  padding-right: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 10px 62px 0px 62px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0 0 0;
+  width: 80%;
+  max-width: 1200px;
+  max-height: 80%;
+}
+
+.slide {
+  display: none;
+}
+
+.image-slide {
+  width: 100%;
+}
+
+.modal-preview {
+  width: 100%;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img.preview,
+img.modal-preview {
+  opacity: 0.6;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.floatCar {
+  float: right;
+  clear: right;
+  margin-left: 20px;
+}
+
+table {
   border: 3px solid black;
   padding-left: 3px;
   padding-right: 3px;
   background-color: rgba(250, 250, 250, 0.507);
 }
 
-.float-container{
+.float-container {
   padding: 20px;
 }
 
@@ -224,7 +237,7 @@ table{
   height: 100%;
 }
 
-.details-title{
+.details-title {
   list-style: none;
   text-align: left;
   font-weight: 900;
@@ -241,4 +254,73 @@ table{
   float: left;
   display: flex;
   width: 10%;
+}
+
+#grid-line {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* 3 COL LAYOUT */
+  grid-gap: 10px;
+}
+
+div.cell {
+  background: whitesmoke;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+/* (B) SPAN MULTIPLE ROWS */
+.spanrow {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.vehicles {
+  width: 100%;
+  height: min-content;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+ 
+button.accordion {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+ 
+button.accordion:after {
+  content: '\f055';
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14px;
+  float: right;
+	
+}
+ 
+button.accordion.is-open:after {
+  content: '\f056';
+}
+ 
+button.accordion:hover, button.accordion.is-open {
+  background-color: #ddd;
+}
+ 
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
 }
