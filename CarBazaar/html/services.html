@@ -34,118 +34,119 @@
             to get free repair services, all you have to do is buy the parts and drive your car in!
         </p>
 
-        <div class="container d-flex justify-content-center">
-        <div class="testbox">
-            <form class="serviceForm" action="">
-                <div class="banner">
-                    <h2>Schedule an Appointment</h2>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Service Appointment Form</h2>
                 </div>
-
-                <!--Contact Information-->
-                <div class="contactInfo">
-
-                    <h3>Name</h3>
-
-                    <div class="customerName">
-                        <input type="text" name="name" placeholder="First" />
-                        <input type="text" name="name" placeholder="Last" />
-                    </div>
-
-                    <div class="customerEmail">
-                        <h3>Email</h3>
-                        <input type="text" name="name" />
-                    </div>
-
-                    <div class="customerPhone">
-                        <h3>Phone</h3>
-                        <input type="text" name="name" />
-                    </div>
-
-                    <div class="customerAddress">
-                        <h3>Contact Address</h3>
-                        <input type="text" name="name" placeholder="Street address" /><br>
-                        <input type="text" name="name" placeholder="Street address line 2" /><br>
-                        <input type="text" name="name" placeholder="City" /><br>
-                        <input type="text" name="name" placeholder="Postal / Zip code" /><br>
-                        <input type="text" name="name" placeholder="Country" /><br>
-                    </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row m-b-55">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-6">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="first_name">
+                                            <label class="label--desc">first name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="last_name">
+                                            <label class="label--desc">last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="company">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Phone</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="area_code">
+                                            <label class="label--desc">Area Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="phone">
+                                            <label class="label--desc">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Vehicle Year</div>
+                            <div class="value">
+                                <div class="input-group">
+                                        <input class="input--style-5" type="text" name="year" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Vehicle Make</div>
+                            <div class="value">
+                                <div class="input-group">
+                                        <input class="input--style-5" type="text" name="make" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Vehicle Model</div>
+                            <div class="value">
+                                <div class="input-group">
+                                        <input class="input--style-5" type="text" name="model" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Request Date</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input type="date" name="bdate" />
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="name">Requested Services</div>
+                            <div class="value">
+                                <div class="input-group">
+                                        <input class="input--style-5" type="text" name="make" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                        </div>
+                    </form>
                 </div>
-
-                <!--Vehicle information-->
-                <div class="vehicle">
-
-                    <h3>Vehicle</h3>
-
-                    <div>
-                        <input type="text" name="year" placeholder="Year">
-                    </div>
-
-                    <div class="vehicleMake">
-                        <input type="text" name="make" placeholder="Make">
-                    </div>
-
-                    <div class="vehicleModel">
-                        <input type="text" name="model" placeholder="Model">
-                    </div>
-
-                    <div class="vehicleSubmodel">
-                        <input type="text" name="make" placeholder="Submodel">
-                    </div>
-
-                    <!--Date and Time selection-->
-                    <div class="requestedDate">
-
-                        <h3>Requested Date</h3>
-
-                        <input type="date" name="bdate" />
-                        <i class="fas fa-calendar-alt"></i>
-
-                    </div>
-
-                    <div class="item">
-
-                        <h3>Requested Time</h3>
-
-                        <input type="time" name="name" />
-                        <i class="fas fa-clock"></i>
-
-                    </div>
-
-                    <!--Service and repair selection-->
-                    <div>
-                        <h3>Services</h3>
-                        <input type="checkbox" id="oilChange" name="oilChange">
-                        <label for="oilChange">Oil Change</label><br>
-
-                        <input type="checkbox" id="tireRotation" name="tireRotation">
-                        <label for="tireRotation">Tire Rotation</label><br>
-
-                        <input type="checkbox" id="wheelAlignment" name="wheelAlignment">
-                        <label for="wheelAlignment">Wheel Alignment</label><br>
-
-                        <input type="checkbox" id="warningLights" name="warningLights">
-                        <label for="warningLights">Warning Lights</label><br>
-
-                        <input type="checkbox" id="brakes" name="brakes">
-                        <label for="brakes">Brakes</label><br>
-
-                        <input type="checkbox" id="wheelAlignment" name="wheelAlignment">
-                        <label for="wheelAlignment">Wheel Alignment</label><br>
-
-                        <input type="checkbox" id="other" name="other">
-                        <label for="other">Other (Please Describe Below)</label><br>
-                    </div>
-
-                    <!--Comments-->
-                    <div class="item">
-                        <h3>Additional Information</h3>
-                        <textarea rows="3"></textarea>
-                    </div>
-
-                    <div class="btn-block">
-                        <button type="submit" href="/">SEND</button>
-                    </div>
-            </form>
+            </div>
         </div>
     </div>
     </main>
