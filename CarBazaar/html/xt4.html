@@ -26,13 +26,13 @@
   <main>
     <div id="grid-line">
       <div class="cell">
-        <h2>Chevrolet Camaro</h2>
+        <h2>Cadillac XT4</h2>
       </div>
       <div class="cell">Cell</div>
       <div class="cell">Cell</div>
       <div class="cell spanrow">
-        <img src="../images/camaro.jpg"
-          onclick="openLightbox('CameroLightbox');toSlide(1, 'cameroSlide', 'cameroImage')" class="hover-shadow preview"
+        <img src="../images/xt4Side.jpg"
+          onclick="openLightbox('xt4Lightbox');toSlide(1, 'xt4Slide', 'xt4Image')" class="hover-shadow preview"
           alt="Toy car on the road." />
       </div>
       <div class="cell">Cell</div>
@@ -111,33 +111,33 @@
     </script>
   </main>
 
-  <div id="CameroLightbox" class="modal">
-    <span class="close pointer" onclick="closeLightbox('CameroLightbox')">&times;</span>
+  <div id="xt4Lightbox" class="modal">
+    <span class="close pointer" onclick="closeLightbox('xt4Lightbox')">&times;</span>
     <div class="modal-content">
-      <div id="cameroSlide" class="slide">
-        <img src="../images/camaro.jpg" class="image-slide" alt="Toy car on the road." />
+      <div id="xt4Slide" class="slide">
+        <img src="../images/xt4Side.jpg" class="image-slide" alt="Toy car on the road." />
       </div>
-      <div id="cameroSlide" class="slide">
-        <img src="../images/cameroInterior.jpg" class="image-slide" alt="Toy car exploring offroad." />
+      <div id="xt4Slide" class="slide">
+        <img src="../images/xt4Front.jpg" class="image-slide" alt="Toy car exploring offroad." />
       </div>
-      <div id="cameroSlide" class="slide">
-        <img src="../images/cameroBackseat.jpg" class="image-slide" alt="Toy car in the city." />
+      <div id="xt4Slide" class="slide">
+        <img src="../images/xt4Interior.jpg" class="image-slide" alt="Toy car in the city." />
       </div>
 
-      <a class="previous" onclick="changeSlide(-1, 'cameroSlide', 'cameroImage')">&#10094;</a>
-      <a class="next" onclick="changeSlide(1, 'cameroSlide', 'cameroImage')">&#10095;</a>
+      <a class="previous" onclick="changeSlide(-1, 'xt4Slide', 'xt4Image')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'xt4Slide', 'xt4Image')">&#10095;</a>
 
       <div class="dots">
         <div class="col">
-          <img id="cameroImage" src="../images/camaro.jpg" class="modal-preview hover-shadow"
+          <img id="xt4Image" src="../images/xt4Side.jpg" class="modal-preview hover-shadow"
             onclick="toSlide(1, 'cameroSlide', 'cameroImage')" alt="Toy car on the road" />
         </div>
         <div class="col">
-          <img id="cameroImage" src="../images/cameroInterior.jpg" class="modal-preview hover-shadow"
+          <img id="xt4Image" src="../images/xt4Front.jpg" class="modal-preview hover-shadow"
             onclick="toSlide(2, 'cameroSlide', 'cameroImage')" alt="Toy car exploring offroad." />
         </div>
         <div class="col">
-          <img id="cameroImage" src="../images/cameroBackseat.jpg" class="modal-preview hover-shadow"
+          <img id="xt4Image" src="../images/xt4Interior.jpg" class="modal-preview hover-shadow"
             onclick="toSlide(3,'cameroSlide', 'cameroImage')" alt="Toy car in the city." />
         </div>
       </div>

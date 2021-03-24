@@ -26,13 +26,13 @@
   <main>
     <div id="grid-line">
       <div class="cell">
-        <h2>Chevrolet Camaro</h2>
+        <h2>Chevrolet Camaro</h2>>
       </div>
       <div class="cell">Cell</div>
       <div class="cell">Cell</div>
       <div class="cell spanrow">
-        <img src="../images/camaro.jpg"
-          onclick="openLightbox('CameroLightbox');toSlide(1, 'cameroSlide', 'cameroImage')" class="hover-shadow preview"
+        <img src="../images/impalaSide.jpg"
+          onclick="openLightbox('impalaLightbox');toSlide(1, 'impalaSlide', 'impalaImage')" class="hover-shadow preview"
           alt="Toy car on the road." />
       </div>
       <div class="cell">Cell</div>
@@ -111,34 +111,34 @@
     </script>
   </main>
 
-  <div id="CameroLightbox" class="modal">
-    <span class="close pointer" onclick="closeLightbox('CameroLightbox')">&times;</span>
+  <div id="impalaLightbox" class="modal">
+    <span class="close pointer" onclick="closeLightbox('impalaLightbox')">&times;</span>
     <div class="modal-content">
-      <div id="cameroSlide" class="slide">
-        <img src="../images/camaro.jpg" class="image-slide" alt="Toy car on the road." />
+      <div id="impalaSlide" class="slide">
+        <img src="../images/impalaSide.jpg" class="image-slide" alt="Toy car on the road." />
       </div>
-      <div id="cameroSlide" class="slide">
-        <img src="../images/cameroInterior.jpg" class="image-slide" alt="Toy car exploring offroad." />
+      <div id="impalaSlide" class="slide">
+        <img src="../images/impalaFront.jpg" class="image-slide" alt="Toy car exploring offroad." />
       </div>
-      <div id="cameroSlide" class="slide">
-        <img src="../images/cameroBackseat.jpg" class="image-slide" alt="Toy car in the city." />
+      <div id="impalaSlide" class="slide">
+        <img src="../images/impalaInterior.jpg" class="image-slide" alt="Toy car in the city." />
       </div>
 
-      <a class="previous" onclick="changeSlide(-1, 'cameroSlide', 'cameroImage')">&#10094;</a>
-      <a class="next" onclick="changeSlide(1, 'cameroSlide', 'cameroImage')">&#10095;</a>
+      <a class="previous" onclick="changeSlide(-1, 'impalaSlide', 'impalaImage')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'impalaSlide', 'impalaImage')">&#10095;</a>
 
       <div class="dots">
         <div class="col">
-          <img id="cameroImage" src="../images/camaro.jpg" class="modal-preview hover-shadow"
-            onclick="toSlide(1, 'cameroSlide', 'cameroImage')" alt="Toy car on the road" />
+          <img id="impalaImage" src="../images/impalaSide.jpg" class="modal-preview hover-shadow"
+            onclick="toSlide(1, 'impalaSlide', 'impalaImage')" alt="Toy car on the road" />
         </div>
         <div class="col">
-          <img id="cameroImage" src="../images/cameroInterior.jpg" class="modal-preview hover-shadow"
-            onclick="toSlide(2, 'cameroSlide', 'cameroImage')" alt="Toy car exploring offroad." />
+          <img id="impalaImage" src="../images/impalaFront.jpg" class="modal-preview hover-shadow"
+            onclick="toSlide(2, 'impalaSlide', 'impalaImage')" alt="Toy car exploring offroad." />
         </div>
         <div class="col">
-          <img id="cameroImage" src="../images/cameroBackseat.jpg" class="modal-preview hover-shadow"
-            onclick="toSlide(3,'cameroSlide', 'cameroImage')" alt="Toy car in the city." />
+          <img id="impalaImage" src="../images/impalaInterior.jpg" class="modal-preview hover-shadow"
+            onclick="toSlide(3,'impalaSlide', 'impalaImage')" alt="Toy car in the city." />
         </div>
       </div>
     </div>
