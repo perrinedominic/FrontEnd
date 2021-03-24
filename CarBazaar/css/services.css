@@ -158,7 +158,7 @@ tr:nth-child(odd) {
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
   
   .form-row .name {
@@ -472,7 +472,7 @@ tr:nth-child(odd) {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
+    color: #666;
     font-family: inherit;
   }
   
@@ -494,28 +494,12 @@ tr:nth-child(odd) {
     border-radius: 20px;
   }
   
-  .btn--green {
-    background: #57b846;
-  }
-  
-  .btn--green:hover {
-    background: #4dae3c;
-  }
-  
-  .btn--blue {
-    background: #4272d7;
-  }
-  
-  .btn--blue:hover {
-    background: #3868cd;
-  }
-  
   .btn--red {
-    background: #ff4b5a;
+    background: #666;
   }
   
   .btn--red:hover {
-    background: #eb3746;
+    background: #666;
   }
   
   /* ==========================================================================
@@ -546,8 +530,9 @@ tr:nth-child(odd) {
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     display: none;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #666;
     margin-top: 5px;
+
   }
   
   .daterangepicker::after, .daterangepicker::before {
