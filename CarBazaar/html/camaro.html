@@ -24,22 +24,56 @@
     <li class="nav-list"><a class="navigation-item" href="services.html">Services</a></li>
   </ul>
   <main>
-    <div id="grid-line">
-      <div class="cell">
-        <h2>Chevrolet Camaro</h2>
-      </div>
-      <div class="cell">Cell</div>
-      <div class="cell">Cell</div>
-      <div class="cell spanrow">
-        <img src="../images/camaro.jpg"
+      <div class="container">
+        <div class="card">
+          <div class="container-fliud">
+            <div class="wrapper row">
+              <div class="preview col-md-6">
+  
+                <div class="preview-pic tab-content">
+                  <img src="../images/camaro.jpg"
           onclick="openLightbox('CameroLightbox');toSlide(1, 'cameroSlide', 'cameroImage')" class="hover-shadow preview"
           alt="Toy car on the road." />
+                  <div class="tab-pane" id="pic-2"><img src="../images/camaro.jpg" /></div>
+                  <div class="tab-pane" id="pic-3"><img src="../images/cameroBackseat.jpg" /></div>
+                  <div class="tab-pane" id="pic-4"><img src="../images/cameroInterior.jpg" /></div>
+                </div>
+                <ol class="preview-thumbnail nav nav-tabs">
+                  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../images/camaro.jpg" /></a>
+                  </li>
+                  <li><a data-target="#pic-2" data-toggle="tab"><img src="../images/cameroBackseat.jpg" /></a></li>
+                  <li><a data-target="#pic-3" data-toggle="tab"><img src="../images/cameroInterior.jpg" /></a></li>
+                </ol>
+  
+              </div>
+              <div class="details col-md-6">
+                <h3 class="product-title">Chevrolet Camaro</h3>
+                <div class="rating">
+                  <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+                <p class="product-description">New 2021 Chevrolet Camaro. 0 Miles. V8 Engine with RWD. Red Exterior. </p>
+                <h4 class="price">current price: <span>$34,995</span></h4>
+  
+                <h5 class="sizes">Mileage:
+                  0
+                </h5>
+                <h5 class="colors">color:
+                  Red
+                </h5>
+                <div class="action">
+                  <button class="add-to-cart btn btn-default" type="button">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cell">Cell</div>
-      <div class="cell">Cell</div>
-      <div class="cell">Cell</div>
-      <div class="cell">Cell</div>
-    </div>
 
     <div class="container">
       <h2>Features</h2>
