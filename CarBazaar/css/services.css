@@ -63,6 +63,10 @@ tr:nth-child(odd) {
     background-color: lightgray;
 }
 
+#serv {
+  text-align: center;
+}
+
 
 
 /* ==========================================================================
