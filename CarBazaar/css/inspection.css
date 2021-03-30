@@ -1,0 +1,52 @@
+.header {
+    background-color: skyblue;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: url(../images/background.jpg);
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+    padding: 15px;
+}
+
+table {
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr {
+    background-color: lightcyan;
+}
+
+.tab {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    text-align: center;
+}
