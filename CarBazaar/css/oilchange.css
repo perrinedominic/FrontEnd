@@ -46,3 +46,42 @@ tr {
     margin-left: auto;
     margin-right: auto;
 }
+
+.title {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    color: skyblue;
+}
+.tagline {
+    font-size: 24px;
+    text-align: center;
+    color: skyblue;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: skyblue;
+}
+
+h2 {
+    color: black;
+}
