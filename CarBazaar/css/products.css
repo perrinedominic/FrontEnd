@@ -18,6 +18,21 @@ header {
   padding: 15px 200px;
 }
 
+a:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: skyblue;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+a:visited{
+  text-decoration:none;
+  color: black;
+}
+
 main {
   min-height: 550px;
   width: 950px;
@@ -154,13 +169,13 @@ body {
 
 img.preview,
 img.modal-preview {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 img.active,
 .preview:hover,
 .modal-preview:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 img.hover-shadow {
@@ -323,6 +338,7 @@ button.accordion:hover, button.accordion.is-open {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
+  font-size: larger;
 }
 
 .container {
@@ -354,7 +370,7 @@ float: left;
 }
 
 /* Add a dark background to the active button */
-.btn.active {
+button.active{
   background-color: #666;
   color: white;
 }
@@ -441,6 +457,11 @@ img {
 .product-title, .price, .sizes, .colors {
   text-transform: UPPERCASE;
   font-weight: bold; }
+
+  .card-title {
+    font-family: sans-serif;
+    font-weight: bold;
+  }
 
 .product-title, .rating, .product-description, .price, .vote, .sizes {
   margin-bottom: 15px; }

@@ -57,7 +57,24 @@ li a:hover {
     background-color: skyblue;
 }
 
+a.oilLink:visited, a.inspectionLink:visited {
+  text-decoration: none;
+  color: black;
+}
 
+.oilLink:hover, .inspectionLink:hover{
+  color: skyblue;
+}
+
+.oilLink:link, .inspectionLink:link{
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.oilLink, .inspectionLink {
+  font-size: 20px;
+}
 
 tr:nth-child(odd) {
     background-color: lightgray;
