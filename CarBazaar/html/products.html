@@ -37,6 +37,14 @@
             <button class="btn" onclick="filterSelection('car')">Cars</button>
             <button class="btn" onclick="filterSelection('truck')">Trucks</button>
             <button class="btn" onclick="filterSelection('suv')">SUV/Crossovers</button>
+            <br />
+            <button class="btn" onclick="calculatePerMonth()">Calculate Monthly Payment</button>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price"><br>
+            <label for="time">Payment Time:</label>
+            <input type="number" id="months" placeholder="In Months" name="months">
+            <br />
+            <h3 id="pricePerMonth"></h3>
           </div>
   
         </div>
@@ -208,5 +216,19 @@
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active";
     });
-  }</script>
+  }
+  
+  function calculatePerMonth()
+{
+  var price = document.getElementById('price').value;
+  var months = document.getElementById('months').value;
+
+  var perMonth = price / months;
+
+  Math.round((permonth + Number.EPSILON) * 100) / 100;
+  
+  document.getElementById('pricePerMonth').textContent = "Price per month: " + perMonth;
+  document.getElementById('pricePerMonth').style.backgroundcolor = "rgba(250, 250, 250, 0.507)"; 
+}
+  </script>
 </html>

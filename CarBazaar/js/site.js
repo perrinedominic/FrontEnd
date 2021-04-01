@@ -106,5 +106,4 @@ if (slider.auto)	{
   }
 };
 
-
   
