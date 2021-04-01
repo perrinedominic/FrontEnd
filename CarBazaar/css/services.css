@@ -30,6 +30,17 @@ main {
   color: skyblue;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align:center;
+  background-color: black;
+  color: white;
+  padding-top: 7px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
