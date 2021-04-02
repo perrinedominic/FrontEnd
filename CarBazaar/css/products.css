@@ -541,3 +541,22 @@ img {
             transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align:center;
+  background-color: black;
+  color: white;
+  padding-top: 7px;
+}
+
+.aboutButton
+{
+  background-color:transparent;
+  color: white;
+  border-color: transparent;
+}

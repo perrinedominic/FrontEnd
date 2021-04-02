@@ -164,13 +164,14 @@
       <br />
     </div>
     <!-- /.container -->
-  <footer class="footer">
+    <footer>
       <p>&#169 Copyright Car Bazaar. All Rights Reserved.</p>
-      <p><a href="about.html">Contact Us</a></p>
+      <button class="aboutButton" onclick="window.location.href='about.html'">Contact Us</button>
   </footer>
 </body>
 
-<script>filterSelection("all")
+<script>
+filterSelection("all")
   function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("filterDiv");
