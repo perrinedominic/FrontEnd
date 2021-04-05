@@ -147,8 +147,15 @@
       <br />
     <!-- /.row -->
     <footer>
-      <p>Car Bazaar &#169 2021. All Rights Reserved.</p>
+      <p>Car Bazaar &#169 <span id="year"></span>. All Rights Reserved.</p>
       <p><a href="about.html">Contact Us</a></p>
   </footer>
+  <script>
+    var x = getCurrentYear();
+
+    function getCurrentYear() {
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    }
+  </script>
 </body>
 </html>
