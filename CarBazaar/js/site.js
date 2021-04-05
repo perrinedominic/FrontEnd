@@ -104,4 +104,5 @@ this.next = function () {
 if (slider.auto)	{
       setInterval(slider.next, slider.rate);
   }
-};  
+};
+
