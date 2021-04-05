@@ -91,6 +91,16 @@ h2 {
     color: black;
 }
 
+#post {
+    background-color: white;
+    opacity: 0.7;
+}
+
+#sef {
+    background-color: white;
+    opacity: 0.7;
+}
+
 footer {
     position: fixed;
     left: 0;
