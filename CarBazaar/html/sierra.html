@@ -50,7 +50,7 @@
 
             </div>
             <div class="details col-md-6">
-              <h3 class="product-title">GMC Sierra SLE</h3>
+              <h3 style="text-align: center;"  class="product-title">GMC Sierra SLE</h3>
               <div class="rating">
                 <div class="stars">
                   <span class="fa fa-star checked"></span>
@@ -62,14 +62,36 @@
               </div>
               <p class="product-description">Used 2018 GMC Sierra SLE. 40,000 miles. V8 Engine with AWD. Blue Exterior.
               </p>
-              <h4 class="price">current price: <span>$34,500</span></h4>
+              <form id="theform" action="#">
+                <div>
+                  <label class="col-6" for="days">Current Price :</label>
+                  <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="34500" type="text">34500</span>
+                </div>
+              </br>
+                <div>
+                  <label class="col-6" for="days">Dealer Fees :</label>
+                  <span class="col-4" id="dealerFees" type="number">1000</span>
+                </div>
+              </br>
+                <div>
+                  <label class="col-6" for="kilo">Discount :</label>
+                  <select name="term" class="col-4" id="discountNumber" type="number">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                  </select>
+                </div>
+              </br>
+              <div>
+                <label class="col-6">Total (After Tax) :</label>
+                <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
+              </div>
+            </br>
+                <div class="action">
+                  <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()" value="calculate">
+                </div>
+              </form>
 
-              <h5 class="sizes">Mileage:
-                40,000
-              </h5>
-              <h5 class="colors">color:
-                Blue
-              </h5>
               <div class="action">
                 <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact
                   Us</button>
@@ -82,7 +104,7 @@
 
     <div id="buyNow" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
       <div id="buyNowContent" class="wrapper wrapper--w790">
-        <div style="background-color: rgba(255, 255, 255, 0.5);" class="card card-5">
+        <div style="background-color: rgba(255, 255, 255, 1);" class="card card-5">
           <div class="card-heading">
             <div class="loginPopup">
               <div class="formPopup" id="popupForm">
@@ -96,12 +118,12 @@
                       <div class="row row-space">
                         <div class="col-5">
                           <div class="input-group-desc">
-                            <input class="input--style-5" placeholder="First Name" type="text" name="first_name">
+                            <input class="input--style-5" required placeholder="First Name" type="text" name="first_name">
                           </div>
                         </div>
                         <div class="col-5">
                           <div class="input-group-desc">
-                            <input class="input--style-5" placeholder="Last Name" type="text" name="last_name">
+                            <input class="input--style-5" required placeholder="Last Name" type="text" name="last_name">
                           </div>
                         </div>
                       </div>
@@ -173,7 +195,7 @@
                         </div>
                         <div class="col-5">
                           <div class="input-group-desc">
-                            <input class="input--style-5" placeholder="Phone" type="tel" name="phone">
+                            <input required class="input--style-5" placeholder="Phone" type="tel" name="phone">
                           </div>
                         </div>
                       </div>

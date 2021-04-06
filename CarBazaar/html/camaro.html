@@ -47,7 +47,7 @@
 
             </div>
             <div class="details col-md-6">
-              <h3 class="product-title">Chevrolet Camaro</h3>
+              <h3 style="text-align: center;" class="product-title">Chevrolet Camaro</h3>
               <div class="rating">
                 <div class="stars">
                   <span class="fa fa-star checked"></span>
@@ -58,16 +58,39 @@
                 </div>
               </div>
               <p class="product-description">New 2021 Chevrolet Camaro. 0 Miles. V8 Engine with RWD. Red Exterior. </p>
-              <h4 class="price">current price: <span>$34,995</span></h4>
+              <form id="theform" action="#">
+                <div>
+                  <label class="col-6" for="days">Current Price :</label>
+                  <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="34995" type="text">34995</span>
+                </div>
+              </br>
+                <div>
+                  <label class="col-6" for="days">Dealer Fees :</label>
+                  <span class="col-4" id="dealerFees" type="number">1000</span>
+                </div>
+              </br>
+                <div>
+                  <label class="col-6" for="kilo">Discount :</label>
+                  <select name="term" class="col-4" id="discountNumber" type="number">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                  </select>
+                </div>
+              </br>
+              <div>
+                <label class="col-6">Total (After Tax) :</label>
+                <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
+              </div>
+            </br>
+                <div class="action">
+                  <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()" value="calculate">
+                </div>
+              </form>
 
-              <h5 class="sizes">Mileage:
-                0
-              </h5>
-              <h5 class="colors">color:
-                Red
-              </h5>
               <div class="action">
-                <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact Us</button>
+                <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact
+                  Us</button>
               </div>
             </div>
           </div>

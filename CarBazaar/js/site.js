@@ -114,3 +114,16 @@ function openTheForm() {
 function closeTheForm() {
   document.getElementById("buyNow").style.display = "none";
 }
+
+// Get vehicle total cost
+function getTotal(){
+  price = Number(document.getElementById("currentPrice").innerText);
+  fees = Number(document.getElementById("dealerFees").innerText);
+  discount = Number(document.getElementById("discountNumber").value) / 100;
+  cost = price + fees;
+  subtotal = cost - cost * discount;
+  taxInverse = 0.945;
+  total = subtotal / taxInverse;
+  total = total.toFixed(2);
+  document.getElementById("totalCost").value = total;
+        }
