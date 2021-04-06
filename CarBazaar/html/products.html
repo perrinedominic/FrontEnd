@@ -166,6 +166,7 @@
     <!-- /.container -->
     <footer>
       <p>Car Bazaar &#169 <span id="year"></span>. All Rights Reserved.</p>
+      <p>Page was loaded at: <span id="time"></span></p>
       <button class="aboutButton" onclick="window.location.href='about.html'">Contact Us</button>
   </footer>
 </body>
@@ -175,7 +176,15 @@
 
 function getCurrentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
+    
 }
+
+var today = new Date();
+
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+        document.getElementById("time").innerHTML = time;
+        
 filterSelection("all")
   function filterSelection(c) {
     var x, i;
