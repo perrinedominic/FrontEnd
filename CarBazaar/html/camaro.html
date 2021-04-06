@@ -24,56 +24,181 @@
     <li class="nav-list"><a class="navigation-item" href="services.html">Services</a></li>
   </ul>
   <main>
-      <div class="container">
-        <div class="card">
-          <div class="container-fliud">
-            <div class="wrapper row">
-              <div class="preview col-md-6">
-  
-                <div class="preview-pic tab-content">
-                  <img src="../images/camaro.jpg"
-          onclick="openLightbox('CameroLightbox');toSlide(1, 'cameroSlide', 'cameroImage')" class="hover-shadow preview"
-          alt="Toy car on the road." />
-                  <div class="tab-pane" id="pic-2"><img src="../images/camaro.jpg" /></div>
-                  <div class="tab-pane" id="pic-3"><img src="../images/cameroBackseat.jpg" /></div>
-                  <div class="tab-pane" id="pic-4"><img src="../images/cameroInterior.jpg" /></div>
-                </div>
-                <ol class="preview-thumbnail nav nav-tabs">
-                  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../images/camaro.jpg" /></a>
-                  </li>
-                  <li><a data-target="#pic-2" data-toggle="tab"><img src="../images/cameroBackseat.jpg" /></a></li>
-                  <li><a data-target="#pic-3" data-toggle="tab"><img src="../images/cameroInterior.jpg" /></a></li>
-                </ol>
-  
+    <div class="container">
+      <div class="card">
+        <div class="container-fliud">
+          <div class="wrapper row">
+            <div class="preview col-md-6">
+
+              <div class="preview-pic tab-content">
+                <img src="../images/camaro.jpg"
+                  onclick="openLightbox('CameroLightbox');toSlide(1, 'cameroSlide', 'cameroImage')"
+                  class="hover-shadow preview" alt="Toy car on the road." />
+                <div class="tab-pane" id="pic-2"><img src="../images/camaro.jpg" /></div>
+                <div class="tab-pane" id="pic-3"><img src="../images/cameroBackseat.jpg" /></div>
+                <div class="tab-pane" id="pic-4"><img src="../images/cameroInterior.jpg" /></div>
               </div>
-              <div class="details col-md-6">
-                <h3 class="product-title">Chevrolet Camaro</h3>
-                <div class="rating">
-                  <div class="stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
+              <ol class="preview-thumbnail nav nav-tabs">
+                <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../images/camaro.jpg" /></a>
+                </li>
+                <li><a data-target="#pic-2" data-toggle="tab"><img src="../images/cameroBackseat.jpg" /></a></li>
+                <li><a data-target="#pic-3" data-toggle="tab"><img src="../images/cameroInterior.jpg" /></a></li>
+              </ol>
+
+            </div>
+            <div class="details col-md-6">
+              <h3 class="product-title">Chevrolet Camaro</h3>
+              <div class="rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
                 </div>
-                <p class="product-description">New 2021 Chevrolet Camaro. 0 Miles. V8 Engine with RWD. Red Exterior. </p>
-                <h4 class="price">current price: <span>$34,995</span></h4>
-  
-                <h5 class="sizes">Mileage:
-                  0
-                </h5>
-                <h5 class="colors">color:
-                  Red
-                </h5>
-                <div class="action">
-                  <button class="add-to-cart col-11 btn btn-default" type="button">Buy Now</button>
-                </div>
+              </div>
+              <p class="product-description">New 2021 Chevrolet Camaro. 0 Miles. V8 Engine with RWD. Red Exterior. </p>
+              <h4 class="price">current price: <span>$34,995</span></h4>
+
+              <h5 class="sizes">Mileage:
+                0
+              </h5>
+              <h5 class="colors">color:
+                Red
+              </h5>
+              <div class="action">
+                <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact Us</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="buyNow" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+      <div id="buyNowContent" class="wrapper wrapper--w790">
+        <div style="background-color: rgba(255, 255, 255, 0.5);" class="card card-5">
+          <div class="card-heading">
+            <div class="loginPopup">
+              <div class="formPopup" id="popupForm">
+                <form action="/action_page.php" class="formContainer">
+                  <div class="form-row m-b-55">
+                    <div class="name">
+                      <h5>Hello, my name is</h5>
+                    </div>
+                    <div class="value">
+                      <div></br></div>
+                      <div class="row row-space">
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" placeholder="First Name" type="text" name="first_name">
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" placeholder="Last Name" type="text" name="last_name">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="name">
+                    <div></br></div>
+                    <h5>and</h5>
+                  </div>
+                  <div class="form-row m-b-55">
+                    <div></br></div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <select class="input--style-5" name="contactReason">
+                              <option>I'd like to know your best price for this</option>
+                              <option>I'd like to test drive this</option>
+                              <option>I'm interested in this</option>
+                              <option>I'd like the vehicle history for this</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row m-b-55">
+                    <div></br></div>
+                    <div class="name">
+                      <h5 style="font-weight: bold;">Chevrolet Camaro.</h5>
+                    </div>
+                    <div></br></div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <h5>I'm in the area of</h5>
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" placeholder="Zip" type="text" name="last_name">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div></br></div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <h5>You can email me at</h5>
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" placeholder="Email" type="email" name="email">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div></br></div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <h5>or call me at</h5>
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" placeholder="Phone" type="tel" name="phone">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div></br></div>
+                  <div class="value">
+                    <div class="row row-space">
+                      <div class="col-10" style="text-align: center;">
+                        <div class="input-group-desc">
+                          <h5>Thank You!</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">
+                    <div class="row row-space">
+                      <div class="col-10" style="text-align: center;">
+                        <button type="submit" class="btn col-5">Send</button>
+                        <button type="button" class="btn col-5" onclick="closeTheForm()">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
       <h2>Features</h2>

@@ -105,3 +105,12 @@ if (slider.auto)	{
       setInterval(slider.next, slider.rate);
   }
 };
+
+// Buy now popup
+function openTheForm() {
+  document.getElementById("buyNow").style.display = "block";
+}
+
+function closeTheForm() {
+  document.getElementById("buyNow").style.display = "none";
+}
