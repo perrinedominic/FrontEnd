@@ -24,77 +24,82 @@
     <li class="nav-list"><a class="navigation-item" href="services.html">Services</a></li>
   </ul>
   <main>
-          <div class="container">
-            <div class="card">
-              <div class="container-fliud">
-                <div class="wrapper row">
-                  <div class="preview col-md-6">
-                    
-                    <div class="preview-pic tab-content">
-                      <div class="tab-pane active" id="pic-1"><img src="../images/ctsSide.jpg" onclick="openLightbox('CtsLightbox');toSlide(1, 'ctsSlide', 'ctsImage')"
-                        class="hover-shadow preview" alt="Toy car on the road." /></div>
-                      <div class="tab-pane" id="pic-2"><img src="../images/ctsSide.jpg"/></div>
-                      <div class="tab-pane" id="pic-3"><img src="../images/ctsFront.jpg" /></div>
-                      <div class="tab-pane" id="pic-4"><img src="../images/ctsSide.jpg" /></div>
-                    </div>
-                    <ol class="preview-thumbnail nav nav-tabs">
-                      <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../images/ctsSide.jpg" /></a></li>
-                      <li><a data-target="#pic-2" data-toggle="tab"><img src="../images/ctsFront.jpg" /></a></li>
-                      <li><a data-target="#pic-3" data-toggle="tab"><img src="../images/ctsInterior.jpg" /></a></li>
-                    </ol>
+    <div class="container">
+      <div class="card">
+        <div class="container-fliud">
+          <div class="wrapper row">
+            <div class="preview col-md-6">
 
-                  </div>
-                  <div class="details col-md-6">
-                    <h3 style="text-align: center;" class="product-title">Cadillac CT5 V</h3>
-                    <div class="rating">
-                      <div class="stars">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                      </div>
-                    </div>
-                    <p class="product-description">New 2021 Cadillac CT5 V. 10 miles. V8 Engine with AWD. Black Exterior. Fully Loaded!</p>
-                    <form id="theform" action="#">
-                      <div>
-                        <label class="col-6" for="days">Current Price :</label>
-                        <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="66995" type="text">66995</span>
-                      </div>
-                    </br>
-                      <div>
-                        <label class="col-6" for="days">Dealer Fees :</label>
-                        <span class="col-4" id="dealerFees" type="number">1000</span>
-                      </div>
-                    </br>
-                      <div>
-                        <label class="col-6" for="kilo">Discount :</label>
-                        <select name="term" class="col-4" id="discountNumber" type="number">
-                          <option>5</option>
-                          <option>10</option>
-                          <option>15</option>
-                        </select>
-                      </div>
-                    </br>
-                    <div>
-                      <label class="col-6">Total (After Tax) :</label>
-                      <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
-                    </div>
-                  </br>
-                      <div class="action">
-                        <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()" value="calculate">
-                      </div>
-                    </form>
-      
-                    <div class="action">
-                      <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact
-                        Us</button>
-                    </div>
-                  </div>
+              <div class="preview-pic tab-content">
+                <div class="tab-pane active" id="pic-1"><img src="../images/ctsSide.jpg"
+                    onclick="openLightbox('CtsLightbox');toSlide(1, 'ctsSlide', 'ctsImage')"
+                    class="hover-shadow preview" alt="Toy car on the road." /></div>
+                <div class="tab-pane" id="pic-2"><img src="../images/ctsSide.jpg" /></div>
+                <div class="tab-pane" id="pic-3"><img src="../images/ctsFront.jpg" /></div>
+                <div class="tab-pane" id="pic-4"><img src="../images/ctsSide.jpg" /></div>
+              </div>
+              <ol class="preview-thumbnail nav nav-tabs">
+                <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../images/ctsSide.jpg" /></a>
+                </li>
+                <li><a data-target="#pic-2" data-toggle="tab"><img src="../images/ctsFront.jpg" /></a></li>
+                <li><a data-target="#pic-3" data-toggle="tab"><img src="../images/ctsInterior.jpg" /></a></li>
+              </ol>
+
+            </div>
+            <div class="details col-md-6">
+              <h3 style="text-align: center;" class="product-title">Cadillac CT5 V</h3>
+              <div class="rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
                 </div>
+              </div>
+              <p class="product-description">New 2021 Cadillac CT5 V. 10 miles. V8 Engine with AWD. Black Exterior.
+                Fully Loaded!</p>
+              <form id="theform" action="#">
+                <div>
+                  <label class="col-6" for="days">Current Price :</label>
+                  <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="66995"
+                    type="text">66995</span>
+                </div>
+                </br>
+                <div>
+                  <label class="col-6" for="days">Dealer Fees :</label>
+                  <span class="col-4" id="dealerFees" type="number">1000</span>
+                </div>
+                </br>
+                <div>
+                  <label class="col-6" for="kilo">Discount :</label>
+                  <select name="term" class="col-4" id="discountNumber" type="number">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                  </select>
+                </div>
+                </br>
+                <div>
+                  <label class="col-6">Total (After Tax) :</label>
+                  <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
+                </div>
+                </br>
+                <div class="action">
+                  <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()"
+                    value="calculate">
+                </div>
+              </form>
+
+              <div class="action">
+                <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact
+                  Us</button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
 
     <div class="container">
