@@ -159,15 +159,29 @@
     <!-- /.row -->
     <footer>
       <p>Car Bazaar &#169 <span id="year"></span>. All Rights Reserved.</p>
+      <p>Page was loaded at: <span id="time"></span></p>
       <p><a href="about.html">Contact Us</a></p>
     </footer>
     <script>
       var x = getCurrentYear();
 
+<<<<<<< HEAD
       function getCurrentYear() {
         document.getElementById("year").innerHTML = new Date().getFullYear();
       }
     </script>
+=======
+    function getCurrentYear() {
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    }
+
+    var today = new Date();
+
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+        document.getElementById("time").innerHTML = time;
+  </script>
+>>>>>>> c7c32a47bb1ca23b709da5aa33134452bada1d9a
 </body>
 
 </html>

@@ -163,6 +163,7 @@
       <!-- /.col-lg-9 -->
 
     </div>
+<<<<<<< HEAD
     <!-- /.row -->
     <br />
     <br />
@@ -171,6 +172,13 @@
   <footer>
     <p>Car Bazaar &#169 <span id="year"></span>. All Rights Reserved.</p>
     <button class="aboutButton" onclick="window.location.href='about.html'">Contact Us</button>
+=======
+    <!-- /.container -->
+    <footer>
+      <p>Car Bazaar &#169 <span id="year"></span>. All Rights Reserved.</p>
+      <p>Page was loaded at: <span id="time"></span></p>
+      <button class="aboutButton" onclick="window.location.href='about.html'">Contact Us</button>
+>>>>>>> c7c32a47bb1ca23b709da5aa33134452bada1d9a
   </footer>
 </body>
 
@@ -179,9 +187,22 @@
 
   function getCurrentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
+<<<<<<< HEAD
   }
   filterSelection("all")
 
+=======
+    
+}
+
+var today = new Date();
+
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+        document.getElementById("time").innerHTML = time;
+        
+filterSelection("all")
+>>>>>>> c7c32a47bb1ca23b709da5aa33134452bada1d9a
   function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("filterDiv");
