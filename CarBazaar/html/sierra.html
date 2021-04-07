@@ -50,7 +50,7 @@
 
             </div>
             <div class="details col-md-6">
-              <h3 style="text-align: center;"  class="product-title">GMC Sierra SLE</h3>
+              <h3 style="text-align: center;" class="product-title">GMC Sierra SLE</h3>
               <div class="rating">
                 <div class="stars">
                   <span class="fa fa-star checked"></span>
@@ -65,30 +65,28 @@
               <form id="theform" action="#">
                 <div>
                   <label class="col-6" for="days">Current Price :</label>
-                  <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="34500" type="text">34500</span>
+                  <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="34500"
+                    type="text">34500</span>
                 </div>
-              </br>
+                </br>
                 <div>
                   <label class="col-6" for="days">Dealer Fees :</label>
                   <span class="col-4" id="dealerFees" type="number">1000</span>
                 </div>
-              </br>
+                </br>
                 <div>
                   <label class="col-6" for="kilo">Discount :</label>
-                  <select name="term" class="col-4" id="discountNumber" type="number">
-                    <option>5</option>
-                    <option>10</option>
-                    <option>15</option>
-                  </select>
+                  <input name="term" class="col-4" id="discountCode" type="text">
                 </div>
-              </br>
-              <div>
-                <label class="col-6">Total (After Tax) :</label>
-                <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
-              </div>
-            </br>
+                </br>
+                <div>
+                  <label class="col-6">Total (After Tax) :</label>
+                  <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
+                </div>
+                </br>
                 <div class="action">
-                  <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()" value="calculate">
+                  <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()"
+                    value="calculate">
                 </div>
               </form>
 
@@ -104,23 +102,26 @@
 
     <div id="buyNow" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
       <div id="buyNowContent" class="wrapper wrapper--w790">
-        <div style="background-color: rgba(255, 255, 255, 1);" class="card card-5">
+        <div style="background-color: rgba(170, 170, 170, 0.877); margin: auto;" class="col-6 card card-5">
           <div class="card-heading">
             <div class="loginPopup">
               <div class="formPopup" id="popupForm">
                 <form action="/action_page.php" class="formContainer">
-                  <div class="form-row m-b-55">
+                  <div class="form-row">
                     <div class="name">
-                      <h5>Hello, my name is</h5>
                     </div>
                     <div class="value">
                       <div></br></div>
-                      <div class="row row-space">
+                      <div style="justify-content: center" class="row row-space">
                         <div class="col-5">
                           <div class="input-group-desc">
-                            <input class="input--style-5" required placeholder="First Name" type="text" name="first_name">
+                            <input class="input--style-5" required placeholder="First Name" type="text"
+                              name="first_name">
                           </div>
                         </div>
+                        <div></br></div>
+                      </div>
+                      <div style="justify-content: center" class="row row-space">
                         <div class="col-5">
                           <div class="input-group-desc">
                             <input class="input--style-5" required placeholder="Last Name" type="text" name="last_name">
@@ -129,15 +130,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="name">
-                    <div></br></div>
-                    <h5>and</h5>
-                  </div>
-                  <div class="form-row m-b-55">
+                  <div class="form-row">
                     <div></br></div>
                     <div class="value">
-                      <div class="row row-space">
-                        <div class="col-5">
+                      <div style="justify-content: center" class="row row-space">
+                        <div class="col-6">
                           <div class="input-group-desc">
                             <select class="input--style-5" name="contactReason">
                               <option>I'd like to know your best price for this</option>
@@ -150,77 +147,50 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-row m-b-55">
-                    <div></br></div>
-                    <div class="name">
-                      <h5 style="font-weight: bold;">GMC Sierra 1500 SLE.</h5>
-                    </div>
-                    <div></br></div>
-                    <div class="value">
-                      <div class="row row-space">
-                        <div class="col-5">
-                          <div class="input-group-desc">
-                            <h5>I'm in the area of</h5>
-                          </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="input-group-desc">
-                            <input class="input--style-5" placeholder="Zip" type="text" name="last_name">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div></br></div>
-                    <div class="value">
-                      <div class="row row-space">
-                        <div class="col-5">
-                          <div class="input-group-desc">
-                            <h5>You can email me at</h5>
-                          </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="input-group-desc">
-                            <input class="input--style-5" placeholder="Email" type="email" name="email">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div></br></div>
-                    <div class="value">
-                      <div class="row row-space">
-                        <div class="col-5">
-                          <div class="input-group-desc">
-                            <h5>or call me at</h5>
-                          </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="input-group-desc">
-                            <input required class="input--style-5" placeholder="Phone" type="tel" name="phone">
-                          </div>
+                  <div></br></div>
+                  <h4 style="font-weight: bold;">GMC Sierra 1500 SLE</h4>
+                  <div></br></div>
+                  <div class="value">
+                    <div style="justify-content: center" class="row row-space">
+                      <div class="col-5">
+                        <div class="input-group-desc">
+                          <input class="input--style-5" placeholder="Zip" type="text" name="last_name">
                         </div>
                       </div>
                     </div>
                   </div>
                   <div></br></div>
                   <div class="value">
-                    <div class="row row-space">
-                      <div class="col-10" style="text-align: center;">
+                    <div style="justify-content: center" class="row row-space">
+                      <div class="col-5">
                         <div class="input-group-desc">
-                          <h5>Thank You!</h5>
+                          <input class="input--style-5" placeholder="Email" type="email" name="email">
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="value">
-                    <div class="row row-space">
-                      <div class="col-10" style="text-align: center;">
-                  <button type="submit" class="btn col-5">Send</button>
-                  <button type="button" class="btn col-5" onclick="closeTheForm()">Close</button>
-                  </div>
-                  </div>
-                  </div>
-                </form>
+                  <div></br></div>
               </div>
+              <div style="justify-content: center" class="row row-space">
+                <div class="col-5">
+                  <div class="input-group-desc">
+                    <input required class="input--style-5" placeholder="Phone" type="tel" name="phone">
+                  </div>
+                </div>
+              </div>
+              <div class="value">
+                <div class="row row-space">
+                  <div style="text-align: center;">
+                    <button type="submit" class="btn col-5">Send</button>
+                  </div>
+                </div>
+                <div class="row row-space">
+                  <div style="text-align: center;">
+                    <button type="button" class="btn col-5" onclick="closeTheForm()">Close</button>
+                  </div>
+                </div>
+              </div>
+              </form>
             </div>
           </div>
         </div>

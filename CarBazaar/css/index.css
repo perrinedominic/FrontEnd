@@ -147,3 +147,7 @@ p {
   #winnerMessage {
     display: none;
   }
+
+  #loserMessage {
+    display: none;
+  }

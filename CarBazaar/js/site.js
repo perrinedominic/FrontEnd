@@ -120,7 +120,24 @@ function getTotal()
 {
   price = Number(document.getElementById("currentPrice").innerText);
   fees = Number(document.getElementById("dealerFees").innerText);
-  discount = Number(document.getElementById("discountNumber").value) / 100;
+  discountCode = (document.getElementById("discountCode").value.toUpperCase());
+  discount = 0;
+
+  if (discountCode === "NEWCAR5") {
+    discount = .05;
+    alert("Congratulations! 5% Discount activated!")
+  } else if (discountCode === "DISCOUNT10") {
+    discount = .10;
+    alert("Congratulations! 10% Discount activated!")
+  } else if (discountCode === "DEAL15") {
+    discount = .15;
+    alert("Congratulations! 15% Discount activated!")
+  } else if (discountCode.length > 0) {
+    alert("Inavlid discount code!")
+  }
+  
+
+
   cost = price + fees;
   subtotal = cost - cost * discount;
   taxInverse = 0.945;

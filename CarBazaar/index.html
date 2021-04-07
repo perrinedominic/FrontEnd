@@ -49,14 +49,14 @@
         </div>
 <br />
 <br />
-<div class="container d-flex justify-content-center">
+<div class="container col-6 justify-content-center">
 <div id="gameContainer" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-    <div class="wrapper wrapper--w790">
+    <div style="text-align: center;" class="wrapper wrapper--w790">
         <div style="background-color: rgba(255, 255, 255, 0.5); font-size: x-large;" class="card card-5">
             <div class="card-heading">
                 <span id="wordSpan">Press Any Key to Begin</span>
                 <hr class="gameDivider">
-                <span id="guessFeedbackSpan"></span>
+                <span style="text-align: center;" id="guessFeedbackSpan"></span>
             </div>
             <div>
                 <span style="text-align: center;" id="guessesLeftSpan"></span><br />
@@ -67,12 +67,13 @@
 </div>
 </div>
 
-<div class="container d-flex justify-content-center">
+<div class="container col-6 justify-content-center">
 <div id="gameOutcome" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-    <div class="wrapper wrapper--w790">
+    <div style="text-align: center;" class="wrapper wrapper--w790">
         <div style="background-color: rgba(255, 255, 255, 0.5); font-size: x-large;" class="card card-5">
             <p id="winnerMessage">Congratulations! Use the code IMAWINNER to get 15% off your next vehicle
                 purchase!</p>
+            <p id="loserMessage">Try again later!</p>
         </div>
     </div>
 </div>
@@ -86,6 +87,9 @@
             "drive", "luxury", "muffler", "savings", "satisfaction", "customer", "deals"
         ];
         var myGame;
+
+        var textArray = ["NEWCAR5", "DISCOUNT10", "DEAL15"];
+        var randomNumber = Math.floor(Math.random()*textArray.length);
 
         class Game {
             constructor() {
@@ -170,9 +174,11 @@
 
             checkEndConditions() {
                 if (this.guessesLeft <= 0) { //If 0 or fewer guesses left, LOSE
-                    alert("Sorry, try again later!")
+                    document.getElementById("loserMessage").style.display = "block";
+                    document.getElementById("gameContainer").remove();
                 } else if (this.playerHint.search("_") == -
                     1) { //If There are no '_' characters in the output, WIN
+                    document.getElementById("winnerMessage").innerText = "Congratulations! \nUse code " + textArray[randomNumber] + " for a discount!"
                     document.getElementById("winnerMessage").style.display = "block";
                     document.getElementById("gameContainer").remove();
                 }
