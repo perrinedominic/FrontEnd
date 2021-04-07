@@ -143,3 +143,7 @@ p {
   {
     border: 2px solid black;
   }
+
+  #winnerMessage {
+    display: none;
+  }

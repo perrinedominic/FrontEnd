@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
     <link type="text/css" rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
+
 <body>
     <ul>
         <span class="title">Car Bazaar</span>
@@ -22,7 +25,7 @@
     </ul>
     <main>
         <div class="container d-flex justify-content-center">
-        <h1>Featured Products</h1>
+            <h1>Featured Products</h1>
         </div>
         <p>&emsp;Visit our about page to learn more about us, or see products and services to view what we offer.
             If you want to know more about what we offer, please contact us by email or phone.
@@ -32,177 +35,179 @@
 
         <div id="stage" style="padding-left: 180px; height: 160px;">
             <div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
-            <img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;" src="images/camaro.jpg" width="300" height="160" alt="">
-            <img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;" src="images/cameroBackseat.jpg" width="300" height="160" alt="">
-            <img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;" src="images/cameroInterior.jpg" width="300" height="160" alt="">
-            <img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;" src="images/suburbanMain.jpg" width="300" height="160" alt="">
-            <img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;" src="images/ctsFront.jpg" width="300" height="160" alt="">
+                <img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;"
+                    src="images/camaro.jpg" width="300" height="160" alt="">
+                <img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;"
+                    src="images/cameroBackseat.jpg" width="300" height="160" alt="">
+                <img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;"
+                    src="images/cameroInterior.jpg" width="300" height="160" alt="">
+                <img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;"
+                    src="images/suburbanMain.jpg" width="300" height="160" alt="">
+                <img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;"
+                    src="images/ctsFront.jpg" width="300" height="160" alt="">
             </div>
         </div>
 <br />
 <br />
-    <div class="container d-flex justify-content-center">
-        <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-            <div class="wrapper wrapper--w790">
-                <div style="background-color: rgba(255, 255, 255, 0.5); font-size: x-large;" class="card card-5">
-                    <div class="card-heading">
-            <span id="wordSpan">Press Any Key to Begin</span><br />
-            <hr class="gameDivider">
-            <span id="guessFeedbackSpan"></span>   
-        </div>
-        <div>
-            <span style="text-align: center;" id="guessesLeftSpan"></span><br />
-            <span id="guessedLettersSpan"></span>
-        </div>
-        </div>
+<div id="gameContainer" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+        <div style="background-color: rgba(255, 255, 255, 0.5); font-size: x-large;" class="card card-5">
+            <div class="card-heading">
+                <span id="wordSpan">Press Any Key to Begin</span>
+                <span id="guessFeedbackSpan"></span>
+            </div>
+            <div>
+                <span style="text-align: center;" id="guessesLeftSpan"></span>
+                <span id="guessedLettersSpan"></span>
+            </div>
         </div>
     </div>
-    </div> 
+</div>
 
-        <script>
-            var constellationArray = ["car", "van", "truck", "tire", "gas", "repair", "hatchback", 
+<div id="gameOutcome" class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+        <div style="background-color: rgba(255, 255, 255, 0.5); font-size: x-large;" class="card card-5">
+            <p id="winnerMessage">Congratulations! Use the code IMAWINNER to get 15% off your next vehicle
+                purchase!</p>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        var constellationArray = ["car", "van", "truck", "tire", "gas", "repair", "hatchback",
             "headlight", "trunk", "license", "ignition", "convertible", "coupe", "sedan", "steering",
-            "mirror", "airbag", "engine", "battery", "transmission", "brakes", "accelerate", "clutch", 
-            "drive", "luxury", "muffler", "savings", "satisfaction", "customer", "deals"];
-var myGame;
+            "mirror", "airbag", "engine", "battery", "transmission", "brakes", "accelerate", "clutch",
+            "drive", "luxury", "muffler", "savings", "satisfaction", "customer", "deals"
+        ];
+        var myGame;
 
-class Sound {
-    constructor(src) {
-        this.sound = document.createElement("audio");
-        this.sound.src = src;
-        this.sound.setAttribute("preload", "auto");
-        this.sound.setAttribute("controls", "none");
-        this.sound.style.display = "none";
-        this.sound.volume = 0.2;
-    }
-    play() {
-        this.sound.play();
-    }
-    stop() {
-        this.sound.pause();
-    }
-}
-
-class Game {
-    constructor(){
-        this.victorySound = new Sound("assets/sounds/Commerce_start.mp3");
-        this.victoryCount=0;
-        this.assignNewGameVariables();
-        this.updateFields();
-    }
-
-    assignNewGameVariables(){
-        this.verificationMessage="";
-        this.guessesLeft=11;
-        this.guessedLetters="";
-        this.constellationName=this.assignWord();
-        this.playerHint=this.createPlayerHint();
-    }
-
-    //This assigns a new word to the game for the player to guess, utilized only upon instantiation of a new game
-    assignWord(){
-        let index = Math.floor(Math.random()*constellationArray.length);
-        return constellationArray[index];
-    }
-
-    //This creates the hidden output for the player to reference, utilized only upon instantiation of a new game
-    createPlayerHint(){
-        let output="";
-        for(let i=0; i<this.constellationName.length; i++){
-            if(this.constellationName.substr(i, 1) == "-"){
-                output += "-"; //Places an - inbetween words to keep in line with pictures
-            } else {
-                output += "_"; //Replaces the letter with an '_'
+        class Game {
+            constructor() {
+                this.victoryCount = 0;
+                this.assignNewGameVariables();
+                this.updateFields();
             }
-            output += " " //Adds a space between '_'s
-        }
-        return output;
-    }
 
-    //This is the update of all guess information, utilized any time a NEW and APPROVED key entity is pressed
-    updateFields(){
-        document.getElementById("wordSpan").innerHTML=this.playerHint;
-        document.getElementById("guessesLeftSpan").innerHTML="Chances Left: "+this.guessesLeft;
-        document.getElementById("guessedLettersSpan").innerHTML="Guessed Letters: "+this.guessedLetters;
-        document.getElementById("guessFeedbackSpan").innerHTML=this.verificationMessage;
-    }
+            assignNewGameVariables() {
+                this.verificationMessage = "";
+                this.guessesLeft = 11;
+                this.guessedLetters = "";
+                this.constellationName = this.assignWord();
+                this.playerHint = this.createPlayerHint();
+            }
 
-    //This is the main function of the game, awaiting information from a key press and submitting information based on the response.
-    verifyInput(input){
-        if(!/[a-z]/.test(input) || input.length>1){ //Test input against regular expression
-            this.verificationMessage="This is not an approved letter. Try again.";
-        } else if(this.guessedLetters.search(input) != -1) { //Test input against Already Guessed Letters
-            this.verificationMessage="This letter has already been guessed.";
-        } else {
-            this.verificationMessage="";
-            this.guessedLetters += input + ", "
-            this.compareInputWithWord(input);
-            this.checkEndConditions();
-        }
-        this.updateFields();
-    }
+            //This assigns a new word to the game for the player to guess, utilized only upon instantiation of a new game
+            assignWord() {
+                let index = Math.floor(Math.random() * constellationArray.length);
+                return constellationArray[index];
+            }
 
-    //Compares the input value to the word and rewrites the output information
-    compareInputWithWord(input){
-        var newWordOutput="";
-        var adjustmentMade = false;
-        for(let i=0; i<this.constellationName.length; i++){
-            if(this.constellationName.charAt(i)==input) { //If the point in the word has the input letter
-                newWordOutput += input + " ";
-                adjustmentMade = true;
-            } else {
-                newWordOutput += this.playerHint.charAt(2*i) + " "; //Due to spaces, i has to be doubled to get the proper next character
+            //This creates the hidden output for the player to reference, utilized only upon instantiation of a new game
+            createPlayerHint() {
+                let output = "";
+                for (let i = 0; i < this.constellationName.length; i++) {
+                    if (this.constellationName.substr(i, 1) == "-") {
+                        output += "-"; //Places an - inbetween words to keep in line with pictures
+                    } else {
+                        output += "_"; //Replaces the letter with an '_'
+                    }
+                    output += " " //Adds a space between '_'s
+                }
+                return output;
+            }
+
+            //This is the update of all guess information, utilized any time a NEW and APPROVED key entity is pressed
+            updateFields() {
+                document.getElementById("wordSpan").innerHTML = this.playerHint;
+                document.getElementById("guessesLeftSpan").innerHTML = "Chances Left: " + this.guessesLeft;
+                document.getElementById("guessedLettersSpan").innerHTML = "Guessed Letters: " + this
+                    .guessedLetters;
+                document.getElementById("guessFeedbackSpan").innerHTML = this.verificationMessage;
+            }
+
+            //This is the main function of the game, awaiting information from a key press and submitting information based on the response.
+            verifyInput(input) {
+                if (!/[a-z]/.test(input) || input.length > 1) { //Test input against regular expression
+                    this.verificationMessage = "This is not an approved letter. Try again.";
+                } else if (this.guessedLetters.search(input) != -
+                    1) { //Test input against Already Guessed Letters
+                    this.verificationMessage = "This letter has already been guessed.";
+                } else {
+                    this.verificationMessage = "";
+                    this.guessedLetters += input + ", "
+                    this.compareInputWithWord(input);
+                    this.checkEndConditions();
+                }
+                this.updateFields();
+            }
+
+            //Compares the input value to the word and rewrites the output information
+            compareInputWithWord(input) {
+                var newWordOutput = "";
+                var adjustmentMade = false;
+                for (let i = 0; i < this.constellationName.length; i++) {
+                    if (this.constellationName.charAt(i) ==
+                        input) { //If the point in the word has the input letter
+                        newWordOutput += input + " ";
+                        adjustmentMade = true;
+                    } else {
+                        newWordOutput += this.playerHint.charAt(2 * i) +
+                            " "; //Due to spaces, i has to be doubled to get the proper next character
+                    }
+                }
+                if (!adjustmentMade) {
+                    this.guessesLeft--;
+                }
+                this.playerHint = newWordOutput
+                    .toUpperCase(); //change the output to uppercase and save it back to playerHint
+            }
+
+            checkEndConditions() {
+                if (this.guessesLeft <= 0) { //If 0 or fewer guesses left, LOSE
+                    alert("Sorry, try again later!")
+                } else if (this.playerHint.search("_") == -
+                    1) { //If There are no '_' characters in the output, WIN
+                    document.getElementById("winnerMessage").style.display = "block";
+                    document.getElementById("gameContainer").remove();
+                }
+            }
+
+            newGame() {
+                this.assignNewGameVariables();
+                this.updateFields();
+                document.getElementById("victoryCountSpan").innerHTML = "Victories: " + this.victoryCount;
             }
         }
-        if(!adjustmentMade){
-            this.guessesLeft--;
+
+        window.addEventListener("keyup", startUp); //Start Screen
+        function startUp() {
+            myGame = new Game();
+            window.removeEventListener("keyup", startUp); //remove input element
+            window.addEventListener("keyup", function (event) { //replace input element and apply game loop.
+                myGame.verifyInput(event.key.toLowerCase());
+            });
         }
-        this.playerHint = newWordOutput.toUpperCase(); //change the output to uppercase and save it back to playerHint
-    }
+    </script>
 
-    checkEndConditions(){
-        if(this.guessesLeft<=0){ //If 0 or fewer guesses left, LOSE
-            this.victorySound.stop();
-            this.newGame();
-        } else if(this.playerHint.search("_") == -1){ //If There are no '_' characters in the output, WIN
-            this.victoryCount+=1;
-            this.victorySound.play();
-            setTimeout(() => {this.victorySound.stop()}, 4600);
-            document.getElementById("themeRewardSpan").src="assets/images/car.jpg";
-            this.newGame();
-        }
-    }
-
-    newGame(){
-        this.assignNewGameVariables();
-        this.updateFields();
-        document.getElementById("victoryCountSpan").innerHTML="Victories: "+this.victoryCount;
-    }
-}
-
-window.addEventListener("keyup", startUp); //Start Screen
-function startUp(){
-    myGame = new Game();
-    window.removeEventListener("keyup", startUp); //remove input element
-    window.addEventListener("keyup", function(event){ //replace input element and apply game loop.
-        myGame.verifyInput(event.key.toLowerCase());
-    });
-}</script>
-
-</main>
+    </main>
 
     <div style="padding-bottom: 5px;" class="container d-flex justify-content-center">
         <div style="width:48%; background-color: rgba(255, 255, 255, 0.5);" class="card border-0 shadow">
-            <div class="container d-flex justify-content-center"><h3 id="location">Location of our Headquarters.</h3></div>
-            <div class="container d-flex justify-content-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.538165660776!2d-89.58743828496252!3d44.52461230366336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88005a912e334235%3A0x464288b54b602c5f!2sMid-State%20Technical%20College!5e0!3m2!1sen!2sus!4v1616091130681!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            <div class="container d-flex justify-content-center">
+                <h3 id="location">Location of our Headquarters.</h3>
+            </div>
+            <div class="container d-flex justify-content-center"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.538165660776!2d-89.58743828496252!3d44.52461230366336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88005a912e334235%3A0x464288b54b602c5f!2sMid-State%20Technical%20College!5e0!3m2!1sen!2sus!4v1616091130681!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
         </div>
     </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <footer>
         <p>Car Bazaar &#169 <span id="year"></span>. All Rights Reserved.</p>
         <p>Page was loaded at: <span id="time"></span></p>
@@ -210,9 +215,9 @@ function startUp(){
     </footer>
     <script>
         var x = getCurrentYear();
-    
+
         function getCurrentYear() {
-          document.getElementById("year").innerHTML = new Date().getFullYear();
+            document.getElementById("year").innerHTML = new Date().getFullYear();
         }
 
         var today = new Date();
@@ -220,6 +225,7 @@ function startUp(){
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
         document.getElementById("time").innerHTML = time;
-      </script>
+    </script>
 </body>
+
 </html>
