@@ -138,3 +138,8 @@ p {
     color: white;
     padding-top: 7px;
   }
+
+  .gameDivider
+  {
+    border: 2px solid black;
+  }
