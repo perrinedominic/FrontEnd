@@ -1,6 +1,5 @@
 // Tests if valus are greater than zero.
-QUnit.test('IsGreaterThanZero()', function(assert)
-{
+QUnit.test('IsGreaterThanZero()', function (assert) {
     // arrange
     var values = [];
 

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
 });
 
 
@@ -24,13 +24,13 @@ function toSlide(n, id) {
 };
 
 function showSlide(n, id) {
-  const slides = document.querySelectorAll('[id='+id+']');
+  const slides = document.querySelectorAll('[id=' + id + ']');
   let modalPreviews = document.getElementsByClassName('modal-preview');
 
   if (n > slides.length) {
-    slideIndex = 1;	
+    slideIndex = 1;
   };
-  
+
   if (n < 1) {
     slideIndex = slides.length;
   };
@@ -38,71 +38,71 @@ function showSlide(n, id) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   };
-  
+
   for (let i = 0; i < modalPreviews.length; i++) {
     modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
   };
-  
+
   slides[slideIndex - 1].style.display = 'block';
   modalPreviews[slideIndex - 1].className += ' active';
 };
 
-window.onload = function() {
+window.onload = function () {
 
   var slider1 = new Slider({
-      images: '.slider-1 img',
-      btnPrev: '.slider-1 .buttons .prev',
-      btnNext: '.slider-1 .buttons .next',
-      auto: false
+    images: '.slider-1 img',
+    btnPrev: '.slider-1 .buttons .prev',
+    btnNext: '.slider-1 .buttons .next',
+    auto: false
   });
 
- var slider2 = new Slider({
-      images: '.slider-2 img',
-      btnPrev: '.slider-2 .buttons .prev',
-      btnNext: '.slider-2 .buttons .next',
-      auto: true,
-      rate: 2000
+  var slider2 = new Slider({
+    images: '.slider-2 img',
+    btnPrev: '.slider-2 .buttons .prev',
+    btnNext: '.slider-2 .buttons .next',
+    auto: true,
+    rate: 2000
   });
 }
 
 function Slider(obj) {
 
-this.images = document.querySelectorAll(obj.images);
-this.auto = obj.auto;
-this.btnPrev = obj.btnPrev;
-this.btnNext = obj.btnNext;
-   this.rate = obj.rate || 1000;
+  this.images = document.querySelectorAll(obj.images);
+  this.auto = obj.auto;
+  this.btnPrev = obj.btnPrev;
+  this.btnNext = obj.btnNext;
+  this.rate = obj.rate || 1000;
 
-var i = 0;
-   var slider = this;
+  var i = 0;
+  var slider = this;
 
-this.prev = function () {
-  slider.images[i].classList.remove('shown');
-  i--;
+  this.prev = function () {
+    slider.images[i].classList.remove('shown');
+    i--;
 
-  if (i < 0) {
-    i = slider.images.length - 1;
+    if (i < 0) {
+      i = slider.images.length - 1;
+    }
+
+    slider.images[i].classList.add('shown');
   }
 
-  slider.images[i].classList.add('shown');
-}
+  this.next = function () {
+    slider.images[i].classList.remove('shown');
+    i++;
 
-this.next = function () {
-  slider.images[i].classList.remove('shown');
-  i++;
+    if (i >= slider.images.length) {
+      i = 0;
+    }
 
-  if (i >= slider.images.length) {
-    i = 0;
+    slider.images[i].classList.add('shown');
   }
-
-  slider.images[i].classList.add('shown');
-}
 
   document.querySelector(slider.btnPrev).onclick = slider.prev;
   document.querySelector(slider.btnNext).onclick = slider.next;
 
-if (slider.auto)	{
-      setInterval(slider.next, slider.rate);
+  if (slider.auto) {
+    setInterval(slider.next, slider.rate);
   }
 };
 
@@ -116,7 +116,7 @@ function closeTheForm() {
 }
 
 // Get vehicle total cost
-function getTotal(){
+function getTotal() {
   price = Number(document.getElementById("currentPrice").innerText);
   fees = Number(document.getElementById("dealerFees").innerText);
   discount = Number(document.getElementById("discountNumber").value) / 100;
@@ -126,4 +126,5 @@ function getTotal(){
   total = subtotal / taxInverse;
   total = total.toFixed(2);
   document.getElementById("totalCost").value = total;
-        }
+}
+
