@@ -60,41 +60,39 @@
               </div>
               <p class="product-description">New 2021 Chevrolet Suburban. 0 Miles. V8 Engine with 4WD. White Exterior.
                 Fully Loaded! </p>
-              <form id="theform" action="#">
-                <div>
-                  <label class="col-6" for="days">Current Price :</label>
-                  <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="74999"
-                    type="text">74999</span>
-                </div>
+                <form id="theform" action="#">
+                  <div>
+                    <label class="col-6" for="days">Current Price :</label>
+                    <span name="currentPrice" id="currentPrice" class="col-4" id="days" value="74999" type="text">74999</span>
+                  </div>
                 </br>
-                <div>
-                  <label class="col-6" for="days">Dealer Fees :</label>
-                  <span class="col-4" id="dealerFees" type="number">1000</span>
-                </div>
+                  <div>
+                    <label class="col-6" for="days">Dealer Fees :</label>
+                    <span class="col-4" id="dealerFees" type="number">1000</span>
+                  </div>
                 </br>
-                <div>
-                  <label class="col-6" for="kilo">Discount :</label>
-                  <select name="term" class="col-4" id="discountNumber" type="number">
-                    <option>5</option>
-                    <option>10</option>
-                    <option>15</option>
-                  </select>
-                </div>
+                  <div>
+                    <label class="col-6" for="kilo">Discount :</label>
+                    <select name="term" class="col-4" id="discountNumber" type="number">
+                      <option>5</option>
+                      <option>10</option>
+                      <option>15</option>
+                    </select>
+                  </div>
                 </br>
                 <div>
                   <label class="col-6">Total (After Tax) :</label>
                   <input id="totalCost" class="col-4" id="tot" type="number" value="0" readonly>
                 </div>
-                </br>
+              </br>
+                  <div class="action">
+                    <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()" value="calculate">
+                  </div>
+                </form>
+  
                 <div class="action">
-                  <input class="add-to-cart col-11 btn btn-default" id="calc" type="button" onclick="getTotal()"
-                    value="calculate">
-                </div>
-              </form>
-
-              <div class="action">
-                <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact
-                  Us</button>
+                  <button class="add-to-cart col-11 btn btn-default" onclick="openTheForm()" type="button">Contact
+                    Us</button>
               </div>
             </div>
           </div>

@@ -32,8 +32,7 @@ table {
     width: 50%;
 }
 
-td,
-th {
+td, th {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
@@ -59,7 +58,6 @@ h3 {
     text-align: center;
     color: skyblue;
 }
-
 .tagline {
     font-size: 24px;
     text-align: center;
@@ -73,7 +71,6 @@ ul {
     overflow: hidden;
     background-color: black;
 }
-
 li {
     float: left;
 }
@@ -109,8 +106,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    text-align:center;
     background-color: black;
     color: white;
     padding-top: 7px;
-}
+  }
