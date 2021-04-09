@@ -1,6 +1,13 @@
 // Takes an array of words, and concatenates them together to form a sentence.
 function ConcatArrayOfWords(words) {
+    var ListOfWords = words;
+    var sentence = "";
 
+        ListOfWords.forEach(word => {
+            sentence += (word + " ");
+        });
+
+    return sentence;
 }
 
 // Takes an array of words, reverses them, and concatenates them together to form a sentence.
