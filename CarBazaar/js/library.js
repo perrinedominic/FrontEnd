@@ -27,7 +27,14 @@ function TestIfSquareRootIsWholeNumber(number) {
 
 // Returns the sum of an array of numbers passed-in.
 function AddArrayOfNumbers(numbers) {
+    var listOfNumbers = numbers;
 
+    var sum = numbers.reduce(function(a, b)
+    {
+        return a + b;
+    }, 0);
+
+    return sum;
 }
 
 // Gets a random whole number between 0 and the number passed in (maxNumber).
