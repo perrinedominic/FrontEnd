@@ -15,11 +15,11 @@ QUnit.test('ConcatArrayOfWords()', function(assert)
 QUnit.test('AddArrayOfNumbers()', function(assert)
 {
     // Arrange
-    var values = [];
+    var numvalues = [];
 
     // Act
-    values = [1, 2, 3 , 4, 5, 6, 7, 8, 9, 10];
+    numvalues = [1, 2, 3 , 4, 5, 6, 7, 8, 9, 10];
 
     // Assert
-    assert.equal(AddArrayOfNumbers(values, 55));
+    assert.equal(AddArrayOfNumbers(numvalues), 55, '1-10 added together is 55.');
 })
