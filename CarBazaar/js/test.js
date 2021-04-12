@@ -9,7 +9,6 @@ QUnit.test('ConcatArrayOfWords()', function(assert)
 
     // Assert
     assert.equal(ConcatArrayOfWords(values), "My chicken ate some corn ", 'My chicken ate some corn ');
-
 })
 
 QUnit.test('AddArrayOfNumbers()', function(assert)
@@ -25,4 +24,19 @@ QUnit.test('AddArrayOfNumbers()', function(assert)
     // Assert
     assert.equal(AddArrayOfNumbers(numvalues), 55, '1-10 added together is 55.');
     assert.equal(AddArrayOfNumbers(numValuesWithLetter), 'error', 'Letters cannot be added');
+})
+
+QUnit.test('TestIfSquareRootIsWholeNumber()', function(assert)
+{
+    // Arrange
+    var value;
+    var otherValue;
+
+    // Act
+    value = 4;
+    otherValue = 10;
+
+    // Assert
+    assert.equal(TestIfSquareRootIsWholeNumber(value), true, '2 is whole number');
+    assert.equal(TestIfSquareRootIsWholeNumber(otherValue), false, '3.16~ is not a whole number')
 })
