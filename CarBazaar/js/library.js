@@ -22,7 +22,12 @@ function CheckForWordInSentence(sentence, word) {
 
 // Tests if a number's square root is a whole number.
 function TestIfSquareRootIsWholeNumber(number) {
+    var number = number;
+    var root = Math.sqrt(number);
 
+    var result = Number.isInteger(root);
+
+    return result;
 }
 
 // Returns the sum of an array of numbers passed-in.
