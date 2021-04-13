@@ -87,3 +87,17 @@ function GetRandomInteger(maxNumber) {
 
     return result;
 }
+
+// Converts number to Dollar Amount.
+function ConvertToDollar(money) {
+
+    var moneyAmount = money;
+    var string = "";
+    var s = string.concat("$", moneyAmount.toString());
+  
+    if (isNaN(moneyAmount)) {
+      alert("Only numbers can be converted to dollar amount.");
+    } else {
+      return s;
+    }
+  }

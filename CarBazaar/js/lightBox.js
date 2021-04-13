@@ -115,6 +115,22 @@ function closeTheForm() {
   document.getElementById("buyNow").style.display = "none";
 }
 
+
+
+function ConvertToDollar(money) {
+
+  var moneyAmount = money;
+  var string = "";
+  var s = string.concat("$", moneyAmount.toString());
+
+  if (isNaN(moneyAmount)) {
+    alert("Only numbers can be converted to dollar amount.");
+  } else {
+    return s;
+  }
+}
+
+
 // Get vehicle total cost
 function getTotal()
 {
@@ -143,5 +159,7 @@ function getTotal()
   taxInverse = 0.945;
   total = subtotal / taxInverse;
   total = total.toFixed(2);
-  document.getElementById("totalCost").value = total;
+  convertedAmount = ConvertToDollar(total)
+  document.getElementById("totalCost").value = convertedAmount;
 }
+
