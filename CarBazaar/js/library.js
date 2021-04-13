@@ -67,4 +67,16 @@ function AddArrayOfNumbers(numbers) {
 // Gets a random whole number between 0 and the number passed in (maxNumber).
 function GetRandomInteger(maxNumber) {
 
+    var result;
+
+    if (maxNumber.isInteger() == false)
+    {
+        result = 'error';
+    }
+    else
+    {
+        result = Math.floor(Math.random() * maxNumber) + 1;
+    }
+
+    return result;
 }
