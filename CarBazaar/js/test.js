@@ -31,22 +31,33 @@ QUnit.test('TestIfSquareRootIsWholeNumber()', function(assert)
     // Arrange
     var value;
     var otherValue;
+    var NaNvalue;
 
     // Act
     value = 4;
     otherValue = 10;
+    NaNvalue = "sad";
 
     // Assert
     assert.equal(TestIfSquareRootIsWholeNumber(value), true, '2 is whole number');
     assert.equal(TestIfSquareRootIsWholeNumber(otherValue), false, '3.16~ is not a whole number')
 })
 
-QUnit.test('GetRandomInteger()', function(asswert)
+QUnit.test('GetRandomInteger()', function(assert)
 {
     // Arrange
+    var number;
+    var string;
+    var boolean;
 
     // Act
+    number = 30;
+    string = "Hello World";
+    boolean = true;
 
     // Assert
+    assert.ok(GetRandomInteger(number), "The return value is a number");
+    assert.equal(GetRandomInteger(string), 'error', "Only numbers allowed. Passed in string.");
+    assert.equal(GetRandomInteger(boolean), 'error', "Only numbers allowed. Passed in bool");
     
 })

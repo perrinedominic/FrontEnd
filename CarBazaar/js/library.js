@@ -23,9 +23,16 @@ function CheckForWordInSentence(sentence, word) {
 // Tests if a number's square root is a whole number.
 function TestIfSquareRootIsWholeNumber(number) {
     var number = number;
-    var root = Math.sqrt(number);
 
-    var result = Number.isInteger(root);
+    if(isNaN(number))
+    {
+        result = "Passed in value is not a number.";
+    }
+    else
+    {
+        var root = Math.sqrt(number);
+        var result = Number.isInteger(root);    
+    }
 
     return result;
 }
@@ -69,14 +76,14 @@ function GetRandomInteger(maxNumber) {
 
     var result;
 
-    if (maxNumber.isInteger() == false)
-    {
-        result = 'error';
-    }
-    else
-    {
-        result = Math.floor(Math.random() * maxNumber) + 1;
-    }
+        if (isNaN(maxNumber) || typeof maxNumber === "boolean")
+        {
+            result = 'error';
+        }
+        else
+        {
+            result = Math.floor(Math.random() * maxNumber) + 1;
+        }
 
     return result;
 }
