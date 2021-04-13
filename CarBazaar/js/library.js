@@ -101,3 +101,12 @@ function ConvertToDollar(money) {
       return s;
     }
   }
+
+// Checks for word in a sentence.
+function WordInSentence(sentence, word) {
+    word = word.toUpperCase();
+    sentence = sentence.toUpperCase();
+    isIncluded = sentence.includes(word);
+    alert(isIncluded);
+    return isIncluded;
+}
