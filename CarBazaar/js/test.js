@@ -40,3 +40,13 @@ QUnit.test('TestIfSquareRootIsWholeNumber()', function(assert)
     assert.equal(TestIfSquareRootIsWholeNumber(value), true, '2 is whole number');
     assert.equal(TestIfSquareRootIsWholeNumber(otherValue), false, '3.16~ is not a whole number')
 })
+
+QUnit.test('GetRandomInteger()', function(asswert)
+{
+    // Arrange
+
+    // Act
+
+    // Assert
+    
+})
