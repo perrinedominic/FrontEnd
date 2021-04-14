@@ -104,9 +104,13 @@ function ConvertToDollar(money) {
 
 // Checks for word in a sentence.
 function WordInSentence(sentence, word) {
-    word = word.toUpperCase();
-    sentence = sentence.toUpperCase();
-    isIncluded = sentence.includes(word);
-    alert(isIncluded);
-    return isIncluded;
+    if (word == String) {
+        word = word.toUpperCase();
+        sentence = sentence.toUpperCase();
+        isIncluded = sentence.includes(word);
+        return isIncluded;
+    } else {
+        error = "The word must be a string value.";
+        return error;
+    }
 }

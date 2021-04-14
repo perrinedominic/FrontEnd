@@ -61,3 +61,43 @@ QUnit.test('GetRandomInteger()', function(assert)
     assert.equal(GetRandomInteger(boolean), 'error', "Only numbers allowed. Passed in bool");
     
 })
+
+QUnit.test('ConvertToDollar()', function(assert)
+{
+    // Arrange
+    var number;
+    var numberString;
+    var boolean;
+
+    // Act
+    number = 30;
+    numberString = "500";
+    boolean = true;
+
+    // Assert
+    assert.equal(ConvertToDollar(number), "$30");
+    assert.equal(ConvertToDollar(numberString), "30");
+    assert.equal(ConvertToDollar(boolean), "Only numbers can be converted to dollar amount.");
+    
+})
+
+QUnit.test('WordInSentence()', function(assert)
+{
+    // Arrange
+    var sentence;
+    var number;
+    var word1;
+    var word2;
+
+    // Act
+    sentence = "The car is blue."
+    number = 30;
+    word1 = "BLUE";
+    word2 = "red";
+
+    // Assert
+    assert.equal(WordInSentence(sentence, word2), true); //Word was found.
+    assert.equal(WordInSentence(string, number), "The word must be a string value.");
+    assert.equal(WordInSentence(boolean), false); //Word was not found.
+    
+})
