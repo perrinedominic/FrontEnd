@@ -72,12 +72,12 @@ QUnit.test('ConvertToDollar()', function(assert)
     // Act
     number = 30;
     numberString = "500";
-    boolean = true;
+    string = "Dog"
 
     // Assert
     assert.equal(ConvertToDollar(number), "$30");
-    assert.equal(ConvertToDollar(numberString), "30");
-    assert.equal(ConvertToDollar(boolean), "Only numbers can be converted to dollar amount.");
+    assert.equal(ConvertToDollar(numberString), "$500");
+    assert.equal(ConvertToDollar(string), "Only numbers can be converted to dollar amount.");
     
 })
 
@@ -96,8 +96,8 @@ QUnit.test('WordInSentence()', function(assert)
     word2 = "red";
 
     // Assert
-    assert.equal(WordInSentence(sentence, word2), true); //Word was found.
-    assert.equal(WordInSentence(string, number), "The word must be a string value.");
-    assert.equal(WordInSentence(boolean), false); //Word was not found.
+    assert.equal(WordInSentence(sentence, word1), true); //Word was not found.
+    assert.equal(WordInSentence(sentence, number), "The word must be a string value.");
+    assert.equal(WordInSentence(sentence, word2), false); //Word was not found.
     
 })

@@ -93,10 +93,12 @@ function ConvertToDollar(money) {
 
     var moneyAmount = money;
     var string = "";
+    var error
     var s = string.concat("$", moneyAmount.toString());
   
     if (isNaN(moneyAmount)) {
-      alert("Only numbers can be converted to dollar amount.");
+        error = "Only numbers can be converted to dollar amount.";
+        return error;
     } else {
       return s;
     }
@@ -104,7 +106,7 @@ function ConvertToDollar(money) {
 
 // Checks for word in a sentence.
 function WordInSentence(sentence, word) {
-    if (word == String) {
+    if (typeof word == "string") {
         word = word.toUpperCase();
         sentence = sentence.toUpperCase();
         isIncluded = sentence.includes(word);
