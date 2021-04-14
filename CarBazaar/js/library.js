@@ -91,18 +91,18 @@ function GetRandomInteger(maxNumber) {
 // Converts number to Dollar Amount.
 function ConvertToDollar(money) {
 
-    var moneyAmount = money;
     var string = "";
-    var error
-    var s = string.concat("$", moneyAmount.toString());
-  
-    if (isNaN(moneyAmount)) {
+    var error;
+
+
+    if (isNaN(money)) {
         error = "Only numbers can be converted to dollar amount.";
         return error;
     } else {
-      return s;
+        string = string.concat("$", money.toString());
+        return string;
     }
-  }
+}
 
 // Checks for word in a sentence.
 function WordInSentence(sentence, word) {

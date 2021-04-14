@@ -67,7 +67,7 @@ QUnit.test('ConvertToDollar()', function(assert)
     // Arrange
     var number;
     var numberString;
-    var boolean;
+    var string;
 
     // Act
     number = 30;
