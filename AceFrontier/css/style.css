@@ -1081,8 +1081,6 @@ ul.top_icon li a {
      padding-top: 24px;
 }
 
-
-}
 .main-menu ul li:last-child a {
      padding-right: 0;
 }
@@ -1172,7 +1170,7 @@ ul.top_icon li a {
      right: 0;
      padding: 15px 0px;
 }
-.sub-full {}
+
 .simple-down {
      padding: 15px;
 }
@@ -1777,7 +1775,7 @@ input[type="radio"] .styled:checked+label::after {
      -moz-background-size: 100% 20px;
      background-size: 100% 20px;
      background-image: -webkit-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -webkit-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
-     background-image: -moz-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -moz-linear-gradient(left, #077f9b 0%, #0c1e434 100%);
+     background-image: -moz-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -moz-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
      background-image: -o-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -o-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
      background-image: linear-gradient(to right, #077f9b 0%, #0c1e43 100%), linear-gradient(to right, #077f9b 0%, #0c1e43 100%);
      max-width: 1004px;
@@ -1998,6 +1996,7 @@ input[type="radio"] .styled:checked+label::after {
      background-repeat: no-repeat;
      background-position: center center;
 }
+
 .amazing .amazing-box {
      text-align: center;
 }
@@ -2272,3 +2271,9 @@ ul.location_icon span {
 }
 
 /** slider arrow **/
+
+
+.comboBoxArea
+{
+     width: 260px;
+}
