@@ -2276,3 +2276,9 @@ ul.location_icon span {
 {
      width: 260px;
 }
+
+.destinations-area .single-destinations .details .package-list li {
+     border-bottom: 1px solid #eee;
+     margin-bottom: 15px;
+     padding-bottom: 15px;
+ }
