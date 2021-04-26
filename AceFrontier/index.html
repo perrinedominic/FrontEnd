@@ -101,7 +101,7 @@
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                      <li class="nav-item">
                         <a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab"
-                           aria-controls="flight" aria-selected="true">Flights</a>
+                           aria-controls="flight" aria-selected="true">Tours</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab"
@@ -109,32 +109,57 @@
                      </li>
                   </ul>
                   <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show in active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+                     <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
                         <form class="main-form tour-form">
                            <div class="form-row">
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <input type="text" class="form-control" name="name" placeholder="From "
+                                    <label>Tour Type</label>
+                                    <select type="select" class="form-control" name="name" placeholder="From "
                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>Mountain Trek</option>
+                                       <option>Bus Tours</option>
+                                       <option>Ocean Getaways</option>
+                                    </select>
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <input type="text" class="form-control" name="to" placeholder="To "
+                                    <label>Location</label>
+                                    <select type="select" class="form-control" name="name" placeholder="From "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>Mount Everest</option>
+                                       <option>Cayambe</option>
+                                       <option>Makalu</option>
+                                       <option>Half Dome</option>
+                                       <option>Paris</option>
+                                       <option>New York</option>
+                                       <option>London</option>
+                                       <option>Australian Outback</option>
+                                       <option>Ocean Bungalow</option>
+                                       <option>Beach Getaway</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label for="checkIn">Tour Date</label>
+                                    <input type="date" class="form-control" name="to" placeholder="To "
                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <input type="text" class="form-control date-picker hasDatepicker" name="start"
-                                       placeholder="Start " onfocus="this.placeholder = ''"
-                                       onblur="this.placeholder = 'Start '" id="dp1619131488217"></div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <input type="text" class="form-control date-picker hasDatepicker" name="return"
-                                       placeholder="Return " onfocus="this.placeholder = ''"
-                                       onblur="this.placeholder = 'Return '" id="dp1619131488218"></div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"><input type="number" min="1"
-                                       max="20" class="form-control" name="adults" placeholder="Adults "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
+                                    <label>Preferred Flight Class</label>
+                                    <select type="select" class="form-control" name="name" placeholder="From "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>Economy</option>
+                                       <option>Premium Economy</option>
+                                       <option>Business Class</option>
+                                       <option>First Class</option>
+                                    </select>
                                  </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"><button
-                                       class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Travelers</label>
+                                    <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
+                                       max="4" id="roomNumberControl"></div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    </br>
+                                    <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
                                        class="form-control" name="searchButton">Search</button>
                                  </div>
                               </div>
@@ -143,36 +168,43 @@
                      </div>
                      <div class="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="holiday-tab">
                         <form class="main-form tour-form">
-                           <div class="row">
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                 <input type="text" class="form-control" name="name" placeholder="From "
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                 <input type="text" class="form-control" name="to" placeholder="To "
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                 <input type="text" class="form-control date-picker hasDatepicker" name="start"
-                                    placeholder="Start " onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Start '" id="dp1619131488217">
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                 <input type="text" class="form-control date-picker hasDatepicker" name="return"
-                                    placeholder="Return " onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Return '" id="dp1619131488218">
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"><input type="number" min="1"
-                                    max="20" class="form-control" name="adults" placeholder="Adults "
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"><input type="number" min="1"
-                                    max="20" class="form-control" name="child" placeholder="Child "
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">
-                              </div>
-                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"><button
-                                    class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
-                                    class="form-control" name="searchButton">Search</button>
+                           <div class="form-row">
+                              <div class="row">
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Location</label>
+                                    <select type="select" class="form-control" name="name" placeholder="From "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>Chicago, USA</option>
+                                       <option>Singapore</option>
+                                       <option>Yerevan, Armenia</option>
+                                       <option>Dubai, UAE</option>
+                                       <option>Los Angeles, USA</option>
+                                       <option>Cancún, Mexico</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label for="checkIn">Check-In</label>
+                                    <input type="date" class="form-control" name="to" placeholder="To "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Check-Out</label>
+                                    <input id="checkIn" type="date" class="form-control date-picker hasDatepicker"
+                                       name="start"></div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Rooms</label>
+                                    <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
+                                       max="4" id="roomNumberControl"></div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Adults</label>
+                                    <input type="number" class="form-control" name="adults" placeholder="1" min="1"
+                                       max="4" id="adultNumberControl">
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    </br>
+                                    <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
+                                       class="form-control" name="searchButton">Search</button>
+                                 </div>
                               </div>
                            </div>
                         </form>
