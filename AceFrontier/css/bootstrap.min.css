@@ -2033,6 +2033,10 @@ pre code {
     .table-responsive-md>.table-bordered {
         border: 0
     }
+  
+    ul#myTab.nav.nav-tabs {
+        opacity: 0;
+    }
 }
 
 @media (max-width:991.98px) {
@@ -4296,12 +4300,17 @@ input[type=submit].btn-block {
     text-align: center
 }
 
+.tab-content{
+    display: block;
+}
+
 .tab-content>.tab-pane {
-    display: none
+    height: auto;
 }
 
 .tab-content>.active {
-    display: block
+    display: block;
+    height: auto;
 }
 
 .navbar {
