@@ -115,17 +115,14 @@
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Tour Type</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
-                                       <option>Mountain Trek</option>
-                                       <option>Bus Tours</option>
-                                       <option>Ocean Getaways</option>
+                                    <select id='tourTypes' type="select" class="form-control" name="name"
+                                       placeholder="From " onclick="dynamicDropdown(this)">
                                     </select>
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Location</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                    <select id="locations" type="select" class="form-control" name="name"
+                                       placeholder="From ">
                                        <option>Mount Everest</option>
                                        <option>Cayambe</option>
                                        <option>Makalu</option>
@@ -138,6 +135,35 @@
                                        <option>Beach Getaway</option>
                                     </select>
                                  </div>
+
+                                 <script language="javascript" type="text/javascript">
+                                    var mList = {
+                                       "Mountain Trek": ['Mount Everest', 'Cayambe', 'Makalu', 'Half Dome'
+                                       ],
+                                       "Bus Tours": ['Paris', 'New York', 'London', 'Australian Outback'
+                                       ],
+                                       "Ocean Getaways": ['Ocean Bungalow', 'Beach Getaway'
+                                       ]
+                                    };
+
+                                    el_parent = document.getElementById("tourTypes");
+                                    el_child = document.getElementById("locations");
+
+                                    for (key in mList) {
+                                       el_parent.innerHTML = el_parent.innerHTML + '<option>' + key + '</option>';
+                                    }
+
+                                    el_parent.addEventListener('change', function populate_child(e) {
+                                       el_child.innerHTML = '';
+                                       itm = e.target.value;
+                                       if (itm in mList) {
+                                          for (i = 0; i < mList[itm].length; i++) {
+                                             el_child.innerHTML = el_child.innerHTML + '<option>' + mList[itm][
+                                                i] + '</option>';
+                                          }
+                                       }
+                                    });
+                                 </script>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Tour Date</label>
                                     <input type="date" class="form-control" name="to" placeholder="To "

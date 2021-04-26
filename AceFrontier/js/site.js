@@ -13,5 +13,3 @@ function submitContactForm()
         document.getElementById("emailError").textContent = "Please enter all fields.";
     }
 }
-
-   
