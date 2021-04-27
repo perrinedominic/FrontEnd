@@ -7,7 +7,6 @@ image: node:10.15.3
 
 pipelines:
   default:
-    - parallel:
         - step:
             name: Initial Installations
             caches:
