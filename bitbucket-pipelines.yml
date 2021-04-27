@@ -13,7 +13,7 @@ pipelines:
               - node
             script:
               - npm install
-              – npm install express --save-dev
+              - npm install express --save-dev
               - npm install javascript-obfuscator --save-dev
               - npm install ncp --save-dev
         - step:
@@ -23,4 +23,4 @@ pipelines:
             script:
               - node release/createReleaseProject
             artifacts:
-              release/**
+              - release/**
