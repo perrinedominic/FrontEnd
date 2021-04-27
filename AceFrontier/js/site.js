@@ -14,6 +14,7 @@ function submitContactForm()
         document.getElementById("emailError").textContent = "Please enter all fields.";
     }
 }
+<<<<<<< HEAD
 
 
 function displayHotels()
@@ -107,3 +108,5 @@ function DeleteHotel(hotelID)
 
 
    
+=======
+>>>>>>> origin/nauv-118
