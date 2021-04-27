@@ -33,7 +33,7 @@
 </head>
 <!-- body -->
 
-<body class="main-layout">
+<body onload="displayHotels();" class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
@@ -100,6 +100,7 @@
                 <div class="menu-content pb-40 col-lg-8">
                     <div class="title text-center">
                         <h1 class="mb-10">Popular Hotels</h1>
+                        <h2>HINT: Click the yellow price to see more details!</h2>
                     </div>
                     <br />
                 </div>
@@ -124,6 +125,185 @@
                             <p>
                                 <a href="https://g.page/palmer-house-a-hilton-hotel?share">View on map</a>   |   62 Reviews
                             </p>
+                            <ul class="package-list">											
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Price per night</span>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="addDataToStorage('hotel1')" class="price-btn">$400</a>
+                                </li>													
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div style="padding-bottom: 10%;" class="single-destinations">
+                        <div style="text-align: center;" class="thumb">
+                            <img src="../images/Locations/fullertonBay.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h4 class="d-flex justify-content-between">
+                                <span>The Fullerton Hotel</span>                              	
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>	
+                            </h4>
+                            <p>
+                                <a href="https://goo.gl/maps/uhwhroYDgBcduuMh6">View on map</a>   |   80 Reviews
+                            </p>
+                            <ul class="package-list">
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Price per night</span>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="addDataToStorage('hotel2')" class="price-btn">$250</a>
+                                </li>													
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div style="padding-bottom: 10%;" class="single-destinations">
+                        <div style="text-align: center;" class="thumb">
+                            <img src="../images/Locations/yerevan.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h4 class="d-flex justify-content-between">
+                                <span>The Yerevan</span>                              	
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>				
+                                </div>	
+                            </h4>
+                            <p>
+                                <a href="https://g.page/paris-hotel-yerevan?share">View on map</a>   |   56 Reviews
+                            </p>
+                            <ul class="package-list">							
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Price per night</span>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="addDataToStorage('hotel3')" class="price-btn">$60</a>
+                                </li>													
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div style="padding-bottom: 10%;" class="single-destinations">
+                        <div style="text-align: center;" class="thumb">
+                            <img src="../images/Locations/mariot.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h4 class="d-flex justify-content-between">
+                                <span>The Mariott</span>                              	
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>				
+                                </div>	
+                            </h4>
+                            <p>
+                                <a href="https://goo.gl/maps/6sZ1zSCUqDWQs6347">View on map</a>   |   48 Reviews
+                            </p>
+                            <ul class="package-list">					
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Price per night</span>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;" onclick="addDataToStorage('hotel4')" class="price-btn">$100</a>
+                                </li>													
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div style="padding-bottom: 10%;" class="single-destinations">
+                        <div style="text-align: center;" class="thumb">
+                            <img src="../images/Locations/wayfarer.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h4 class="d-flex justify-content-between">
+                                <span>The Wayfarer</span>                              	
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>				
+                                </div>	
+                            </h4>
+                            <p>
+                                <a href="https://goo.gl/maps/u2QM5Xoum3j59q1U8">View on map</a>   |   105 Reviews
+                            </p>
+                            <ul class="package-list">					
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Price per night</span>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;" onclick="addDataToStorage('hotel5')" class="price-btn">$150</a>
+                                </li>													
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div style="padding-bottom: 10%;" class="single-destinations">
+                        <div style="text-align: center;" class="thumb">
+                            <img src="../images/Locations/Mexico.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h4 class="d-flex justify-content-between">
+                                <span>Hotel Riu Dunamar</span>                              	
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>				
+                                </div>	
+                            </h4>
+                            <p>
+                                <a href="https://g.page/Hotel-Riu-Dunamar?share">View on map</a>   |   95 Reviews
+                            </p>
+                            <ul class="package-list">								
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Price per night</span>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="addDataToStorage('hotel6')" class="price-btn">$200</a>
+                                </li>													
+                            </ul>
+                        </div>
+                    </div>
+                </div>																														
+            </div>
+        </div>	
+    </section>
+    <!--Start Price comparer-->
+    <section class="destinations-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-40 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Compare Hotels Show Here</h1>
+                        <hr class="compareDivider">
+                    </div>
+                    <br />
+                </div>
+            </div>						
+            <div class="row">
+                <div id="hotel1" class="col-lg-4 hiddenHotel">
+                    <div style="padding-bottom: 10%;" class="single-destinations">
+                        <div style="text-align: center;" class="thumb">
+                            <img src="../images/Locations/chicago1.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h4 class="d-flex justify-content-between">
+                                <span>Palmer House Hilton</span>                              	
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>				
+                                </div>	
+                            </h4>
                             <ul class="package-list">
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Swimming pool</span>
@@ -151,13 +331,13 @@
                                 </li>												
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Price per night</span>
-                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  href="#" class="price-btn">$400</a>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="DeleteHotel('hotel1')" class="price-btn">$400</a>
                                 </li>													
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div id="hotel2" class="col-lg-4 hiddenHotel">
                     <div style="padding-bottom: 10%;" class="single-destinations">
                         <div style="text-align: center;" class="thumb">
                             <img src="../images/Locations/fullertonBay.jpg" alt="">
@@ -172,9 +352,6 @@
                                     <span class="fa fa-star"></span>
                                 </div>	
                             </h4>
-                            <p>
-                                <a href="https://goo.gl/maps/uhwhroYDgBcduuMh6">View on map</a>   |   80 Reviews
-                            </p>
                             <ul class="package-list">
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Swimming pool</span>
@@ -202,13 +379,13 @@
                                 </li>												
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Price per night</span>
-                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  href="#" class="price-btn">$250</a>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="DeleteHotel('hotel2')"  class="price-btn">$250</a>
                                 </li>													
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div id="hotel3" class="col-lg-4 hiddenHotel">
                     <div style="padding-bottom: 10%;" class="single-destinations">
                         <div style="text-align: center;" class="thumb">
                             <img src="../images/Locations/yerevan.jpg" alt="">
@@ -224,9 +401,6 @@
                                     <span class="fa fa-star"></span>				
                                 </div>	
                             </h4>
-                            <p>
-                                <a href="https://g.page/paris-hotel-yerevan?share">View on map</a>   |   56 Reviews
-                            </p>
                             <ul class="package-list">
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Swimming pool</span>
@@ -254,13 +428,13 @@
                                 </li>												
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Price per night</span>
-                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  href="#" class="price-btn">$60</a>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="DeleteHotel('hotel3')" class="price-btn">$60</a>
                                 </li>													
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div id="hotel4" class="col-lg-4 hiddenHotel">
                     <div style="padding-bottom: 10%;" class="single-destinations">
                         <div style="text-align: center;" class="thumb">
                             <img src="../images/Locations/mariot.jpg" alt="">
@@ -275,9 +449,6 @@
                                     <span class="fa fa-star"></span>				
                                 </div>	
                             </h4>
-                            <p>
-                                <a href="https://goo.gl/maps/6sZ1zSCUqDWQs6347">View on map</a>   |   48 Reviews
-                            </p>
                             <ul class="package-list">
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Swimming pool</span>
@@ -305,13 +476,13 @@
                                 </li>												
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Price per night</span>
-                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;" href="#" class="price-btn">$100</a>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;" onclick="DeleteHotel('hotel4')" class="price-btn">$100</a>
                                 </li>													
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div id="hotel5" class="col-lg-4 hiddenHotel">
                     <div style="padding-bottom: 10%;" class="single-destinations">
                         <div style="text-align: center;" class="thumb">
                             <img src="../images/Locations/wayfarer.jpg" alt="">
@@ -327,9 +498,6 @@
                                     <span class="fa fa-star"></span>				
                                 </div>	
                             </h4>
-                            <p>
-                                <a href="https://goo.gl/maps/u2QM5Xoum3j59q1U8">View on map</a>   |   105 Reviews
-                            </p>
                             <ul class="package-list">
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Swimming pool</span>
@@ -357,13 +525,13 @@
                                 </li>												
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Price per night</span>
-                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  href="#" class="price-btn">$150</a>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="DeleteHotel('hotel5')" class="price-btn">$150</a>
                                 </li>													
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div id="hotel6" class="col-lg-4 hiddenHotel">
                     <div style="padding-bottom: 10%;" class="single-destinations">
                         <div style="text-align: center;" class="thumb">
                             <img src="../images/Locations/Mexico.jpg" alt="">
@@ -379,9 +547,6 @@
                                     <span class="fa fa-star"></span>				
                                 </div>	
                             </h4>
-                            <p>
-                                <a href="https://g.page/Hotel-Riu-Dunamar?share">View on map</a>   |   95 Reviews
-                            </p>
                             <ul class="package-list">
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Swimming pool</span>
@@ -409,7 +574,7 @@
                                 </li>												
                                 <li class="d-flex justify-content-between align-items-center">
                                     <span>Price per night</span>
-                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  href="#" class="price-btn">$200</a>
+                                    <a style="background-color: #f8b600; font-weight: 600; padding: 5px 20px;"  onclick="DeleteHotel('hotel6')" class="price-btn">$200</a>
                                 </li>													
                             </ul>
                         </div>

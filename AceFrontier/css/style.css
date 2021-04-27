@@ -2283,3 +2283,13 @@ ul.location_icon span {
      margin-bottom: 15px;
      padding-bottom: 15px;
  }
+
+ .hiddenHotel
+ {
+      display: none;
+ }
+
+ .compareDivider
+ {
+      border: 3px solid black;
+ }
