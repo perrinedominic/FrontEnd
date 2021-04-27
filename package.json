@@ -1,0 +1,16 @@
+{
+  "name": "teamnauvoo",
+  "version": "1.0.0",
+  "description": "package json file for team nauvoo pipelines",
+  "main": "add.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Boderman@bitbucket.org/BrentPresley/nauvoo.git"
+  },
+  "author": "Team Nauvoo",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/BrentPresley/nauvoo#readme"
+}

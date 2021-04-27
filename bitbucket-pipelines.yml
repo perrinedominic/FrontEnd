@@ -9,16 +9,19 @@ pipelines:
   default:
     - parallel:
         - step:
-            name: Build and Test
+            name: Initial Installations
             caches:
               - node
             script:
               - npm install
-              - npm test
+              – npm install express --save-dev
+              - npm install javascript-obfuscator --save-dev
+              - npm install ncp --save-dev
         - step:
-            name: Code linting
-            script:
-              - npm install eslint
-              - npx eslint .
+            name: Prepare Projects for Release
             caches:
               - node
+            script:
+              - node release/createReleaseProject
+            artifacts:
+              release/**
