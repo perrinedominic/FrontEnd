@@ -139,7 +139,7 @@
 
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Tour Date</label>
-                                    <input type="date" class="form-control" name="to" placeholder="To "
+                                    <input onload="getDate();" id="checkInDate" type="date" class="form-control" name="formDates"
                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -181,13 +181,13 @@
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Check-In</label>
-                                    <input pattern="\d{1,2}/\d{1,2}/\d{4}" type="date" class="form-control"
+                                    <input id="checkIn" name="formDates" onload="getDate();" max="2025-12-12" onload="getDate()" pattern="\d{1,2}/\d{1,2}/\d{4}" type="date" class="form-control formDates"
                                        onblur="compare();">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Check-Out</label>
                                     <input pattern="\d{1,2}/\d{1,2}/\d{4}" onblur="compare();" id="checkOut" type="date"
-                                       class="form-control date-picker hasDatepicker" name="start"></div>
+                                       class="form-control date-picker" max="01/01/2025" name="formDates"></div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Rooms</label>
                                     <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
