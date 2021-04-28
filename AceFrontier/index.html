@@ -116,7 +116,8 @@
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Tour Type</label>
                                     <select id='tourTypes' type="select" class="form-control" name="name"
-                                       placeholder="From " onclick="dynamicDropdown(this)">
+                                       placeholder="From ">
+                                       <option>Any</option>
                                     </select>
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -136,34 +137,6 @@
                                     </select>
                                  </div>
 
-                                 <script language="javascript" type="text/javascript">
-                                    var mList = {
-                                       "Mountain Trek": ['Mount Everest', 'Cayambe', 'Makalu', 'Half Dome'
-                                       ],
-                                       "Bus Tours": ['Paris', 'New York', 'London', 'Australian Outback'
-                                       ],
-                                       "Ocean Getaways": ['Ocean Bungalow', 'Beach Getaway'
-                                       ]
-                                    };
-
-                                    el_parent = document.getElementById("tourTypes");
-                                    el_child = document.getElementById("locations");
-
-                                    for (key in mList) {
-                                       el_parent.innerHTML = el_parent.innerHTML + '<option>' + key + '</option>';
-                                    }
-
-                                    el_parent.addEventListener('change', function populate_child(e) {
-                                       el_child.innerHTML = '';
-                                       itm = e.target.value;
-                                       if (itm in mList) {
-                                          for (i = 0; i < mList[itm].length; i++) {
-                                             el_child.innerHTML = el_child.innerHTML + '<option>' + mList[itm][
-                                                i] + '</option>';
-                                          }
-                                       }
-                                    });
-                                 </script>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Tour Date</label>
                                     <input type="date" class="form-control" name="to" placeholder="To "
@@ -171,8 +144,7 @@
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Preferred Flight Class</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                    <select type="select" class="form-control" name="name">
                                        <option>Economy</option>
                                        <option>Premium Economy</option>
                                        <option>Business Class</option>
@@ -198,8 +170,7 @@
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Location</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                    <select type="select" class="form-control">
                                        <option>Chicago, USA</option>
                                        <option>Singapore</option>
                                        <option>Yerevan, Armenia</option>
@@ -210,13 +181,13 @@
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Check-In</label>
-                                    <input type="date" class="form-control" name="to" placeholder="To "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                    <input pattern="\d{1,2}/\d{1,2}/\d{4}" type="date" class="form-control"
+                                       onblur="compare();">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Check-Out</label>
-                                    <input id="checkIn" type="date" class="form-control date-picker hasDatepicker"
-                                       name="start"></div>
+                                    <input pattern="\d{1,2}/\d{1,2}/\d{4}" onblur="compare();" id="checkOut" type="date"
+                                       class="form-control date-picker hasDatepicker" name="start"></div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Rooms</label>
                                     <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
@@ -521,24 +492,32 @@
          })
       })
    </script>
-   <script>
-      var options = [{
-            "text": "Mountain Treks"
-         },
-         {
-            "text": "Bus Tours"
-         },
-         {
-            "text": "Beach Getaways"
-         }
-      ];
 
-      var selectBox = document.getElementByClassName('.form-control');
+   <script language="javascript" type="text/javascript">
+      var mList = {
+         "Mountain Trek": ['Mount Everest', 'Cayambe', 'Makalu', 'Half Dome'],
+         "Bus Tours": ['Paris', 'New York', 'London', 'Australian Outback'],
+         "Ocean Getaways": ['Ocean Bungalow', 'Beach Getaway']
+      };
 
-      for (var i = 0, l = options.length; i < l; i++) {
-         var option = options[i];
-         selectBox.options.add(new Option(option.text));
+      el_parent = document.getElementById("tourTypes");
+      el_child = document.getElementById("locations");
+
+      for (key in mList) {
+         el_parent.innerHTML = el_parent.innerHTML + '<option>' + key + '</option>';
       }
+
+      el_parent.addEventListener('change', function populate_child(e) {
+         el_child.innerHTML = '';
+         itm = e.target.value;
+         if (itm in mList) {
+            for (i = 0; i < mList[itm].length; i++) {
+               el_child.innerHTML = el_child.innerHTML + '<option>' + mList[itm][
+                  i
+               ] + '</option>';
+            }
+         }
+      });
    </script>
 
 </body>

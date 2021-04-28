@@ -13,3 +13,16 @@ function submitContactForm()
         document.getElementById("emailError").textContent = "Please enter all fields.";
     }
 }
+
+function compare()
+{
+    var startDt = document.getElementById("checkIn").value;
+    var endDt = document.getElementById("checkOut").value;
+
+    if( (new Date(startDt).getTime() < new Date(endDt).getTime()))
+    {
+        alert("Check-In date cannot be after the Check-Out date");
+    }
+
+    alert(startDt);
+}
