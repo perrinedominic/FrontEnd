@@ -104,5 +104,38 @@ function DeleteHotel(hotelID)
       location.reload();
 }
 
+if (name != "" && msg != "" && subject != "") {
+    window.location.href = "mailto:AceFrontier@travel.com?subject=" + subject + "&body=Hi AceFrontier! My name is " + name + ". %0d%0a %0d%0a" + msg;
+} else {
+    document.getElementById("emailError").textContent = "Please enter all fields.";
+}
 
+
+<<<<<<< HEAD
    
+=======
+function compare() {
+var startDt = document.getElementById("checkIn").value;
+var endDt = document.getElementById("checkOut").value;
+
+if (startDt > endDt) {
+    alert("Check-In date cannot be after the Check-Out date");
+}
+}
+
+function getDate() {
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+if (dd < 10) {
+    dd = '0' + dd
+}
+if (mm < 10) {
+    mm = '0' + mm
+}
+
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementsByName("formDates").setAttribute("min", today);
+}
+>>>>>>> 2d12aa8de0f06329722b53c1cbbcd6c4e59f00d5
