@@ -2293,3 +2293,54 @@ ul.location_icon span {
  {
       border: 3px solid black;
  }
+
+ .priceCompareButton
+ {
+     background-color: #f8b600; 
+     font-weight: 600; 
+     padding: 5px 20px;
+     transform-style: preserve-3d;
+ }
+
+ .priceCompareButton:after {
+     top: -100%;
+     left: 0px;
+     width: 100%;
+     position: absolute;
+     background: #f8b600; 
+     color: black;
+     border-radius: 5px;
+     content: 'Compare Hotel';
+     transform-origin: left bottom;
+     transform: rotateX(90deg);
+   }
+   .priceCompareButton:hover {
+     transform-origin: center bottom;
+     transform: rotateX(-90deg) translateY(100%);
+   }
+
+   .removePriceCompareButton
+ {
+     background-color: #f8b600; 
+     font-weight: 600; 
+     padding: 5px 20px;
+     transform-style: preserve-3d;
+ }
+
+ .removePriceCompareButton:after {
+     top: -100%;
+     left: 0px;
+     width: 100%;
+     position: absolute;
+     background: #f8b600; 
+     color: black;
+     border-radius: 5px;
+     content: 'Remove Hotel';
+     transform-origin: left bottom;
+     transform: rotateX(90deg);
+   }
+
+   .removePriceCompareButton:hover {
+     transform-origin: center bottom;
+     transform: rotateX(-90deg) translateY(100%);
+   }
