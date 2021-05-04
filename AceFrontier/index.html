@@ -111,7 +111,7 @@
                   </ul>
                   <div class="tab-content" id="myTabContent">
                      <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
-                        <form class="main-form tour-form">
+                        <form id="tourForm" class="main-form tour-form" action="">
                            <div class="form-row">
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -140,8 +140,9 @@
 
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Tour Date</label>
-                                    <input onload="getDate();" id="checkInDate" type="date" class="form-control" name="formDates"
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                    <input onload="getDate();" id="checkInDate" type="date" class="form-control"
+                                       name="formDates" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'To '">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Preferred Flight Class</label>
@@ -158,20 +159,26 @@
                                        max="4" id="roomNumberControl"></div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     </br>
-                                    <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
-                                       class="form-control" name="searchButton">Search</button>
+                                    <button class=" col-6 btn btn-main" id="searchButton" type="submit" onclick="findTour();"
+                                       style="background-color: #ee580f;" class="form-control"
+                                       name="searchButton">Search</button>
+
+                                    <script>
+
+                                    </script>
+
                                  </div>
                               </div>
                            </div>
                         </form>
                      </div>
                      <div class="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="holiday-tab">
-                        <form class="main-form tour-form">
+                        <form class="main-form tour-form" action="">
                            <div class="form-row">
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Location</label>
-                                    <select type="select" class="form-control">
+                                    <select id="hotelLocation" type="select" class="form-control">
                                        <option>Chicago, USA</option>
                                        <option>Singapore</option>
                                        <option>Yerevan, Armenia</option>
@@ -182,8 +189,9 @@
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Check-In</label>
-                                    <input id="checkIn" name="formDates" onload="getDate();" max="2025-12-12" onload="getDate()" pattern="\d{1,2}/\d{1,2}/\d{4}" type="date" class="form-control formDates"
-                                       onblur="compare();">
+                                    <input id="checkIn" name="formDates" onload="getDate();" max="2025-12-12"
+                                       onload="getDate()" pattern="\d{1,2}/\d{1,2}/\d{4}" type="date"
+                                       class="form-control formDates" onblur="compare();">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Check-Out</label>
@@ -201,7 +209,7 @@
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     </br>
                                     <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
-                                       class="form-control" name="searchButton">Search</button>
+                                       class="form-control" onclick="findHotel();" name="searchButton">Search</button>
                                  </div>
                               </div>
                            </div>
