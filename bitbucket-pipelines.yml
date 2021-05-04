@@ -16,13 +16,13 @@ pipelines:
               - npm install express --save-dev
               - npm install javascript-obfuscator --save-dev
               - npm install ncp --save-dev
-        - step:
-          name: Perform Unit Test
-          caches:
-            - node
-          script:
-            - npm install -g mocha --save-dev
-            - mocha AceFrontier/js/test.js
+       - step:
+            name: Perform Unit Tests
+            caches:
+              - node
+            script:
+              - npm install -g mocha --save-dev
+              - mocha AceFrontier/js/test.js
         - step:
             name: Prepare Projects for Release
             caches:
