@@ -3,19 +3,10 @@ function submitContactForm() {
     let subject = document.getElementById('emailSubject').value;
     let name = document.getElementById('emailName').value;
 
-<<<<<<< HEAD
-    if(name != "" && msg != "" && subject != "")
-    {
-        window.location.href = "mailto:AceFrontier@travel.com?subject="+subject+"&body=Hi AceFrontier! My name is "+name +". %0d%0a %0d%0a"+ msg;
-    }
-    else
-    {
-=======
     if (name != "" && msg != "" && subject != "") {
         window.location.href = "mailto:AceFrontier@travel.com?subject=" + subject + "&body=Hi AceFrontier! My name is " + name + ". %0d%0a %0d%0a" + msg;
         alert("Your message has been emailed to us. Thank you!");
     } else {
->>>>>>> origin/nauv-119
         document.getElementById("emailError").textContent = "Please enter all fields.";
     }
 }
@@ -105,10 +96,7 @@ if (name != "" && msg != "" && subject != "") {
     window.location.href = "mailto:AceFrontier@travel.com?subject=" + subject + "&body=Hi AceFrontier! My name is " + name + ". %0d%0a %0d%0a" + msg;
 } else {
     document.getElementById("emailError").textContent = "Please enter all fields.";
-<<<<<<< HEAD
-=======
 }
-
 
 function compare() {
     var startDt = document.getElementById("checkIn").value;
@@ -192,5 +180,4 @@ function findHotel() {
             document.getElementById("tourForm").action = "html/book.html";
             break;
     }
->>>>>>> origin/nauv-119
 }
