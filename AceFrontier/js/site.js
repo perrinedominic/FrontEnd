@@ -228,4 +228,6 @@ function getHotel() {
         default:
             break;
     }
+
+    window.history.replaceState(null, null, window.location.pathname);
 }
