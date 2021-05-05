@@ -148,37 +148,85 @@ function findTour() {
     }
 }
 
-function findHotel() {
-    var tourType = document.getElementById("hotelLocation").value;
+function findTourVersionTwo() {
+    var tourType = document.getElementById("tourTypes").value;
 
     switch (tourType) {
-        case "Chicago, USA":
-            document.getElementById("tourForm").action = "html/book.html";
-            document.getElementsByClassName
+        case "Mountain Trek":
+            document.getElementById("tourForm").action = "#travel";
             break;
 
-        case "Singapore":
-            document.getElementById("tourForm").action = "html/book.html";
+        case "Bus Tours":
+            document.getElementById("tourForm").action = "#busTours";
             break;
 
-        case "Yerevan, Armania":
-            document.getElementById("tourForm").action = "html/book.html";
-            break;
-
-        case "Dubai, UAE":
-            document.getElementById("tourForm").action = "html/book.html";
-            break;
-
-        case "Los Angeles, USA":
-            document.getElementById("tourForm").action = "html/book.html";
-            break;
-
-        case "Cancún, Mexico":
-            document.getElementById("tourForm").action = "html/book.html";
+        case "Ocean Getaways":
+            document.getElementById("tourForm").action = "#blog";
             break;
 
         default:
-            document.getElementById("tourForm").action = "html/book.html";
+            document.getElementById("tourForm").action = "#countryInfo";
+            break;
+    }
+}
+
+function getHotel() {
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    const location = urlParams.get('hotelLocations');
+
+    var hotelLocation = location;
+    switch (hotelLocation) {
+        case "Chicago, USA":
+            document.getElementById("singaporeHotel").setAttribute("style", "display: none;");
+            document.getElementById("yerevanHotel").setAttribute("style", "display: none;");
+            document.getElementById("dubaiHotel").setAttribute("style", "display: none;");
+            document.getElementById("laHotel").setAttribute("style", "display: none;");
+            document.getElementById("dunamarHotel").setAttribute("style", "display: none;");
+            break;
+
+        case "Singapore":
+            document.getElementById("chicagoHotel").setAttribute("style", "display: none;");
+            document.getElementById("yerevanHotel").setAttribute("style", "display: none;");
+            document.getElementById("dubaiHotel").setAttribute("style", "display: none;");
+            document.getElementById("laHotel").setAttribute("style", "display: none;");
+            document.getElementById("dunamarHotel").setAttribute("style", "display: none;");
+            break;
+
+        case "Yerevan, Armenia":
+            document.getElementById("chicagoHotel").setAttribute("style", "display: none;");
+            document.getElementById("singaporeHotel").setAttribute("style", "display: none;");
+            document.getElementById("dubaiHotel").setAttribute("style", "display: none;");
+            document.getElementById("laHotel").setAttribute("style", "display: none;");
+            document.getElementById("dunamarHotel").setAttribute("style", "display: none;");
+            break;
+
+        case "Dubai, UAE":
+            document.getElementById("chicagoHotel").setAttribute("style", "display: none;");
+            document.getElementById("yerevanHotel").setAttribute("style", "display: none;");
+            document.getElementById("singaporeHotel").setAttribute("style", "display: none;");
+            document.getElementById("laHotel").setAttribute("style", "display: none;");
+            document.getElementById("dunamarHotel").setAttribute("style", "display: none;");
+            break;
+
+        case "Los Angeles, USA":
+            document.getElementById("chicagoHotel").setAttribute("style", "display: none;");
+            document.getElementById("yerevanHotel").setAttribute("style", "display: none;");
+            document.getElementById("dubaiHotel").setAttribute("style", "display: none;");
+            document.getElementById("singaporeHotel").setAttribute("style", "display: none;");
+            document.getElementById("dunamarHotel").setAttribute("style", "display: none;");
+            break;
+
+        case "Cancún, Mexico":
+            document.getElementById("chicagoHotel").setAttribute("style", "display: none;");
+            document.getElementById("yerevanHotel").setAttribute("style", "display: none;");
+            document.getElementById("dubaiHotel").setAttribute("style", "display: none;");
+            document.getElementById("laHotel").setAttribute("style", "display: none;");
+            document.getElementById("singaporeHotel").setAttribute("style", "display: none;");
+            break;
+
+        default:
             break;
     }
 }

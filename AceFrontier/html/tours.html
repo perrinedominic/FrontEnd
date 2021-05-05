@@ -110,22 +110,20 @@
                   </ul>
                   <div class="tab-content" id="myTabContent">
                      <div class="tab-pane fade show in active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
-                        <form class="main-form tour-form">
+                        <form id="tourForm" class="main-form tour-form" action="">
                            <div class="form-row">
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Tour Type</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
-                                       <option>Mountain Trek</option>
-                                       <option>Bus Tours</option>
-                                       <option>Ocean Getaways</option>
+                                    <select id='tourTypes' type="select" class="form-control" name="name"
+                                       placeholder="From ">
+                                       <option>Any</option>
                                     </select>
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Location</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                    <select id="locations" type="select" class="form-control" name="name"
+                                       placeholder="From ">
                                        <option>Mount Everest</option>
                                        <option>Cayambe</option>
                                        <option>Makalu</option>
@@ -138,15 +136,16 @@
                                        <option>Beach Getaway</option>
                                     </select>
                                  </div>
+
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Tour Date</label>
-                                    <input type="date" class="form-control" name="formDates" placeholder="To "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                    <input onload="getDate();" id="checkInDate" type="date" class="form-control"
+                                       name="formDates" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'To '">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Preferred Flight Class</label>
-                                    <select type="select" class="form-control" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                    <select type="select" class="form-control" name="name">
                                        <option>Economy</option>
                                        <option>Premium Economy</option>
                                        <option>Business Class</option>
@@ -159,21 +158,22 @@
                                        max="4" id="roomNumberControl"></div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     </br>
-                                    <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
-                                       class="form-control" name="searchButton">Search</button>
+                                    <button class=" col-6 btn btn-main" id="searchButton" type="submit"
+                                       onclick="findTourVersionTwo();" style="background-color: #ee580f;" class="form-control"
+                                       name="searchButton">Search</button>
+
                                  </div>
                               </div>
                            </div>
                         </form>
                      </div>
                      <div class="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="holiday-tab">
-                        <form class="main-form tour-form">
+                        <form id="hotelForm" class="main-form tour-form" action="book.html">
                            <div class="form-row">
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Location</label>
-                                    <select type="select" class="form-control" name="name" placeholder="From "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                    <select id="hotelLocation" name="hotelLocations" type="select" class="form-control">
                                        <option>Chicago, USA</option>
                                        <option>Singapore</option>
                                        <option>Yerevan, Armenia</option>
@@ -184,13 +184,14 @@
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label for="checkIn">Check-In</label>
-                                    <input type="date" class="form-control" name="to" placeholder="To "
-                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                    <input id="checkIn" name="formDates" onload="getDate();" max="2025-12-12"
+                                       onload="getDate()" pattern="\d{1,2}/\d{1,2}/\d{4}" type="date"
+                                       class="form-control formDates" onblur="compare();">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Check-Out</label>
-                                    <input id="checkIn" type="date" class="form-control date-picker hasDatepicker"
-                                       name="start"></div>
+                                    <input pattern="\d{1,2}/\d{1,2}/\d{4}" onblur="compare();" id="checkOut" type="date"
+                                       class="form-control date-picker" max="01/01/2025" name="formDates"></div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     <label>Rooms</label>
                                     <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
@@ -203,7 +204,7 @@
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                     </br>
                                     <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
-                                       class="form-control" name="searchButton">Search</button>
+                                       class="form-control" onclick="getHotel()" name="searchButton">Search</button>
                                  </div>
                               </div>
                            </div>
@@ -231,7 +232,8 @@
             <div class="row">
                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                   <div class="about-box">
-                     <p id="tourInfo"> <span>Here at Ace Frontier we offer many great countries to visit. We have locations from
+                     <p id="tourInfo"> <span>Here at Ace Frontier we offer many great countries to visit. We have
+                           locations from
                            China, Russia, and Japan all the way to right here at home in the U.S.A. Our most famous spot
                            is our London tours. We also offer tours in most countries across the globe. You can scuba
                            dive in the Bahamas, climb Mount Everest, take a bus tour in London, or even take a trip out
@@ -701,22 +703,22 @@
                </div>
                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <div class="Follow">
-                      <h3> Contact</h3>
-                      <div class="row">
-                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                            <input class="Newsletter" id="emailName" placeholder="Name" type="text">
-                         </div>
-                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                            <input class="Newsletter" id="emailSubject" placeholder="Subject" type="text">
-                         </div>
-                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <textarea id="emailMessage" class="textarea" placeholder="Comment" type="text"></textarea>
-                         </div>
-                      </div>
-                      <button class="Subscribe" onclick="submitContactForm();">Submit</button>
-                      <p style="color: red; font-size: larger;" id="emailError"></p>
-                   </div>
-              </div>
+                     <h3> Contact</h3>
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <input class="Newsletter" id="emailName" placeholder="Name" type="text">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <input class="Newsletter" id="emailSubject" placeholder="Subject" type="text">
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                           <textarea id="emailMessage" class="textarea" placeholder="Comment" type="text"></textarea>
+                        </div>
+                     </div>
+                     <button class="Subscribe" onclick="submitContactForm();">Submit</button>
+                     <p style="color: red; font-size: larger;" id="emailError"></p>
+                  </div>
+               </div>
             </div>
             <div class="copyright">
                <div class="container">
@@ -759,6 +761,33 @@
             }
          })
       })
+   </script>
+
+   <script language="javascript" type="text/javascript">
+      var mList = {
+         "Mountain Trek": ['Mount Everest', 'Cayambe', 'Makalu', 'Half Dome'],
+         "Bus Tours": ['Paris', 'New York', 'London', 'Australian Outback'],
+         "Ocean Getaways": ['Ocean Bungalow', 'Beach Getaway']
+      };
+
+      el_parent = document.getElementById("tourTypes");
+      el_child = document.getElementById("locations");
+
+      for (key in mList) {
+         el_parent.innerHTML = el_parent.innerHTML + '<option>' + key + '</option>';
+      }
+
+      el_parent.addEventListener('change', function populate_child(e) {
+         el_child.innerHTML = '';
+         itm = e.target.value;
+         if (itm in mList) {
+            for (i = 0; i < mList[itm].length; i++) {
+               el_child.innerHTML = el_child.innerHTML + '<option>' + mList[itm][
+                  i
+               ] + '</option>';
+            }
+         }
+      });
    </script>
 </body>
 
