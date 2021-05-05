@@ -11,17 +11,46 @@ canvas {
     height: 60%;
     width: 90%;
 }
+
+body{
+  background-color: black;
+}
+
+.moveButton
+{
+  background-color: lawngreen;
+}
+
+a{
+  color: lawngreen;
+}
+
+a.hover
+{
+  background-color: lawngreen;
+  color: black;
+}
 </style>
 </head>
 <body onload="startGame()">
-<h2 class="container d-flex justify-content-center">Use the Arrow keys or buttons to play!</h2><br /><br />
+<h2 style="color: lawngreen;" class="container d-flex justify-content-center">Use the Arrow keys or buttons to play!</h2><br /><br />
 <div class="container d-flex justify-content-center" id="gameContainer"></div>
 
 <div class="container d-flex justify-content-center">
-  <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
-  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
-  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+  <button class="moveButton" onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
+</div>
+
+<br>
+
+<div class="container d-flex justify-content-center">
+  <button class="moveButton" onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+  <button class="moveButton" onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+</div>
+
+<br>
+
+<div class="container d-flex justify-content-center">
+  <button class="moveButton" onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
 </div>
 
 <h2 class="container d-flex justify-content-center"><a href="../index.html">Back to Site</a></h2>
