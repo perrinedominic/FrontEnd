@@ -127,7 +127,21 @@ hr.divider
 </div>
 
 <div class="container d-flex justify-content-center" id="gameContainer">
-  <div id="myfilter" style="position: absolute; background-color: rgb(0, 0, 0); opacity: 0.3; width:100%; height:100%; display: none;"></div>
+</div>
+
+<div class="container d-flex justify-content-center" >
+    <form style="display: none; margin-left: 10px; padding-right: 20px; padding-left: 20px; background-color: rgba(0, 192, 16, 0.6); width: 50%;" id="scoreForm" enctype="multipart/form-data" method="post" action="login.php">
+        <label style="color: black;" for="initials">Initials:</label>
+        <input class="form-control" type="text" id="name" name="name"><br>
+        <label style="color: black;" for="score">Score:</label>
+        <input class="form-control" type="text" id="score" name="score" readonly><br>
+        <div style="text-align: right;">
+        <input style="margin:5px; width: 100px; color: black; background-color: lawngreen;" type="submit" value="Submit" name="submit">
+        </div>
+        <div>
+        <p style="font-weight:bolder; color: black; text-align: center;">Thanks for playing come back tomorrow for another chance.</p>
+        </div>
+        </form>
 </div>
 
 <div class="container d-flex justify-content-center">

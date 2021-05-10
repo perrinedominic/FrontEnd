@@ -91,8 +91,12 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
-            document.getElementById("myfilter").style.display = "block";
-            document.getElementById("myrestartbutton").style.display = "block";
+            document.getElementById("gameContainer").remove();
+            document.getElementById("upButton").remove();
+            document.getElementById("leftButton").remove();
+            document.getElementById("rightButton").remove();
+            document.getElementById("downButton").remove();
+            document.getElementById("scoreForm").style.display = "block";
             return;
         } 
     }
