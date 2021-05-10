@@ -71,7 +71,6 @@ tr:nth-child(even) {
   position: absolute;
   left: auto;
   float: left;
-  display: none;
 }
 
 hr.divider
@@ -120,21 +119,32 @@ hr.divider
     </tr>
   </table>
 </div>
+<?php
+  $dbc = mysqli_connect('softdev.mstclab.com', 'bsmith', 'Boderman1234', 'bsmith');
+  $getScores = "SELECT score, initials FROM acefrontierscores ORDER BY score desc limit 10";
 
-<div id="highScores" class="leftStick">
-<h3 style="color: lawngreen;">HighScores<h3>
-  <hr class="divider">
-</div>
+  $highscorelist = mysqli_query($dbc, $getScores);
 
+  echo '<div id="highScores" class="leftStick">
+  <h2 style="color: lawngreen; display: block;">HighScores<h2>
+    <hr class="divider"> 
+    <table>';
+
+  while ($row = mysqli_fetch_array($highscorelist)) { 
+    echo '<tr><td>'. $row['initials'].'</td><td>'.$row['score'].'</td></tr>';
+  }
+
+  echo '</table></div>';
+?>
 <div class="container d-flex justify-content-center" id="gameContainer">
 </div>
 
 <div class="container d-flex justify-content-center" >
-    <form style="display: none; margin-left: 10px; padding-right: 20px; padding-left: 20px; background-color: rgba(0, 192, 16, 0.6); width: 50%;" id="scoreForm" enctype="multipart/form-data" method="post" action="login.php">
+    <form style="display: none; margin-left: 10px; padding-right: 20px; padding-left: 20px; background-color: rgba(0, 192, 16, 0.6); width: 50%;" id="scoreForm" enctype="multipart/form-data" method="post" action="game.php">
         <label style="color: black;" for="initials">Initials:</label>
-        <input class="form-control" type="text" id="name" name="name"><br>
+        <input class="form-control" type="text" id="name" name="name" maxlength="3"><br>
         <label style="color: black;" for="score">Score:</label>
-        <input class="form-control" type="text" id="score" name="score" readonly><br>
+        <input class="form-control" type="text" id="scoreValue" name="score" readonly><br>
         <div style="text-align: right;">
         <input style="margin:5px; width: 100px; color: black; background-color: lawngreen;" type="submit" value="Submit" name="submit">
         </div>
@@ -162,5 +172,22 @@ hr.divider
 </div>
 
 <footer><h2 class="container d-flex justify-content-center"><a href="../index.html">Back to Site</a></h2></footer>
+
+<?php
+  if(isset($_POST['submit']))
+  {
+    $score = $_POST['score'];
+    $initials = $_POST['name'];
+
+    if(!empty($score) && !empty($initials))
+    {
+
+      $query = "INSERT INTO acefrontierscores (initials, score) VALUES ('$initials', '$score')";
+
+      mysqli_query($dbc, $query);
+    }
+  }
+?>
+
 </body>
 </html>

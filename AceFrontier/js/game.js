@@ -5,12 +5,11 @@ var myScore;
 
 function startGame() {
     myGamePiece = new component(45, 30, "../images/ship.png", 10, 120, "image");
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myScore = new component("30px", "Consolas", "green", 280, 40, "text");
     myGameArea.start();
 
     document.getElementById("gameTable").remove();
     document.getElementById("gamePrep").remove();
-    document.getElementById("highScores").style.display="block";
     document.getElementById("upButton").style.display="block";
     document.getElementById("leftButton").style.display="block";
     document.getElementById("rightButton").style.display="block";
@@ -97,6 +96,7 @@ function updateGameArea() {
             document.getElementById("rightButton").remove();
             document.getElementById("downButton").remove();
             document.getElementById("scoreForm").style.display = "block";
+            document.getElementById("scoreValue").value = myScore.text;
             return;
         } 
     }
@@ -118,7 +118,7 @@ function updateGameArea() {
         myObstacles[i].newPos();
         myObstacles[i].update();
     }
-    myScore.text="SCORE: " + myGameArea.frameNo;
+    myScore.text= myGameArea.frameNo;
     myScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();
