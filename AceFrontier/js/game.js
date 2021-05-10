@@ -7,6 +7,14 @@ function startGame() {
     myGamePiece = new component(45, 30, "../images/ship.png", 10, 120, "image");
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
+
+    document.getElementById("gameTable").remove();
+    document.getElementById("gamePrep").remove();
+    document.getElementById("highScores").style.display="block";
+    document.getElementById("upButton").style.display="block";
+    document.getElementById("leftButton").style.display="block";
+    document.getElementById("rightButton").style.display="block";
+    document.getElementById("downButton").style.display="block";
 }
 
 var myGameArea = {
@@ -162,16 +170,3 @@ function checkKey(e) {
        moveright();
     }
 }
-
-function restartGame() {
-    document.getElementById("myfilter").style.display = "none";
-    document.getElementById("myrestartbutton").style.display = "none";
-    myGameArea.stop();
-    myGameArea.clear();
-    myGameArea = {};
-    myGamePiece = {};
-    myObstacles = [];
-    myscore = {};
-    document.getElementById("canvascontainer").innerHTML = "";
-    startGame()
-    }
