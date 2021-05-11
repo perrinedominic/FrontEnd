@@ -150,6 +150,7 @@ hr.divider
         </div>
         <div>
         <p style="font-weight:bolder; color: black; text-align: center;">Thanks for playing come back tomorrow for another chance.</p>
+        <h3 style="color: red;" id="discountDisplay"></h3>
         </div>
         </form>
 </div>

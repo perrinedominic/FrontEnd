@@ -97,6 +97,39 @@ function updateGameArea() {
             document.getElementById("downButton").remove();
             document.getElementById("scoreForm").style.display = "block";
             document.getElementById("scoreValue").value = myScore.text;
+            var discountDisplay = document.getElementById('discountDisplay');
+
+            if(myScore.text < 500)
+            {
+                discountDisplay.textContent = "No discount please try again tomarrow.";
+                discountDisplay.style.color = 'red';
+            }
+            else if(myScore.text > 500 && myScore.text < 1000)
+            {
+                discountDisplay.textContent = "Congratulations use code FLY3 FOR 3% your next trip";
+                discountDisplay.style.color = 'blue';
+            }
+            else if(myScore.text > 1000 && myScore.text < 1500)
+            {
+                discountDisplay.textContent = "Congratulations use code TRAVEL5 FOR 5% your next trip";
+                discountDisplay.style.color = 'purple';
+            }
+            else if(myScore.text > 1500 && myScore.text < 2500)
+            {
+                discountDisplay.textContent = "Congratulations use code CLIMBBIG10 FOR 10% your next trip";
+                discountDisplay.style.color = 'silver';
+            }
+            else if(myScore.text > 2500 && myScore.text < 4000)
+            {
+                discountDisplay.textContent = "Congratulations use code RIDE15 FOR 15% your next trip";
+                discountDisplay.style.color = 'gold';
+            }
+            else if(myScore.text > 4000)
+            {
+                discountDisplay.textContent = "Congratulations use code WINNER25 FOR 25% your next trip";
+                discountDisplay.style.color = 'whitesmoke';
+            }
+
             return;
         } 
     }
