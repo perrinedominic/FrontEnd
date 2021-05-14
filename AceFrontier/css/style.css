@@ -67,10 +67,6 @@ a {
      transition: 0.4s;
 }
 
-.active, .accordian {
-     background-color: #ccc;
-}
-
 .panel {
      padding: 0 18px;
      background-color: white;
