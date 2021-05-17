@@ -98,16 +98,130 @@
          <div class="container">
             <div class="text-bg">
                <h1>America and the World<br><strong class="white">Amazing Cruises</strong></h1>
-               <div class="tour-container container">
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                     <li class="nav-item">
-                        <a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab"
-                           aria-controls="flight" aria-selected="true">Cruises</a>
-                     </li>
-                  </ul>
                   <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade show in active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
-                        <form class="main-form tour-form">
+                     <div class="tour-container container">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab"
+                                 aria-controls="flight" aria-selected="true">Tours</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab"
+                                 aria-controls="hotel" aria-selected="false">Hotels</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cruise-tab" data-toggle="tab" href="#cruise" role="tab"
+                                 aria-controls="cruise" aria-selected="false">Cruises</a>
+                           </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+                              <form id="tourForm" class="main-form tour-form" action="html/tours.html" method="get">
+                                 <div class="form-row">
+                                    <div class="row">
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Tour Type</label>
+                                          <select id='tourTypes' type="select" class="form-control" name="name"
+                                             placeholder="From ">
+                                             <option>Any</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Location</label>
+                                          <select id="locations" type="select" class="form-control" name="name"
+                                             placeholder="From ">
+                                             <option>Mount Everest</option>
+                                             <option>Cayambe</option>
+                                             <option>Makalu</option>
+                                             <option>Half Dome</option>
+                                             <option>Paris</option>
+                                             <option>New York</option>
+                                             <option>London</option>
+                                             <option>Australian Outback</option>
+                                             <option>Ocean Bungalow</option>
+                                             <option>Beach Getaway</option>
+                                          </select>
+                                       </div>
+      
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label for="checkIn">Tour Date</label>
+                                          <input onload="getDate();" id="checkInDate" type="date" class="form-control"
+                                             name="formDates" onfocus="this.placeholder = ''"
+                                             onblur="this.placeholder = 'To '">
+                                       </div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Preferred Flight Class</label>
+                                          <select type="select" class="form-control" name="name">
+                                             <option>Economy</option>
+                                             <option>Premium Economy</option>
+                                             <option>Business Class</option>
+                                             <option>First Class</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Travelers</label>
+                                          <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
+                                             max="4" id="roomNumberControl"></div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          </br>
+                                          <button class=" col-6 btn btn-main" id="searchButton" type="submit"
+                                             style="background-color: #ee580f;" class="form-control" onclick="findTour();"
+                                             name="searchButton">Search</button>
+      
+                                          <script>
+      
+                                          </script>
+      
+                                       </div>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="holiday-tab">
+                              <form id="hotelForm" class="main-form tour-form" action="book.html">
+                                 <div class="form-row">
+                                    <div class="row">
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Location</label>
+                                          <select id="hotelLocation" type="select" name="hotelLocations" class="form-control">
+                                             <option>Chicago, USA</option>
+                                             <option>Singapore</option>
+                                             <option>Yerevan, Armenia</option>
+                                             <option>Dubai, UAE</option>
+                                             <option>Los Angeles, USA</option>
+                                             <option>Cancún, Mexico</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label for="checkIn">Check-In</label>
+                                          <input id="checkIn" name="formDates" onload="getDate();" max="2025-12-12"
+                                             onload="getDate()" pattern="\d{1,2}/\d{1,2}/\d{4}" type="date"
+                                             class="form-control formDates" onblur="compare();">
+                                       </div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Check-Out</label>
+                                          <input pattern="\d{1,2}/\d{1,2}/\d{4}" onblur="compare();" id="checkOut" type="date"
+                                             class="form-control date-picker" max="01/01/2025" name="formDates"></div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Rooms</label>
+                                          <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
+                                             max="4" id="roomNumberControl"></div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          <label>Adults</label>
+                                          <input type="number" class="form-control" name="adults" placeholder="1" min="1"
+                                             max="4" id="adultNumberControl">
+                                       </div>
+                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                          </br>
+                                          <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
+                                             class="form-control"  name="searchButton">Search</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                     <div class="tab-pane fade" id="cruise" role="tabpanel" aria-labelledby="cruise-tab">
+                        <form class="main-form cruise-form" action="#travel">
                            <div class="form-row">
                               <div class="row">
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -142,13 +256,13 @@
                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Preferred Cruise Class</label>
+                                    <label>Preferred Cruise Length</label>
                                     <select type="select" class="form-control" placeholder="From "
                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
-                                       <option>Economy</option>
-                                       <option>Premium Economy</option>
-                                       <option>Business Class</option>
-                                       <option>First Class</option>
+                                       <option>1-3 Days</option>
+                                       <option>3-5 Days</option>
+                                       <option>5-7 Days</option>
+                                       <option>7+ Days</option>
                                     </select>
                                  </div>
                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">

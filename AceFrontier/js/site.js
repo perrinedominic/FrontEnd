@@ -147,6 +147,24 @@ function findTour() {
     }
 }
 
+function findCruise() {
+    var cruise = document.getElementById("cruiseTypes").value;
+
+    switch (cruise) {
+        case "Holiday Cruise":
+            document.getElementById("CruiseForm").action = "html/cruise.html";
+            break;
+
+        case "Glacier Cruise":
+            document.getElementById("CruiseForm").action = "html/cruise.html";
+            break;
+
+        case "Anniversary Cruise":
+            document.getElementById("CruiseForm").action = "html/cruise.html";
+            break;
+    }
+}
+
 function findTourVersionTwo() {
     var tourType = document.getElementById("tourTypes").value;
 

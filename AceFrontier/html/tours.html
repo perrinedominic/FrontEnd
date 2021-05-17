@@ -108,6 +108,10 @@
                         <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab"
                            aria-controls="hotel" aria-selected="false">Hotels</a>
                      </li>
+                     <li class="nav-item">
+                        <a class="nav-link" id="cruise-tab" data-toggle="tab" href="#cruise" role="tab"
+                           aria-controls="cruise" aria-selected="false">Cruises</a>
+                     </li>
                   </ul>
                   <div class="tab-content" id="myTabContent">
                      <div class="tab-pane fade show in active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
@@ -206,6 +210,64 @@
                                     </br>
                                     <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
                                        class="form-control" onclick="getHotel()" name="searchButton">Search</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="tab-pane fade" id="cruise" role="tabpanel" aria-labelledby="cruise-tab">
+                        <form class="main-form cruise-form" action="cruise.html#travel">
+                           <div class="form-row">
+                              <div class="row">
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Cruise Type</label>
+                                    <select type="select" class="form-control" name="name" placeholder="From "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>Holiday Cruise</option>
+                                       <option>Glacier Cruise</option>
+                                       <option>Anniversary Cruise</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Location</label>
+                                    <select type="select" class="form-control" name="name" placeholder="From "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>Caribbean</option>
+                                       <option>The Bahamas</option>
+                                       <option>Mexico</option>
+                                       <option>Europe</option>
+                                       <option>Bermuda</option>
+                                       <option>Hawaii</option>
+                                       <option>Panama Canal</option>
+                                       <option>Transatlantic</option>
+                                       <option>Great Barrier Reef</option>
+                                       <option>Tasmania</option>
+                                       <option>Papua New Guinea</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label for="checkIn">Tour Date</label>
+                                    <input type="date" class="form-control" name="formDates" placeholder="To "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Preferred Cruise Length</label>
+                                    <select type="select" class="form-control" placeholder="From "
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                       <option>1-3 Days</option>
+                                       <option>3-5 Days</option>
+                                       <option>5-7 Days</option>
+                                       <option>7+ Days</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <label>Travelers</label>
+                                    <input type="number" class="form-control" name="rooms" placeholder="1" min="1"
+                                       max="4" id="roomNumberControl"></div>
+                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    </br>
+                                    <button class=" col-6 btn btn-main" style="background-color: #ee580f;" type="submit"
+                                       class="form-control" name="searchButton">Search</button>
                                  </div>
                               </div>
                            </div>
