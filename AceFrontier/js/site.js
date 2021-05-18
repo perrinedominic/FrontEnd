@@ -265,3 +265,27 @@ function getHotel() {
 
     window.history.replaceState(null, null, window.location.pathname);
 }
+
+setInterval(function() {
+    var item = adList[Math.floor(Math.random() * adList.length)];
+    displayAdWindow();
+    changeAd(item);
+}, 300000);
+
+
+var adList = ['https://www.youtube.com/embed/7LVIikCr2rI?autoplay=1&mute=1', 'https://www.youtube.com/embed/WLIv7HnZ_fE?autoplay=1&mute=1', 'https://www.youtube.com/embed/EnX1wLPjxVw?autoplay=1&mute=1', 'https://www.youtube.com/embed/JJPvNS0FrAQ?autoplay=1&mute=1'];
+
+function displayAdWindow()
+{
+    document.getElementById('adWindow').style.display = "block";
+}
+
+function changeAd(url)
+{
+    document.getElementById('adVideo').src = url;
+}
+
+function removeAdWindow()
+{
+    document.getElementById('adWindow').style.display = 'none';
+}
