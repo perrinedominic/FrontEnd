@@ -2,6 +2,29 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+var dateScoreCookie;
+var currentDate = new Date();
+var currentDay = currentDate.getDay();
+var currentMonth = currentDate.getMonth() + 1;
+var currentYear = currentDate.getFullYear();
+var currentHr = currentDate.getHours();
+var currentMin = currentDate.getMinutes();
+var currentSec = currentDate.getSeconds();
+if(currentDay < 31)
+{
+    if(currentDay < 28 && currentMonth === 2)
+    {
+       expireDay = 1;
+    }
+    else
+    {
+        expireDay = currentDay + 1;
+    }
+}
+else
+{
+    expireDay = 1;
+}
 
 function startGame() {
     myGamePiece = new component(45, 30, "../images/ship.png", 10, 120, "image");
@@ -98,6 +121,9 @@ function updateGameArea() {
             document.getElementById("scoreForm").style.display = "block";
             document.getElementById("scoreValue").value = myScore.text;
             var discountDisplay = document.getElementById('discountDisplay');
+            var minutes = 1200;
+            currentDate.setTime(currentDate.getTime() + (minutes * 60 * 1000));
+            document.cookie = myScore.text +';' + "expires=" + currentDate.toUTCString() + ";";
 
             if(myScore.text < 500)
             {
@@ -106,29 +132,31 @@ function updateGameArea() {
             }
             else if(myScore.text > 500 && myScore.text < 1000)
             {
-                discountDisplay.textContent = "Congratulations use code FLY3 FOR 3% your next trip";
+                discountDisplay.textContent = "Congratulations use code FLY3 FOR 3% off your next trip";
                 discountDisplay.style.color = 'blue';
             }
             else if(myScore.text > 1000 && myScore.text < 1500)
             {
-                discountDisplay.textContent = "Congratulations use code TRAVEL5 FOR 5% your next trip";
+                discountDisplay.textContent = "Congratulations use code TRAVEL5 FOR 5% off your next trip";
                 discountDisplay.style.color = 'purple';
             }
             else if(myScore.text > 1500 && myScore.text < 2500)
             {
-                discountDisplay.textContent = "Congratulations use code CLIMBBIG10 FOR 10% your next trip";
+                discountDisplay.textContent = "Congratulations use code CLIMBBIG10 FOR 10% off your next trip";
                 discountDisplay.style.color = 'silver';
             }
             else if(myScore.text > 2500 && myScore.text < 4000)
             {
-                discountDisplay.textContent = "Congratulations use code RIDE15 FOR 15% your next trip";
+                discountDisplay.textContent = "Congratulations use code RIDE15 FOR 15% off your next trip";
                 discountDisplay.style.color = 'gold';
             }
             else if(myScore.text > 4000)
             {
-                discountDisplay.textContent = "Congratulations use code WINNER25 FOR 25% your next trip";
+                discountDisplay.textContent = "Congratulations use code WINNER25 FOR 25% off your next trip";
                 discountDisplay.style.color = 'whitesmoke';
             }
+
+            checkForCookie();
 
             return;
         } 
@@ -205,5 +233,49 @@ function checkKey(e) {
     else if (e.keyCode == '39' || e.keyCode == '68') {
        // right arrow
        moveright();
+    }
+}
+
+
+function checkForCookie()
+{
+    var cookieValue = document.cookie;
+    var discountCode;
+
+    if(cookieValue === null || cookieValue === '' || cookieValue === undefined || cookieValue === 0)
+    {
+
+    }
+    else
+    {
+        if(cookieValue < 500)
+            {
+               discountCode = 'You did not recive a discount as your score was less then 500.';
+            }
+            else if(cookieValue > 500 && cookieValue < 1000)
+            {
+                discountCode = "Congratulations use code FLY3 FOR 3% off your next trip";
+            }
+            else if(cookieValue > 1000 && cookieValue < 1500)
+            {
+                discountCode = "Congratulations use code TRAVEL5 FOR 5% off your next trip";
+            }
+            else if(cookieValue > 1500 && cookieValue < 2500)
+            {
+                discountCode = "Congratulations use code CLIMBBIG10 FOR 10% off your next trip";
+         
+            }
+            else if(cookieValue > 2500 && cookieValue < 4000)
+            {
+                discountCode = "Congratulations use code RIDE15 FOR 15% off your next trip";
+            }
+            else if(cookieValue > 4000)
+            {
+                discountCode = "Congratulations use code WINNER25 FOR 25% off your next trip";
+            }
+
+        document.getElementById('gamePrep').remove();
+        document.getElementById('playedToday').style.display = 'block';
+        document.getElementById('discountRecived').textContent = discountCode;
     }
 }

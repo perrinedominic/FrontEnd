@@ -79,12 +79,18 @@ hr.divider
 }
 </style>
 </head>
-<body>
+<body onload="checkForCookie()">
 <h2 style="color: lawngreen;" class="container d-flex justify-content-center">Use the Arrow keys or buttons to play!</h2><br /><br />
 <br>
 <div id="gamePrep" class="container d-flex justify-content-center">
   <h3 style="color: lawngreen;">Your ship is being attacked in the bermuda triangle by a giant <bold>KRAKEN</bold>! Use arrow keys or the on screen buttons to avoid the tentacles and 
     save everyone on board your ship. But remeber you only get once chance per day to try to save your crew and your own skin. Do you have what it takes, <a onclick="startGame();">CLICK HERE TO FIND OUT!</a></h3>
+</div>
+<div class="container d-flex justify-content-center">
+  <h3  id="playedToday" style="display: none; color: lawngreen;">Thank you for playing come back again tomarrow to try for a better reward!</h3>
+</div>
+<div class="container d-flex justify-content-center">
+  <h3 id="discountRecived" style="color: lawngreen;"></h3>
 </div>
 
 <div id="gameTable" class="container d-flex justify-content-center">
@@ -94,7 +100,7 @@ hr.divider
       <th>Discount</th>
     </tr>
     <tr>
-      <td>200-500</td>
+      <td>&lt; 500</td>
       <td>0 percent</td>
     </tr>
     <tr>
